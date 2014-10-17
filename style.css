@@ -1,0 +1,16 @@
+body {
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+}
+
+input {
+  width: 100px;
+}
+
+input[type=text] {
+  border-radius: 2px;
+}
+
+input[type=button], input[type=submit] {
+  font-weight: bold;
+}

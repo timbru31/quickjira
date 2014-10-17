@@ -1,0 +1,12 @@
+{
+  "appDesc": {
+    "message": "Öffnet schnell das JIRA mit dem Ticket",
+    "description":"The description of the application, displayed in the web store."
+  },
+  "currentTab": {
+    "message": "aktueller Tab"
+  },
+  "newTab": {
+    "message": "neuer Tab"
+  }
+}
