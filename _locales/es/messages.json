@@ -1,14 +1,14 @@
 {
   "appDesc": {
-    "message": "Öffnet das JIRA mit dem angegebenen Ticket",
+    "message": "Rápidamente abre la JIRA con el billete correspondiente",
     "description":"The description of the application, displayed in the web store."
   },
   "currentTab": {
-    "message": "aktueller Tab",
+    "message": "pestaña actual",
     "description": "Button for opening in current tab"
   },
   "newTab": {
-    "message": "neuer Tab",
+    "message": "nueva pestaña",
     "description": "Button for opening in new tab"
   }
 }
