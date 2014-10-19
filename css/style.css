@@ -1,7 +1,7 @@
 body {
   font-family: Arial, sans-serif;
   font-size: 12px;
-  background: #EDEDEDFF;
+  background: #EDEDED;
   text-align: center;
 }
 
@@ -21,6 +21,11 @@ label {
   line-height: 20px;
 }
 
+.h1:before {
+  content: url("../images/icon32.png");
+  padding-right: 8px;
+}
+
 #save {
   margin-top: 10px;
 }
@@ -34,6 +39,6 @@ label {
 #status {
   display: inline-block;
   padding-left: 5px;
-  color: #FF0000FF;
+  color: #FF0000;
   font-weight: bold;
 }
