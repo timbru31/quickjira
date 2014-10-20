@@ -27,11 +27,17 @@ label {
 }
 
 #save {
-  margin-top: 10px;
+  display: inline-block;
+  margin: 20px auto 0;
 }
 
 #jira-url {
   width: 400px;
+  display: block;
+  margin: 0 auto;
+}
+
+#default-option {
   display: block;
   margin: 0 auto;
 }

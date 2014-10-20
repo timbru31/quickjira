@@ -1,6 +1,6 @@
 function openTicket() {
   event.preventDefault();
-  // Clos after success
+  // close after success
   window.setTimeout(window.close, 1000);
   chrome.storage.sync.get({
     jiraURL: '',
@@ -28,17 +28,29 @@ function openTicket() {
 }
 
 window.addEventListener('load', function(evt) {
-  // get form and attach submit listener
-  var form = document.getElementById('jira');
-  form.addEventListener('submit', openTicket);
-  form.newTab = false;
+  chrome.storage.sync.get({
+    // fallback
+    defaultOption: 'current tab',
+  }, function(options) {
+    // get form
+    var form = document.getElementById('jira');
+    // get buttons
+    var newButton = document.getElementById('new');
+    newButton.newTab = true;
+    var currentButton = document.getElementById('current');
+    currentButton.newTab = false;
 
-  // get button and attach click listener
-  var button = document.getElementById('new');
-  button.addEventListener('click', openTicket);
-  button.newTab = true;
+    // Attach click and submit listener
+    form.addEventListener('submit', openTicket);
+    newButton.addEventListener('click', openTicket);
+    currentButton.addEventListener('click', openTicket);
 
-  // Localization
-  button.value = chrome.i18n.getMessage("newTab");
-  document.getElementById('current').value = chrome.i18n.getMessage("currentTab");
+    // Depending on the option attach newTab true or false to submit handler
+    console.log(options.defaultOption)
+    options.defaultOption == 'current tab' ? form.newTab = false : form.newTab = true;
+
+    // Localization
+    newButton.value = chrome.i18n.getMessage("newTab");
+    currentButton.value = chrome.i18n.getMessage("currentTab");
+  });
 });

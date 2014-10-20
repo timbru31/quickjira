@@ -2,18 +2,31 @@
 <html>
   <head>
     <title>JIRA Quick Finder Options</title>
-    <link rel="stylesheet" type="text/css" href="../css/style.css" />
-    <link rel="shortcut icon" href="../images/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link rel="shortcut icon" href="../images/favicon.ico">
     <script type="text/javascript" src="../js/options.js"></script>
   </head>
   <body>
     <h1 class="h1">JIRA Quick Finder Options</h1>
-    <hr />
-    <h3>JIRA base URL</h3>
-    <p>Please enter here the JIRA URL you normally use, but skip the part after <strong>browse/</strong><br />
-    For example <em>https://jira.atlassian.com/browse/</em></p>
-    <input type="text" id="jira-url" />
-    <button id="save">Save options</button>
-    <p id="status"></p>
+    <hr>
+    <form id="options">
+      <h3>JIRA base URL</h3>
+      <p>
+        Please enter here the JIRA URL you normally use, but skip the part after <strong>browse/</strong><br>
+        For example <em>https://jira.atlassian.com/browse/</em>
+      </p>
+      <input type="text" id="jira-url">
+      <h3>Default action</h3>
+      <p>
+        Choose between the default action when the form is submitted via the enter key.<br>
+        Either open the ticket in the current or a new tab
+      </p>
+      <select name="default option" id="default-option">
+        <option>current tab</option>
+        <option>new tab</option>
+      </select>
+      <input type="submit" id="save" value="Save options">
+      <p id="status"></p>
+    </form>
   </body>
 </html>
