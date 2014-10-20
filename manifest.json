@@ -21,5 +21,16 @@
     "48": "images/icon48.png",
     "64": "images/icon64.png",
     "128": "images/icon128.png"
+  },
+  "commands": {
+    "_execute_browser_action": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+L",
+        "windows": "Ctrl+Shift+L",
+        "mac": "Command+Shift+L",
+        "chromeos": "Ctrl+Shift+L",
+        "linux": "Ctrl+Shift+L"
+      }
+    }
   }
 }
