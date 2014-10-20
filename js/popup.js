@@ -11,8 +11,14 @@ function openTicket() {
     var ticket = encodeURIComponent(document.getElementById('ticket_id').value);
     // get saved JIRA URL
     var jiraURL = options.jiraURL;
-    // make URL
-    var newURL = jiraURL + ticket;
+    var newURL;
+    if (jiraURL == "") {
+      // go to options page
+      newURL = "html/options.html"
+    } else {
+      // make URL
+      newURL = jiraURL + ticket;
+    }
     chrome.tabs.getSelected(null, function(tab) {
       if (options.newTab) {
         // open in new tab
