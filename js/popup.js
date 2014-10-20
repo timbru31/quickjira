@@ -46,7 +46,6 @@ window.addEventListener('load', function(evt) {
     currentButton.addEventListener('click', openTicket);
 
     // Depending on the option attach newTab true or false to submit handler
-    console.log(options.defaultOption)
     options.defaultOption == 'current tab' ? form.newTab = false : form.newTab = true;
 
     // Localization
