@@ -5,6 +5,10 @@ body {
   text-align: center;
 }
 
+.options {
+  font-size: 14px;
+}
+
 input {
   width: 100px;
 }
@@ -44,7 +48,10 @@ label {
 
 #status {
   display: inline-block;
-  padding-left: 5px;
   color: #FF0000;
   font-weight: bold;
+}
+
+.active {
+  padding-left: 5px;
 }

@@ -13,16 +13,33 @@ The settings are synced via your Google account
 
 **Find it on the Chrome Web Store** - https://chrome.google.com/webstore/detail/quick-jira/acdnmaeifljongleeegkkfnfcopblokj
 
+## Features
+* open issue in current or new tab
+* shortcut (default is CTRL + SHIFT + L)
+* omnibox keyword "jira"
+* configure default action
+
 ## License
 This plugin is released under the
 *Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)* license.
+
 Please see [LICENSE.md](LICENSE.md) for more information.
+
+## Changelog
+
+**0.2** (yet to be released)
+* added URL validation
+* added omnibox "jira" keyword
+
+**0.1**
+* initial release
 
 ## Support
 For support please create an issue here at GitHub
 
 ## Pull Requests
 Feel free to submit any PRs here, too. :)
+
 Please indent using two spaces only, have a newline at the EOF and use UNIX line ending, thanks!
 
 ## Donation

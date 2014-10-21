@@ -6,6 +6,7 @@ function saveOptions() {
   var urlPattern = new RegExp("(http|https)://[\w-]+(\.[\w-]+)+([\w.,@?^=%&amp;:/~+#-]*[\w@?^=%&amp;/~+#-])?");
   var jira = document.getElementById('jira-url').value;
   if (!urlPattern.test(jira)) {
+    status.className = "active";
     status.textContent = 'Please specify a valid URL!';
   } else  {
     var defaultOption = document.getElementById('default-option').value;
@@ -14,6 +15,7 @@ function saveOptions() {
       defaultOption: defaultOption
     }, function() {
       // Notify user
+      status.className = "active";
       status.textContent = 'Options were saved!';
       // remove after 500ms
       window.setTimeout(window.close, 500);

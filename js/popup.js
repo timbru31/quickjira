@@ -1,36 +1,11 @@
-function openTicket() {
+function handleSubmit() {
   event.preventDefault();
   // close after success
   window.setTimeout(window.close, 1000);
-  chrome.storage.sync.get({
-    jiraURL: '',
-    // pass if the new tab should be used
-    newTab: event.target.newTab
-  }, function(options) {
-    // get ticket ID
-    var ticket = encodeURIComponent(document.getElementById('ticket_id').value);
-    // get saved JIRA URL
-    var jiraURL = options.jiraURL;
-    var newURL;
-    if (jiraURL == "") {
-      // go to options page
-      newURL = "html/options.html"
-    } else {
-      // make URL
-      newURL = jiraURL + ticket;
-    }
-    chrome.tabs.getSelected(null, function(tab) {
-      if (options.newTab) {
-        // open in new tab
-        chrome.tabs.create({ url: newURL });
-      } else {
-        // update current tab
-        chrome.tabs.update(tab.id, {
-            url: newURL
-        });
-      }
-    });
-  });
+  // get ticket
+  var ticket = encodeURIComponent(document.getElementById('ticket_id').value);
+  // call the background method
+  chrome.extension.getBackgroundPage().openTicket(ticket, event.target.newTab);
 }
 
 window.addEventListener('load', function(evt) {
@@ -47,9 +22,9 @@ window.addEventListener('load', function(evt) {
     currentButton.newTab = false;
 
     // Attach click and submit listener
-    form.addEventListener('submit', openTicket);
-    newButton.addEventListener('click', openTicket);
-    currentButton.addEventListener('click', openTicket);
+    form.addEventListener('submit', handleSubmit);
+    newButton.addEventListener('click', handleSubmit);
+    currentButton.addEventListener('click', handleSubmit);
 
     // Depending on the option attach newTab true or false to submit handler
     options.defaultOption == 'current tab' ? form.newTab = false : form.newTab = true;

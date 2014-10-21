@@ -1,8 +1,9 @@
 {
   "name": "Quick JIRA",
   "short_name": "quiji",
-  "version": "0.1",
+  "version": "0.2",
   "manifest_version": 2,
+  "author": "Tim 'xGhOsTkiLLeRx' Brust",
   "description": "__MSG_appDesc__",
   "browser_action": {
     "default_icon": "images/icon.png",
@@ -14,7 +15,6 @@
   "permissions": [
     "storage"
   ],
-  "author": "Tim 'xGhOsTkiLLeRx' Brust",
   "icons": {
     "16": "images/icon16.png",
     "32": "images/icon32.png",
@@ -32,5 +32,13 @@
         "linux": "Ctrl+Shift+L"
       }
     }
+  },
+  "omnibox": {
+    "keyword" : "jira"
+  },
+  "background": {
+    "scripts": [
+      "js/background.js"
+    ]
   }
 }
