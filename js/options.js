@@ -2,18 +2,23 @@
 function saveOptions() {
   // get base URL
   event.preventDefault();
+  var status = document.getElementById('status');
+  var urlPattern = new RegExp("(http|https)://[\w-]+(\.[\w-]+)+([\w.,@?^=%&amp;:/~+#-]*[\w@?^=%&amp;/~+#-])?");
   var jira = document.getElementById('jira-url').value;
-  var defaultOption = document.getElementById('default-option').value;
-  chrome.storage.sync.set({
-    jiraURL: jira,
-    defaultOption: defaultOption
-  }, function() {
-    // Notify user
-    var status = document.getElementById('status');
-    status.textContent = 'Options were saved!';
-    // remove after 500ms
-    window.setTimeout(window.close, 500);
-  });
+  if (!urlPattern.test(jira)) {
+    status.textContent = 'Please specify a valid URL!';
+  } else  {
+    var defaultOption = document.getElementById('default-option').value;
+    chrome.storage.sync.set({
+      jiraURL: jira,
+      defaultOption: defaultOption
+    }, function() {
+      // Notify user
+      status.textContent = 'Options were saved!';
+      // remove after 500ms
+      window.setTimeout(window.close, 500);
+    });
+  }
 }
 
 // Restore the JIRA base url
