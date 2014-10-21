@@ -21,15 +21,15 @@ window.addEventListener('load', function(evt) {
     var currentButton = document.getElementById('current');
     currentButton.newTab = false;
 
-    // Attach click and submit listener
+    // attach click and submit listener
     form.addEventListener('submit', handleSubmit);
     newButton.addEventListener('click', handleSubmit);
     currentButton.addEventListener('click', handleSubmit);
 
-    // Depending on the option attach newTab true or false to submit handler
+    // depending on the option attach newTab true or false to submit handler
     options.defaultOption == 'current tab' ? form.newTab = false : form.newTab = true;
 
-    // Localization
+    // localization
     newButton.value = chrome.i18n.getMessage("newTab");
     currentButton.value = chrome.i18n.getMessage("currentTab");
   });

@@ -1,4 +1,4 @@
-// Saves options (synced)
+// saves options (synced)
 function saveOptions() {
   // get base URL
   event.preventDefault();
@@ -14,7 +14,7 @@ function saveOptions() {
       jiraURL: jira,
       defaultOption: defaultOption
     }, function() {
-      // Notify user
+      // notify user
       status.className = "active";
       status.textContent = 'Options were saved!';
       // remove after 500ms
@@ -23,7 +23,7 @@ function saveOptions() {
   }
 }
 
-// Restore the JIRA base url
+// restore the JIRA base url
 function restoreOptions() {
   // fallback to empty string
   chrome.storage.sync.get({
@@ -36,9 +36,9 @@ function restoreOptions() {
   });
 }
 
-// Load options on DOMContentLoad
+// load options on DOMContentLoad
 document.addEventListener('DOMContentLoaded', restoreOptions);
-// Save options when button is clicked
+// save options when button is clicked
 window.addEventListener('load', function(evt) {
   document.getElementById('options').addEventListener('submit', saveOptions);
 });
