@@ -3,7 +3,7 @@ function saveOptions() {
   // get base URL
   event.preventDefault();
   var status = document.getElementById('status');
-  var urlPattern = new RegExp("(http|https)://[\w-]+(\.[\w-]+)+([\w.,@?^=%&amp;:/~+#-]*[\w@?^=%&amp;/~+#-])?");
+  var urlPattern = new RegExp("(https?:\/\/(?:www\.|(?!www))[^\s\.]+\.[^\s]{2,}|www\.[^\s]+\.[^\s]{2,})");
   var jira = document.getElementById('jira-url').value;
   if (!urlPattern.test(jira)) {
     status.className = "active";
