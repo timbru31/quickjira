@@ -11,7 +11,7 @@ function handleSubmit() {
 window.addEventListener('load', function(evt) {
   chrome.storage.sync.get({
     // fallback
-    defaultOption: 'current tab',
+    defaultOption: 'current tab'
   }, function(options) {
     // get form
     var form = document.getElementById('jira');

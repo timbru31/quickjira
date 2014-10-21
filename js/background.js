@@ -1,7 +1,7 @@
 // opens the given ticket in current or new tab
 function openTicket(ticket, newTab) {
   chrome.storage.sync.get({
-    jiraURL: '',
+    jiraURL: ''
   }, function(options) {
     // get saved JIRA URL
     var jiraURL = options.jiraURL;
@@ -20,7 +20,7 @@ function openTicket(ticket, newTab) {
       } else {
         // update current tab
         chrome.tabs.update(tab.id, {
-            url: newURL;
+            url: newURL
         });
       }
     });
@@ -29,5 +29,10 @@ function openTicket(ticket, newTab) {
 
 // listen to omnibox jira
 chrome.omnibox.onInputEntered.addListener(function(text) {
-  openTicket(text, false);
+  chrome.storage.sync.get({
+    // fallback
+    defaultOption: 'current tab'
+  }, function(options) {
+    openTicket(text, options.defaultOption != 'current tab');
+  });
 });
