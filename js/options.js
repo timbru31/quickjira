@@ -8,7 +8,7 @@ function saveOptions() {
   if (!urlPattern.test(jira)) {
     status.className = "active";
     status.textContent = 'Please specify a valid URL!';
-  } else  {
+  } else {
     var defaultOption = document.getElementById('default-option').value;
     chrome.storage.sync.set({
       jiraURL: jira,

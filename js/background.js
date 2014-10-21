@@ -8,7 +8,7 @@ function openTicket(ticket, newTab) {
     var newURL;
     if (jiraURL == "") {
       // go to options page
-      newURL = "html/options.html"
+      newURL = "html/options.html";
     } else {
       // make URL
       newURL = jiraURL + ticket;
@@ -20,7 +20,7 @@ function openTicket(ticket, newTab) {
       } else {
         // update current tab
         chrome.tabs.update(tab.id, {
-            url: newURL
+            url: newURL;
         });
       }
     });
