@@ -18,9 +18,17 @@ function saveOptions() {
       status.className = "active";
       status.textContent = 'Options were saved!';
       // remove after 500ms
-      window.setTimeout(window.close, 500);
+      window.setTimeout(function() {
+        closeTab();
+      }, 500);
     });
   }
+}
+
+function closeTab() {
+  chrome.tabs.getCurrent(function(tab) {
+    chrome.tabs.remove(tab.id, function() { })
+  });
 }
 
 // restore the JIRA base url
