@@ -27,7 +27,10 @@ Please see [LICENSE.md](LICENSE.md) for more information.
 
 ## Changelog
 
-**0.2** (yet to be released)
+**0.3 (yet to be released)**
+* use Chrome API to close options page
+
+**0.2**
 * added URL validation
 * added omnibox "jira" keyword
 
