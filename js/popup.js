@@ -30,7 +30,7 @@ window.addEventListener('load', function(evt) {
     options.defaultOption == 'current tab' ? form.newTab = false : form.newTab = true;
 
     // localization
-    newButton.value = chrome.i18n.getMessage("newTab");
-    currentButton.value = chrome.i18n.getMessage("currentTab");
+    newButton.value = chrome.i18n.getMessage('newTab');
+    currentButton.value = chrome.i18n.getMessage('currentTab');
   });
 });

@@ -1,4 +1,4 @@
-# QuickJira (quiji)
+# Quick JIRA (quiji)
 
 ## Info
 Ever wanted to open quickly a JIRA issue in your browser?
@@ -27,8 +27,10 @@ Please see [LICENSE.md](LICENSE.md) for more information.
 
 ## Changelog
 
-**0.3 (yet to be released)**
+**0.3**
 * use Chrome API to close options page
+* added welcome page and changelog page
+* added footer
 
 **0.2**
 * added URL validation

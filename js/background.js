@@ -6,9 +6,9 @@ function openTicket(ticket, newTab) {
     // get saved JIRA URL
     var jiraURL = options.jiraURL;
     var newURL;
-    if (jiraURL == "") {
+    if (jiraURL == '') {
       // go to options page
-      newURL = "html/options.html";
+      newURL = 'html/options.html';
     } else {
       // make URL
       newURL = jiraURL + ticket;
@@ -35,4 +35,17 @@ chrome.omnibox.onInputEntered.addListener(function(text) {
   }, function(options) {
     openTicket(text, options.defaultOption != 'current tab');
   });
+});
+
+
+// Listen to install
+chrome.runtime.onInstalled.addListener(function(details) {
+  switch(details.reason) {
+    case 'install':
+      chrome.tabs.create({ url: 'html/welcome.html' });
+      break;
+    case 'update':
+      chrome.tabs.create({ url: 'html/changelog.html' });
+      break;
+  }
 });

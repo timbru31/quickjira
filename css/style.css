@@ -3,6 +3,7 @@ body {
   font-size: 12px;
   background: #EDEDED;
   text-align: center;
+  margin: 0;
 }
 
 .options {
@@ -48,10 +49,55 @@ label {
 
 #status {
   display: inline-block;
+}
+
+.info {
   color: #FF0000;
   font-weight: bold;
 }
 
 .active {
   padding-left: 5px;
+}
+
+ul {
+  margin-top: 0;
+  display: inline-block;
+}
+
+li {
+  text-align: left;
+}
+
+footer {
+  width: 100%;
+  height: 50px;
+  background-color: #FFFFFF;
+  position: fixed;
+  bottom: 0;
+  line-height: 50px;
+  font-size: 12px;
+}
+
+.red {
+  color: #FF0000;
+}
+
+.right {
+  float: right;
+  padding-right: 20px;
+}
+
+.spacer {
+  margin-bottom: 50px;
+}
+
+.changelog-box {
+  width: 600px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.current-release {
+  padding-left: 10px;
 }

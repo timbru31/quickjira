@@ -3,10 +3,10 @@ function saveOptions() {
   // get base URL
   event.preventDefault();
   var status = document.getElementById('status');
-  var urlPattern = new RegExp("(https?:\/\/(?:www\.|(?!www))[^\s\.]+\.[^\s]{2,}|www\.[^\s]+\.[^\s]{2,})");
+  var urlPattern = /^https?:\/\/(?:www\.|(?!www))[^\s\.]+\.[^\s]{2,}|www\.[^\s]+\.[^\s]{2,}$/
   var jira = document.getElementById('jira-url').value;
   if (!urlPattern.test(jira)) {
-    status.className = "active";
+    status.className += ' active';
     status.textContent = 'Please specify a valid URL!';
   } else {
     var defaultOption = document.getElementById('default-option').value;
@@ -15,7 +15,7 @@ function saveOptions() {
       defaultOption: defaultOption
     }, function() {
       // notify user
-      status.className = "active";
+      status.className += ' active';
       status.textContent = 'Options were saved!';
       // remove after 500ms
       window.setTimeout(function() {
