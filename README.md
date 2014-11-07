@@ -27,6 +27,9 @@ Please see [LICENSE.md](LICENSE.md) for more information.
 
 ## Changelog
 
+**0.3.1 (yet to be released)**
+* added link to changelog in footer
+
 **0.3**
 * use Chrome API to close options page
 * added welcome page and changelog page

@@ -1,7 +1,7 @@
 {
   "name": "Quick JIRA",
   "short_name": "quiji",
-  "version": "0.3",
+  "version": "0.3.1",
   "manifest_version": 2,
   "author": "Tim 'xGhOsTkiLLeRx' Brust",
   "description": "__MSG_appDesc__",
