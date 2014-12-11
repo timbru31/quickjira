@@ -151,3 +151,8 @@ footer {
 .current-release {
   padding-left: 10px;
 }
+
+/* Donation styling */
+.donation {
+  margin-bottom: 50px;
+}
