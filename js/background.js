@@ -27,6 +27,39 @@ function openTicket(ticket, newTab) {
   });
 }
 
+function handleSelectionCurrent(selection) {
+  openTicket(selection.selectionText, false);
+}
+
+function handleSelectionNew(selection) {
+  openTicket(selection.selectionText, true);
+}
+
+
+// right click (context menus)
+var contexts = ["selection"];
+var context = contexts[0];
+
+var parent = chrome.contextMenus.create({
+  "title": "Quick JIRA",
+  "contexts": [context]
+});
+
+var currentTab = chrome.contextMenus.create({
+  "title": "Open in current tab",
+  "parentId": parent,
+  "contexts": [context],
+  "onclick": handleSelectionCurrent
+});
+
+var newTab = chrome.contextMenus.create({
+  "title": "Open in a new tab",
+  "parentId": parent,
+  "contexts": [context],
+  "onclick": handleSelectionNew
+});
+
+
 // listen to omnibox jira
 chrome.omnibox.onInputEntered.addListener(function(text) {
   chrome.storage.sync.get({

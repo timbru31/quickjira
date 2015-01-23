@@ -1,7 +1,7 @@
 {
   "name": "Quick JIRA",
   "short_name": "quiji",
-  "version": "0.3.2",
+  "version": "0.4",
   "manifest_version": 2,
   "author": "Tim 'xGhOsTkiLLeRx' Brust",
   "description": "__MSG_appDesc__",
@@ -13,7 +13,8 @@
   "default_locale": "en",
   "options_page": "html/options.html",
   "permissions": [
-    "storage"
+    "storage",
+    "contextMenus"
   ],
   "icons": {
     "16": "images/icon16.png",
