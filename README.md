@@ -18,6 +18,7 @@ The settings are synced via your Google account
 * shortcut (default is CTRL + SHIFT + L)
 * omnibox keyword "jira"
 * configure default action
+* right click (context menu) integration
 
 ## License
 This plugin is released under the
@@ -26,6 +27,10 @@ This plugin is released under the
 Please see [LICENSE.md](LICENSE.md) for more information.
 
 ## Changelog
+
+**0.4**
+* added donation info
+* added right click (context menu) options
 
 **0.3.1**
 * added link to changelog and options in footer
