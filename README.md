@@ -15,7 +15,7 @@ The settings are synced via your Google account
 
 ## Features
 * open issue in current or new tab
-* shortcut (default is CTRL + SHIFT + L)
+* shortcut (default is CTRL + SHIFT + K)
 * omnibox keyword "jira"
 * configure default action
 * right click (context menu) integration
@@ -27,6 +27,10 @@ This plugin is released under the
 Please see [LICENSE.md](LICENSE.md) for more information.
 
 ## Changelog
+
+**0.4.1**
+* fixed shortcut (sadly changed to CTRL + SHIFT +K)
+* if you experience problems with the new shortcut, please re-install quickjira
 
 **0.4**
 * added donation info

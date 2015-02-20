@@ -1,7 +1,7 @@
 {
   "name": "Quick JIRA",
   "short_name": "quiji",
-  "version": "0.4",
+  "version": "0.4.1",
   "manifest_version": 2,
   "author": "Tim 'xGhOsTkiLLeRx' Brust",
   "description": "__MSG_appDesc__",
@@ -26,11 +26,11 @@
   "commands": {
     "_execute_browser_action": {
       "suggested_key": {
-        "default": "Ctrl+Shift+L",
-        "windows": "Ctrl+Shift+L",
-        "mac": "Command+Shift+L",
-        "chromeos": "Ctrl+Shift+L",
-        "linux": "Ctrl+Shift+L"
+        "default": "Ctrl+Shift+K",
+        "windows": "Ctrl+Shift+K",
+        "mac": "Command+Shift+K",
+        "chromeos": "Ctrl+Shift+K",
+        "linux": "Ctrl+Shift+K"
       }
     }
   },
