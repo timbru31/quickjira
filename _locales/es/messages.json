@@ -1,7 +1,7 @@
 {
   "appDesc": {
     "message": "Rápidamente abre la JIRA con el billete correspondiente",
-    "description":"The description of the application, displayed in the web store."
+    "description": "The description of the application, displayed in the web store."
   },
   "currentTab": {
     "message": "pestaña actual",
