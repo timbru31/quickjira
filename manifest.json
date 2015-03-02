@@ -7,7 +7,7 @@
   "description": "__MSG_appDesc__",
   "browser_action": {
     "default_icon": "images/icon.png",
-    "default_title": "Open JIRA tickets fast",
+    "default_title": "__MSG_defaultTitle__",
     "default_popup": "html/popup.html"
   },
   "default_locale": "en",

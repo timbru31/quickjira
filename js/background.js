@@ -45,15 +45,17 @@ var parent = chrome.contextMenus.create({
   "contexts": [context]
 });
 
+var currentTabString = chrome.i18n.getMessage('openInCurrentTab');
 var currentTab = chrome.contextMenus.create({
-  "title": "Open in current tab",
+  "title": currentTabString,
   "parentId": parent,
   "contexts": [context],
   "onclick": handleSelectionCurrent
 });
 
+var newTabString = chrome.i18n.getMessage('openInNewTab');
 var newTab = chrome.contextMenus.create({
-  "title": "Open in a new tab",
+  "title": newTabString,
   "parentId": parent,
   "contexts": [context],
   "onclick": handleSelectionNew

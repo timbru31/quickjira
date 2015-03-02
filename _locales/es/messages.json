@@ -10,5 +10,17 @@
   "newTab": {
     "message": "nueva pestaña",
     "description": "Button for opening in new tab"
+  },
+  "openInNewTab": {
+    "message": "Abrir en nueava pestaña",
+    "description": "Message display on right click"
+  },
+  "openInCurrentTab": {
+    "message": "Abrir en la pestaña actual",
+    "description": "Message display on right click"
+  },
+  "defaultTitle": {
+    "message": "Rápidamente abrir JIRA billetes",
+    "description": "Message displayed on the settings page of Chrome"
   }
 }

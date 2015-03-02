@@ -1,14 +1,26 @@
 {
   "appDesc": {
     "message": "Öffnet das JIRA mit dem angegebenen Ticket",
-    "description":"The description of the application, displayed in the web store."
+    "description": "The description of the application, displayed in the web store."
   },
   "currentTab": {
     "message": "aktueller Tab",
-    "description": "Button for opening in current tab"
+    "description": "Button for opening in the current tab"
   },
   "newTab": {
     "message": "neuer Tab",
-    "description": "Button for opening in new tab"
+    "description": "Button for opening in a new tab"
+  },
+  "openInNewTab": {
+    "message": "In neuem Tab öffnen",
+    "description": "Message display on right click"
+  },
+  "openInCurrentTab": {
+    "message": "In aktuellem Tab öffnen",
+    "description": "Message display on right click"
+  },
+  "defaultTitle": {
+    "message": "Öffne schnell JIRA Tickets",
+    "description": "Message displayed on the settings page of Chrome"
   }
 }
