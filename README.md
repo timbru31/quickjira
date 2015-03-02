@@ -31,6 +31,7 @@ Please see [LICENSE.md](LICENSE.md) for more information.
 **0.4.1**
 * fixed shortcut (sadly changed to CTRL + SHIFT +K)
 * if you experience problems with the new shortcut, please re-install quickjira
+* localization updated
 
 **0.4**
 * added donation info
