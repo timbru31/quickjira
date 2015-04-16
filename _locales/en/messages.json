@@ -22,5 +22,8 @@
   "defaultTitle": {
     "message": "Open JIRA tickets fast",
     "description": "Message displayed on the settings page of Chrome"
+  },
+  "supportDevelopment": {
+    "message": "Do you want to support the development of Quick JIRA?"
   }
 }
