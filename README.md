@@ -28,7 +28,7 @@ Please see [LICENSE.md](LICENSE.md) for more information.
 
 ## Changelog
 
-**0.4.1**
+**0.5**
 * fixed shortcut (sadly changed to CTRL + SHIFT +K)
 * if you experience problems with the new shortcut, please re-install quickjira
 * localization updated
