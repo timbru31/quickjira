@@ -1,5 +1,5 @@
 // opens the given ticket in current or new tab
-function openTicket(ticket, newTab) {
+openTicket = function(ticket, newTab) {
   chrome.storage.sync.get({
     jiraURL: ''
   }, function(options) {
@@ -27,11 +27,11 @@ function openTicket(ticket, newTab) {
   });
 }
 
-function handleSelectionCurrent(selection) {
+handleSelectionCurrent = function(selection) {
   openTicket(selection.selectionText, false);
 }
 
-function handleSelectionNew(selection) {
+handleSelectionNew = function(selection) {
   openTicket(selection.selectionText, true);
 }
 

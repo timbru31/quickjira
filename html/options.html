@@ -1,21 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <title>Quick JIRA (quiji) Options</title>
+    <script type="text/javascript" src="../js/localizer.js"></script>
+    <title i18n="optionsTitle"></title>
     <link rel="stylesheet" type="text/css" href="../css/style.css">
     <link rel="shortcut icon" href="../images/favicon.ico">
     <script type="text/javascript" src="../js/options.js"></script>
     <meta charset="utf-8">
   </head>
   <body class="page">
-    <h1 class="h1">Quick JIRA (quiji) Options</h1>
+    <h1 class="h1" i18n="optionsTitle"></h1>
     <hr>
     <form id="options">
-      <h3>JIRA base URL</h3>
-      <p>
-        Please enter here the JIRA URL you normally use, but skip the part after <strong>browse/</strong><br>
-        For example <em>https://jira.atlassian.com/browse/</em>
-      </p>
+      <h3 i18n="baseURL"></h3>
+      <p i18n="baseURLDescription"></p>
       <input type="text" id="jira-url">
       <!-- not yet possible, due to mainifest.json
       <h3>Omnibox keyword</h3>
@@ -24,24 +22,20 @@
       </p>
       <input type="text" id="omnibox-keyword">
       -->
-      <h3>Default action</h3>
-      <p>
-        Choose between the default action when the form is submitted via the enter key.<br>
-        Either open the ticket in the current or a new tab
-      </p>
+      <h3 i18n="defaultAction"></h3>
+      <p i18n="defaultActionDescription"></p>
       <select name="default option" id="default-option">
-        <option>current tab</option>
-        <option>new tab</option>
+        <option i18n="currentTab"></option>
+        <option i18n="newTab"></option>
       </select>
       <div>
-        <input type="submit" id="save" value="Save options">
+        <input type="submit" id="save" value="">
         <p class="info" id="status"></p>
       </div>
     </form>
     <footer>
-      Quick JIRA v0.4.1 &bull; <a href="options.html">Options</a> &bull; <a href="changelog.html">Changelog</a> &bull; <a href="https://github.com/timbru31/quickjira/issues">Support</a> &bull;
-      <a href="https://chrome.google.com/webstore/detail/quick-jira/acdnmaeifljongleeegkkfnfcopblokj/reviews">Feedback</a>
-      &bull; Made with <span class="red">&#10084;</span> by xGhOsTkiLLeRx &bull; <a href="donation.html">Donate?</a>
+      <span i18n="version"></span> &bull; <a href="options.html" i18n="options"></a> &bull; <a href="changelog.html" i18n="changelog"></a> &bull; <a href="https://github.com/timbru31/quickjira/issues" i18n="support"></a> &bull;
+      <a href="https://chrome.google.com/webstore/detail/quick-jira/acdnmaeifljongleeegkkfnfcopblokj/reviews" i18n="feedback"></a> &bull; <span i18n="handmade"></span> &bull; <a href="donation.html" i18n="donate"></a>
     </footer>
   </body>
 </html>

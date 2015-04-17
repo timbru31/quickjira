@@ -1,4 +1,32 @@
 {
+  "version": {
+    "message": "Quick JIRA v0.5",
+    "description": "Please do not alter this value"
+  },
+  "options": {
+    "message": "Options",
+    "description": "Link in footer"
+  },
+  "changelog": {
+    "message": "Changelog",
+    "description": "Link in footer"
+  },
+  "support": {
+    "message": "Support",
+    "description": "Link in footer"
+  },
+  "feedback": {
+    "message": "Feedback",
+    "description": "Link in footer"
+  },
+  "donate": {
+    "message": "Donate?",
+    "description": "Link in footer"
+  },
+  "handmade": {
+    "message": "Made with <span class='red'>&#10084;</span> by xGhOsTkiLLeRx",
+    "description": "Text in footer"
+  },
   "appDesc": {
     "message": "Quickly opens the JIRA with the corresponding ticket",
     "description": "The description of the application, displayed in the web store."
@@ -23,7 +51,145 @@
     "message": "Open JIRA tickets fast",
     "description": "Message displayed on the settings page of Chrome"
   },
+  "optionsTitle": {
+    "message": "Quick JIRA (quiji) Options",
+    "description": "Title in tab"
+  },
+  "baseURL": {
+    "message": "JIRA base URL",
+    "description": "base URL you need to enter for a valid ticket URL"
+  },
+  "baseURLDescription": {
+    "message":
+      "Please enter here the JIRA URL you normally use, but skip the part after <strong>browse/</strong><br>
+      For example <em>https://jira.atlassian.com/browse/</em>",
+    "description": "Description text of the base URL"
+  },
+  "defaultAction": {
+    "message": "Default action",
+    "description": "Default action (new tab or current tab) for opening a ticket"
+  },
+  "defaultActionDescription": {
+    "message":
+      "Choose between the default action when the form is submitted via the enter key.<br>
+      Either open the ticket in the current or a new tab",
+    "description": "Description text for the default action"
+  },
+  "saveOptions": {
+    "message": "Save options",
+    "description": "Text for button"
+  },
+  "savedOptions": {
+    "message": "Options were saved",
+    "description": "Text displayed when button is pressed"
+  },
+  "validURL": {
+    "message": "Please specify a valid URL!",
+    "description": "Error message on invalid URL"
+  },
+  "welcomeTitle": {
+    "message": "Welcome to Quick JIRA (quiji)",
+    "description": "Title in tab"
+  },
+  "considerDonating": {
+    "message": "Please consider <a href='donation.html'>donating!</a> :)",
+    "description": "Donation reminder"
+  },
+  "thanksForInstalling": {
+    "message": "Thanks for installing, I hope you enjoy it.",
+    "description": "Greeting"
+  },
+  "features": {
+    "message": "Features",
+    "description": "Heading for feature list"
+  },
+  "featureList": {
+    "message": "
+      <li>Open issue in current or new tab</li>
+      <li>
+        Shortcut (default is CTRL + SHIFT + K)<br>
+        <ul>
+          <li>for Mac OS X please use CMD instead of CTRL</li>
+        </ul>
+      </li>
+      <li>Omnibox keyword 'jira'</li>
+      <li>Configure default action</li>
+    ",
+    "description": "current feature list"
+  },
+  "contactMe": {
+    "message": "Don't hesistate to conact me if you found a bug or want to request a feature! :)",
+    "description": "Contact information"
+  },
+  "configureInfo": {
+    "message": "
+      Please continue to configure the extension for your needs.<br>
+      You should visit the <a href='options.html'>Options page</a> for this!
+    ",
+    "description": "Text to link to the options page"
+  },
+  "changelogTitle": {
+    "message": "Quick JIRA (quiji) was updated",
+    "description": "Title in tab"
+  },
+  "changelogHeader": {
+    "message": "Changelog of Quick JIRA (quiji)",
+    "description": "Header of changelog"
+  },
+  "changelogBox": {
+    "message":
+      "<h3>v0.5<span class='red current-release'>&larr; current release</span></h3>
+      <ul>
+        <li>fixed shortcut (sadly changed to CTRL + SHIFT + K)</li>
+        <li>if you experience problems with the new shortcut, please re-install quickjira</li>
+        <li>localization updated</li>
+      </ul>
+      <hr>
+      <h3>v0.4</h3>
+      <ul>
+        <li>added donation info</li>
+        <li>added right click (context menu) options</li>
+      </ul>
+      <hr>
+      <h3>v0.3.1</h3>
+      <ul>
+        <li>added link to changelog and options in footer</li>
+        <li>new buttons, input fields, overall improved style!</li>
+      </ul>
+      <hr>
+      <h3>v0.3</h3>
+      <ul>
+        <li>use Chrome API to close options page</li>
+        <li>added welcome page and changelog page</li>
+        <li>added footer</li>
+      </ul>
+      <hr>
+      <h3>v0.2</h3>
+      <ul>
+        <li>added URL validation</li>
+        <li>added omnibox 'jira' keyword</li>
+      </ul>
+      <hr>
+      <h3>v0.1</h3>
+      <ul>
+        <li>initial release</li>
+      </ul>",
+    "description": "current changelog. Please do not alter"
+  },
+  "donationTitle": {
+    "message": "Quick JIRA (quiji) donation",
+    "description": "Text in tab"
+  },
   "supportDevelopment": {
-    "message": "Do you want to support the development of Quick JIRA?"
+    "message": "Do you want to support the development of Quick JIRA?",
+    "description": "Donation info header"
+  },
+  "donationChain": {
+    "message": "Donation chain &mdash; You donate &rarr; I can buy some coffee &rarr; faster updates &amp; more features &rarr; you profit!",
+    "description": "Donation workflow text"
+  },
+  "bitcoin": {
+    "message": "Address:",
+    "description": "Bitcoin address"
   }
 }

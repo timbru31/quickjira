@@ -1,4 +1,4 @@
-function handleSubmit() {
+handleSubmit = function() {
   event.preventDefault();
   // close after success
   window.setTimeout(window.close, 1000);
@@ -8,7 +8,7 @@ function handleSubmit() {
   chrome.extension.getBackgroundPage().openTicket(ticket, event.target.newTab);
 }
 
-window.addEventListener('load', function(evt) {
+renderDialog = function() {
   chrome.storage.sync.get({
     // fallback
     defaultOption: 'current tab'
@@ -27,10 +27,12 @@ window.addEventListener('load', function(evt) {
     currentButton.addEventListener('click', handleSubmit);
 
     // depending on the option attach newTab true or false to submit handler
-    options.defaultOption == 'current tab' ? form.newTab = false : form.newTab = true;
+    options.defaultOption == 0 ? form.newTab = false : form.newTab = true;
 
     // localization
     newButton.value = chrome.i18n.getMessage('newTab');
     currentButton.value = chrome.i18n.getMessage('currentTab');
   });
-});
+}
+
+window.addEventListener('load', renderDialog());
