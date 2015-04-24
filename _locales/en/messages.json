@@ -114,6 +114,7 @@
       </li>
       <li>Omnibox keyword 'jira'</li>
       <li>Configure default action</li>
+      <li>Right click (context menu) support</li>
     ",
     "description": "current feature list"
   },

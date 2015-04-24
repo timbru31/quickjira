@@ -15,6 +15,11 @@ input {
   width: 100px;
 }
 
+input[type=button] {
+  min-width: 100px;
+  width: auto;
+}
+
 input[type=text], select {
   border-radius: 4px;
   background-color: #ffffff;

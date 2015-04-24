@@ -110,6 +110,7 @@
       </li>
       <li>Omnibox Keyword 'jira'</li>
       <li>Ändere die Standardaktion</li>
+      <li>Rechtsklick (Kontextmenü) Support</li>
     ",
     "description": "current feature list"
   },
