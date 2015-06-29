@@ -5,10 +5,6 @@ saveOptions = function() {
   var status = document.getElementById('status');
   var urlPattern = /^https?:\/\/(?:www\.|(?!www))[^\s\.]+\.[^\s]{2,}|www\.[^\s]+\.[^\s]{2,}$/
   var jira = document.getElementById('jira-url').value;
-  var lastChar = jira.substr(-1); // Selects the last character
-  if (lastChar != '/') {         // If the last character is not a slash
-     jira = jira + '/';            // Append a slash to it.
-  }
   if (!urlPattern.test(jira)) {
     status.className += ' active';
     status.textContent = chrome.i18n.getMessage('validURL');

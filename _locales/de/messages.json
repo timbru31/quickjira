@@ -57,8 +57,9 @@
   },
   "baseURLDescription": {
     "message":
-      "Bitte gib hier deine JIRA URL ein, aber lasse den Teil nach <strong>browse/</strong> weg.<br>
-      Zum Beispiel <em>https://jira.atlassian.com/browse/</em>",
+      "Bitte gib hier deine JIRA URL zur QuickSearch ein. Beachte, dass die URL mit <strong>=</strong>enden muss.<br>
+      Zum Beispiel <em>https://jira.atlassian.com/secure/QuickSearch.jspa?searchString=</em><br><br>
+      Mehr Information zur JIRA QuickSearch findest Du <a target='_blank' href='https://confluence.atlassian.com/display/JIRA/Using+Quick+Search#UsingQuickSearch-Smartquerying'>hier</a>.",
     "description": "Description text of the base URL"
   },
   "defaultAction": {
@@ -135,7 +136,12 @@
   },
   "changelogBox": {
     "message":
-      "<h3>v0.5<span class='red current-release'>&larr; Aktuelle Version</span></h3>
+      "<h3>v0.5.1<span class='red current-release'>&larr; Aktuelle Version</span></h3>
+      <ul>
+        <li>Support für die QuickSearch URL von JIRA hinzugefügt, mehr Informationen auf der Optionsseite.
+      </ul>
+      <hr>
+      <h3>v0.5</h3>
       <ul>
         <li>Shortcut gefixt (leider geändert zu CTRL + SHIFT + K)</li>
         <li>wenn Probleme auftreten, bitte Quick JIRA neu installieren</li>

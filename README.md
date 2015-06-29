@@ -27,6 +27,8 @@ This plugin is released under the
 Please see [LICENSE.md](LICENSE.md) for more information.
 
 ## Changelog
+**0.5.1 (not yet released)**
+* Changed URL (examples) to use the QuickSearch funtcion of JIRA
 
 **0.5**
 * fixed shortcut (sadly changed to CTRL + SHIFT +K)
