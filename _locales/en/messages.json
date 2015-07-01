@@ -142,7 +142,7 @@
     "message":
       "<h3>v0.5.1<span class='red current-release'>&larr; current release</span></h3>
       <ul>
-        <li>Added support for the QuickSearch URL of JIRA, please refer to the options page for more information</li>
+        <li>Added support for the QuickSearch URL of JIRA, please refer to the options page for more information. Thanks <a href='https://twitter.com/jantimon' target='_blank'>@jantimon</a> for the hint.</li>
       </ul>
       <hr>
       <h3>v0.5</h3>
