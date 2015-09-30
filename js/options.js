@@ -1,9 +1,10 @@
 // saves options (synced)
-saveOptions = function() {
+var saveOptions = function(event) {
   // get base URL
   event.preventDefault();
+  debugger;
   var status = document.getElementById('status');
-  var urlPattern = /^https?:\/\/(?:www\.|(?!www))[^\s\.]+\.[^\s]{2,}|www\.[^\s]+\.[^\s]{2,}$/
+  var urlPattern = /^https?:\/\/(?:www\.|(?!www))[^\s\.]+\.[^\s]{2,}|www\.[^\s]+\.[^\s]{2,}$/;
   var jira = document.getElementById('jira-url').value;
   if (!urlPattern.test(jira)) {
     status.className += ' active';
@@ -21,7 +22,7 @@ saveOptions = function() {
       defaultOption: defaultOption
     }, function() {
       // notify user
-      status.className += ' active';
+      status.classList.add('active');
       status.textContent = chrome.i18n.getMessage('savedOptions');
       // remove after 500ms
       window.setTimeout(function() {
@@ -29,17 +30,17 @@ saveOptions = function() {
       }, 500);
     });
   }
-}
+};
 
-closeTab = function() {
+var closeTab = function() {
   chrome.tabs.getCurrent(function(tab) {
-    chrome.tabs.remove(tab.id, function() { })
+    chrome.tabs.remove(tab.id, function() { });
   });
-}
+};
 
 // restore the JIRA base url
-restoreOptions = function() {
-  document.getElementById('save').value = chrome.i18n.getMessage('saveOptions');
+var restoreOptions = function() {
+  document.querySelector('.save').value = chrome.i18n.getMessage('saveOptions');
   // fallback to empty string
   chrome.storage.sync.get({
     jiraURL: '',
@@ -54,11 +55,12 @@ restoreOptions = function() {
     }
     document.getElementById('default-option').value = defaultOption;
   });
-}
+};
 
 // load options on DOMContentLoad
-document.addEventListener('DOMContentLoaded', restoreOptions);
-// save options when button is clicked
-window.addEventListener('load', function(evt) {
-  document.getElementById('options').addEventListener('submit', saveOptions);
+document.addEventListener('DOMContentLoaded', function(e) {
+  restoreOptions();
+  document.getElementById('options').addEventListener('submit', function(e) {
+    saveOptions(e);
+  });
 });

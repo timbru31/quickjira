@@ -1,9 +1,8 @@
 /* General styling */
 body {
   font-family: Arial, sans-serif;
-  font-size: 12px;
-  background: #EDEDED;
-  text-align: center;
+  font-size: 13px;
+  background: #ededed;
   margin: 0;
 }
 
@@ -22,10 +21,9 @@ input[type=button] {
 
 input[type=text], select {
   border-radius: 4px;
-  background-color: #ffffff;
-  border: 1px solid #cccccc;
+  background-color: #fff;
+  border: 1px solid #ccc;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  padding: 3px 0 3px 5px;
 }
 
 input[type=text]:focus, select:focus {
@@ -34,7 +32,7 @@ input[type=text]:focus, select:focus {
 }
 
 input[type=button], input[type=submit] {
-  color: #ffffff;
+  color: #fff;
   background-color: #20315e;
   border-color: #357ebd;
   text-align: center;
@@ -53,26 +51,21 @@ input[type=submit]:hover, input[type=submit]:focus {
   border-color: #285e8e;
 }
 
-select {
-  padding: 3px 0;
-}
-
 label {
-  font-size: 13px;
   line-height: 25px;
 }
 
 
 /* Popup window styling */
-.popup {
+.quiji-popup {
   width: 120px;
   margin: 8px;
+  text-align: center;
 }
 
-input#current {
+.quiji-buttons input {
   margin-bottom: 5px;
 }
-
 
 /* Page stlying */
 ul {
@@ -84,27 +77,19 @@ li {
   text-align: left;
 }
 
-footer {
-  width: 100%;
-  height: 50px;
-  background-color: #FFFFFF;
-  position: fixed;
-  bottom: 0;
-  line-height: 50px;
-  font-size: 12px;
+.quiji-footer {
+  background-color: #fff;
+  padding: 10px 20px;
+  white-space: nowrap;
 }
 
-.page {
+.quiji-page {
   font-size: 14px;
-}
-
-.h1:before {
-  content: url("../images/icon32.png");
-  padding-right: 8px;
+  margin: 14px 17px; /* Chrome default */
 }
 
 .info {
-  color: #FF0000;
+  color: #ff0000;
   font-weight: bold;
   padding-top: 5px;
   margin-top: 20px;
@@ -113,23 +98,27 @@ footer {
 
 
 /* Options styling */
-#save {
+.save {
   display: inline-block;
   margin: 20px auto 0;
+  /* Override Chrome styles */
+  background-image: none;
+  box-shadow: none;
+  text-shadow: none;
 }
 
-#jira-url {
-  width: 400px;
-  display: block;
-  margin: 0 auto;
+:enabled:hover:-webkit-any(select,input[type="checkbox"],input[type="radio"],:-webkit-any(button,input[type="button"],input[type="submit"])) {
+  background-image: none;
+  border-color: initial;
+  box-shadow: none;
+  color: #fff;
 }
 
-#default-option {
-  display: block;
-  margin: 0 auto;
+.jira-url {
+  width: 100%;
 }
 
-#status {
+.status {
   display: inline-block;
 }
 
@@ -138,26 +127,19 @@ footer {
 }
 
 .red {
-  color: #FF0000;
+  color: #ff0000;
 }
 
+.quiji-url {
+  white-space: nowrap;
+}
 
 /* Changelog styling */
-.spacer {
-  margin-bottom: 50px;
-}
-
-.changelog-box {
-  width: 600px;
-  margin: 0 auto 55px;
-  text-align: left;
-}
-
-.current-release {
+.quiji-current-release {
   padding-left: 10px;
 }
 
 /* Donation styling */
-.donation {
+.quiji-donation {
   margin-bottom: 50px;
 }

@@ -61,8 +61,8 @@
   },
   "baseURLDescription": {
     "message":
-      "Please enter here the JIRA URL for the QuickSearch. Please keep in mind that the URL needs to end with a <strong>=</strong><br>
-      For example <em>https://jira.atlassian.com/secure/QuickSearch.jspa?searchString=</em><br><br>
+      "Please enter here the JIRA URL for the QuickSearch. Please keep in mind that the URL needs to end with a <strong>=</strong> (equals sign)<br>
+      For example <em class='quiji-url'>https://jira.atlassian.com/secure/QuickSearch.jspa?searchString=</em><br><br>
       More information regarding the JIRA QuickSearch can be found <a target='_blank' href='https://confluence.atlassian.com/display/JIRA/Using+Quick+Search#UsingQuickSearch-Smartquerying'>here</a>.",
     "description": "Description text of the base URL"
   },
@@ -140,7 +140,7 @@
   },
   "changelogBox": {
     "message":
-      "<h3>v0.5.1<span class='red current-release'>&larr; current release</span></h3>
+      "<h3>v0.5.1<span class='quiji-current-release red'>&larr; current release</span></h3>
       <ul>
         <li>Added support for the QuickSearch URL of JIRA, please refer to the options page for more information. Thanks <a href='https://twitter.com/jantimon' target='_blank'>@jantimon</a> for the hint.</li>
       </ul>

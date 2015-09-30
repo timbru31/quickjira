@@ -2,40 +2,33 @@
 <html>
   <head>
     <script type="text/javascript" src="../js/localizer.js"></script>
-    <title i18n="optionsTitle"></title>
+    <title data-i18n="optionsTitle"></title>
     <link rel="stylesheet" type="text/css" href="../css/style.css">
     <link rel="icon" type="image/png" href="../images/icon128.png">
     <script type="text/javascript" src="../js/options.js"></script>
     <meta charset="utf-8">
   </head>
-  <body class="page">
-    <h1 class="h1" i18n="optionsTitle"></h1>
-    <hr>
-    <form id="options">
-      <h3 i18n="baseURL"></h3>
-      <p i18n="baseURLDescription"></p>
-      <input type="text" id="jira-url">
-      <!-- not yet possible, due to mainifest.json
-      <h3>Omnibox keyword</h3>
-      <p>
-        You can define your custom omnibox keyword here.
-      </p>
-      <input type="text" id="omnibox-keyword">
-      -->
-      <h3 i18n="defaultAction"></h3>
-      <p i18n="defaultActionDescription"></p>
-      <select name="default option" id="default-option">
-        <option i18n="currentTab"></option>
-        <option i18n="newTab"></option>
-      </select>
-      <div>
-        <input type="submit" id="save" value="">
-        <p class="info" id="status"></p>
-      </div>
-    </form>
-    <footer>
-      <span i18n="version"></span> &bull; <a href="options.html" i18n="options"></a> &bull; <a href="changelog.html" i18n="changelog"></a> &bull; <a href="https://github.com/timbru31/quickjira/issues" i18n="support"></a> &bull;
-      <a href="https://chrome.google.com/webstore/detail/quick-jira/acdnmaeifljongleeegkkfnfcopblokj/reviews" i18n="feedback"></a> &bull; <span i18n="handmade"></span> &bull; <a href="donation.html" i18n="donate"></a>
+  <body class="quiji">
+    <section class="quiji-page">
+      <form class="options">
+        <h3 data-i18n="baseURL"></h3>
+        <p data-i18n="baseURLDescription"></p>
+        <input type="text" class="jira-url" id="jira-url" required>
+        <h3 data-i18n="defaultAction"></h3>
+        <p data-i18n="defaultActionDescription"></p>
+        <select name="default option">
+          <option data-i18n="currentTab"></option>
+          <option data-i18n="newTab"></option>
+        </select>
+        <div>
+          <input type="submit" class="save">
+          <p class="info" class="status"></p>
+        </div>
+      </form>
+    </section>
+    <footer class="quiji-footer">
+      <span data-i18n="version"></span> &bull; <a href="options.html" data-i18n="options"></a> &bull; <a href="changelog.html" data-i18n="changelog"></a> &bull; <a href="https://github.com/timbru31/quickjira/issues" data-i18n="support"></a> &bull;
+      <a href="https://chrome.google.com/webstore/detail/quick-jira/acdnmaeifljongleeegkkfnfcopblokj/reviews" data-i18n="feedback"></a> &bull; <span data-i18n="handmade"></span> &bull; <a href="donation.html" data-i18n="donate"></a>
     </footer>
   </body>
 </html>

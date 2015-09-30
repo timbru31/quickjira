@@ -1,14 +1,19 @@
 // opens the given ticket in current or new tab
-openTicket = function(ticket, newTab) {
+var openTicket = function(ticket, newTab) {
   chrome.storage.sync.get({
     jiraURL: ''
   }, function(options) {
     // get saved JIRA URL
     var jiraURL = options.jiraURL;
     var newURL;
-    if (jiraURL == '') {
+    if (!jiraURL) {
       // go to options page
-      newURL = 'html/options.html';
+      //newURL = 'html/options.html';
+      chrome.runtime.openOptionsPage(function() {
+        debugger;
+        document.querySelector('.jira-url').style.border = "1px solid red";
+      });
+      return;
     } else {
       // make URL
       newURL = jiraURL + ticket;
@@ -25,40 +30,40 @@ openTicket = function(ticket, newTab) {
       }
     });
   });
-}
+};
 
-handleSelectionCurrent = function(selection) {
+var handleSelectionCurrent = function(selection) {
   openTicket(selection.selectionText, false);
-}
+};
 
-handleSelectionNew = function(selection) {
+var handleSelectionNew = function(selection) {
   openTicket(selection.selectionText, true);
-}
+};
 
 
 // right click (context menus)
-var contexts = ["selection"];
+var contexts = ['selection'];
 var context = contexts[0];
 
-var parent = chrome.contextMenus.create({
-  "title": "Quick JIRA",
-  "contexts": [context]
+var parentId = chrome.contextMenus.create({
+  'title': 'Quick JIRA',
+  'contexts': [context]
 });
 
 var currentTabString = chrome.i18n.getMessage('openInCurrentTab');
-var currentTab = chrome.contextMenus.create({
-  "title": currentTabString,
-  "parentId": parent,
-  "contexts": [context],
-  "onclick": handleSelectionCurrent
+chrome.contextMenus.create({
+  'title': currentTabString,
+  'parentId': parentId,
+  'contexts': [context],
+  'onclick': handleSelectionCurrent
 });
 
 var newTabString = chrome.i18n.getMessage('openInNewTab');
-var newTab = chrome.contextMenus.create({
-  "title": newTabString,
-  "parentId": parent,
-  "contexts": [context],
-  "onclick": handleSelectionNew
+chrome.contextMenus.create({
+  'title': newTabString,
+  'parentId': parentId,
+  'contexts': [context],
+  'onclick': handleSelectionNew
 });
 
 
@@ -77,10 +82,12 @@ chrome.omnibox.onInputEntered.addListener(function(text) {
 chrome.runtime.onInstalled.addListener(function(details) {
   switch(details.reason) {
     case 'install':
-      chrome.tabs.create({ url: 'html/welcome.html' });
+      chrome.runtime.openOptionsPage(function() {alert("ive opened someting")});
+      //chrome.tabs.create({ url: 'html/welcome.html' });
       break;
     case 'update':
-      chrome.tabs.create({ url: 'html/changelog.html' });
+      console.log("updated");
+      chrome.runtime.openOptionsPage();
       break;
   }
 });

@@ -1,24 +1,26 @@
-handleSubmit = function() {
+'use strict'
+
+let handleSubmit = function() {
   event.preventDefault();
   // close after success
   window.setTimeout(window.close, 1000);
   // get ticket
-  var ticket = encodeURIComponent(document.getElementById('ticket_id').value);
+  let ticket = encodeURIComponent(document.querySelector('.quiji-ticket-id').value);
   // call the background method
   chrome.extension.getBackgroundPage().openTicket(ticket, event.target.newTab);
-}
+};
 
-renderDialog = function() {
+let renderDialog = function() {
   chrome.storage.sync.get({
     // fallback
     defaultOption: 'current tab'
   }, function(options) {
     // get form
-    var form = document.getElementById('jira');
+    let form = document.querySelector('.quiji-popup-form');
     // get buttons
-    var newButton = document.getElementById('new');
+    let newButton = document.querySelector('.quiji-new-tab');
     newButton.newTab = true;
-    var currentButton = document.getElementById('current');
+    let currentButton = document.querySelector('.quiji-current-tab');
     currentButton.newTab = false;
 
     // attach click and submit listener
@@ -27,12 +29,12 @@ renderDialog = function() {
     currentButton.addEventListener('click', handleSubmit);
 
     // depending on the option attach newTab true or false to submit handler
-    options.defaultOption == 0 ? form.newTab = false : form.newTab = true;
+    form.newTab = options.defaultOption === 0 ? false : true
 
     // localization
     newButton.value = chrome.i18n.getMessage('newTab');
     currentButton.value = chrome.i18n.getMessage('currentTab');
   });
-}
+};
 
 window.addEventListener('load', renderDialog());

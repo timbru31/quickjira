@@ -11,7 +11,7 @@ You can now open up a JIRA issue within a second - in your current or a new tab.
 Just configure the "base url" and you are ready to go!
 The settings are synced via your Google account
 
-**Find it on the Chrome Web Store** - https://chrome.google.com/webstore/detail/quick-jira/acdnmaeifljongleeegkkfnfcopblokj
+[![Quick JIRA @Chrome Web Store](https://developer.chrome.com/webstore/images/ChromeWebStore_Badge_v2_206x58.png "QuickJIRA @Chrome Web Store")](https://chrome.google.com/webstore/detail/quick-jira/acdnmaeifljongleeegkkfnfcopblokj)
 
 ## Features
 * open issue in current or new tab
@@ -27,9 +27,15 @@ This plugin is released under the
 Please see [LICENSE.md](LICENSE.md) for more information.
 
 ## Changelog
+
+**0.6**
+* Updated to Chrome's new options dialog
+* CSS and JS (ES6) updates
+* use newer Chrome APIs like runtime.openOptionsPage()
+* Minimum Chrome version is now 42
+
 **0.5.1**
 * Added support for the QuickSearch URL of JIRA, please refer to the options page for more information. Thanks [@jantimon](https://twitter.com/jantimon) for the hint.
-
 
 **0.5**
 * fixed shortcut (sadly changed to CTRL + SHIFT +K)
