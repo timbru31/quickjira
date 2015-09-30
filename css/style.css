@@ -1,18 +1,16 @@
 /* General styling */
 body {
-  font-family: Arial, sans-serif;
-  font-size: 12px;
-  background: #EDEDED;
-  text-align: center;
+  font-size: 13px;
+  background: #ededed;
   margin: 0;
-}
-
-a:visited {
-  color: #0000EE;
 }
 
 input {
   width: 100px;
+}
+
+input[type=text]:invalid {
+  border: 1px solid #ff0000;
 }
 
 input[type=button] {
@@ -22,19 +20,18 @@ input[type=button] {
 
 input[type=text], select {
   border-radius: 4px;
-  background-color: #ffffff;
-  border: 1px solid #cccccc;
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  padding: 3px 0 3px 5px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
 }
 
 input[type=text]:focus, select:focus {
   border-color: #66afe9;
-  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6);
 }
 
 input[type=button], input[type=submit] {
-  color: #ffffff;
+  color: #fff;
   background-color: #20315e;
   border-color: #357ebd;
   text-align: center;
@@ -53,26 +50,24 @@ input[type=submit]:hover, input[type=submit]:focus {
   border-color: #285e8e;
 }
 
-select {
-  padding: 3px 0;
-}
-
 label {
-  font-size: 13px;
   line-height: 25px;
 }
 
+.red {
+  color: #ff0000;
+}
 
 /* Popup window styling */
-.popup {
+.quiji-popup {
   width: 120px;
   margin: 8px;
+  text-align: center;
 }
 
-input#current {
+.quiji-buttons input {
   margin-bottom: 5px;
 }
-
 
 /* Page stlying */
 ul {
@@ -84,27 +79,19 @@ li {
   text-align: left;
 }
 
-footer {
-  width: 100%;
-  height: 50px;
-  background-color: #FFFFFF;
-  position: fixed;
-  bottom: 0;
-  line-height: 50px;
-  font-size: 12px;
+.quiji-footer {
+  background-color: #fff;
+  padding: 10px 20px;
+  white-space: nowrap;
 }
 
-.page {
+.quiji-page {
   font-size: 14px;
-}
-
-.h1:before {
-  content: url("../images/icon32.png");
-  padding-right: 8px;
+  margin: 14px 17px; /* Chrome default */
 }
 
 .info {
-  color: #FF0000;
+  color: #ff0000;
   font-weight: bold;
   padding-top: 5px;
   margin-top: 20px;
@@ -113,51 +100,68 @@ footer {
 
 
 /* Options styling */
-#save {
-  display: inline-block;
-  margin: 20px auto 0;
+/* override Chrome styles */
+:enabled:hover:-webkit-any(input[type="checkbox"],input[type="radio"],:-webkit-any(button,input[type="button"],input[type="submit"])) {
+  background-image: none;
+  border-color: #285e8e;
+  box-shadow: none;
+  color: #fff;
 }
 
-#jira-url {
-  width: 400px;
-  display: block;
-  margin: 0 auto;
+input[type=text].quiji-options-jira-url {
+  padding-left: 6px;
+  width: 100%;
 }
 
-#default-option {
-  display: block;
-  margin: 0 auto;
-}
-
-#status {
-  display: inline-block;
-}
-
-.active {
+.quiji-options-status {
+  display: inline;
+  vertical-align: bottom;
   padding-left: 5px;
 }
 
-.red {
-  color: #FF0000;
+.quiji-options-url-text {
+  margin-bottom: 0;
 }
 
+.quiji-options-save {
+  display: inline-block;
+  margin: 20px auto 0;
+  /* Override Chrome styles */
+  background-image: none;
+  box-shadow: none;
+  text-shadow: none;
+}
+
+.quiji-url {
+  white-space: nowrap;
+}
 
 /* Changelog styling */
-.spacer {
-  margin-bottom: 50px;
-}
-
-.changelog-box {
-  width: 600px;
-  margin: 0 auto 55px;
-  text-align: left;
-}
-
-.current-release {
+.quiji-current-release {
   padding-left: 10px;
 }
 
 /* Donation styling */
-.donation {
-  margin-bottom: 50px;
+.quiji-donation-chain {
+  white-space: nowrap;
+}
+
+.quiji-donation-options {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+.quiji-donation-paypal {
+  margin-right: 20px;
+}
+
+.quiji-donation-bitcoin {
+  margin-left: 20px;
+}
+
+.quiji-donation-bitcoin-logo {
+  display: block;
+  margin: 0 auto;
 }

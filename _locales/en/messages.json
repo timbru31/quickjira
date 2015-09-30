@@ -1,6 +1,6 @@
 {
   "version": {
-    "message": "Quick JIRA v0.5.1",
+    "message": "Quick JIRA v0.6",
     "description": "Please do not alter this value"
   },
   "options": {
@@ -61,8 +61,8 @@
   },
   "baseURLDescription": {
     "message":
-      "Please enter here the JIRA URL for the QuickSearch. Please keep in mind that the URL needs to end with a <strong>=</strong><br>
-      For example <em>https://jira.atlassian.com/secure/QuickSearch.jspa?searchString=</em><br><br>
+      "Please enter here the JIRA URL for the QuickSearch. Please keep in mind that the URL needs to end with a <strong>=</strong> (equals sign)<br>
+      For example <em class='quiji-url'>https://jira.atlassian.com/secure/QuickSearch.jspa?searchString=</em><br>
       More information regarding the JIRA QuickSearch can be found <a target='_blank' href='https://confluence.atlassian.com/display/JIRA/Using+Quick+Search#UsingQuickSearch-Smartquerying'>here</a>.",
     "description": "Description text of the base URL"
   },
@@ -88,48 +88,6 @@
     "message": "Please specify a valid URL!",
     "description": "Error message on invalid URL"
   },
-  "welcomeTitle": {
-    "message": "Welcome to Quick JIRA (quiji)",
-    "description": "Title in tab"
-  },
-  "considerDonating": {
-    "message": "Please consider <a href='donation.html'>donating!</a> :)",
-    "description": "Donation reminder"
-  },
-  "thanksForInstalling": {
-    "message": "Thanks for installing, I hope you enjoy it.",
-    "description": "Greeting"
-  },
-  "features": {
-    "message": "Features",
-    "description": "Heading for feature list"
-  },
-  "featureList": {
-    "message": "
-      <li>Open issue in current or new tab</li>
-      <li>
-        Shortcut (default is CTRL + SHIFT + K)<br>
-        <ul>
-          <li>for Mac OS X please use CMD instead of CTRL</li>
-        </ul>
-      </li>
-      <li>Omnibox keyword 'jira'</li>
-      <li>Configure default action</li>
-      <li>Right click (context menu) support</li>
-    ",
-    "description": "current feature list"
-  },
-  "contactMe": {
-    "message": "Don't hesistate to conact me if you found a bug or want to request a feature! :)",
-    "description": "Contact information"
-  },
-  "configureInfo": {
-    "message": "
-      Please continue to configure the extension for your needs.<br>
-      You should visit the <a href='options.html'>Options page</a> for this!
-    ",
-    "description": "Text to link to the options page"
-  },
   "changelogTitle": {
     "message": "Quick JIRA (quiji) was updated",
     "description": "Title in tab"
@@ -140,7 +98,15 @@
   },
   "changelogBox": {
     "message":
-      "<h3>v0.5.1<span class='red current-release'>&larr; current release</span></h3>
+      "<h3>v0.6<span class='quiji-current-release red'>&larr; current release</span></h3>
+      <ul>
+        <li>Updated to Chrome's new options dialog</li>
+        <li>CSS and JS (ES6) updates</li>
+        <li>use newer Chrome APIs like runtime.openOptionsPage()</li>
+        <li>Minimum Chrome version is now 45</li>
+      </ul>
+      <hr>
+      <h3>v0.5.1</h3>
       <ul>
         <li>Added support for the QuickSearch URL of JIRA, please refer to the options page for more information. Thanks <a href='https://twitter.com/jantimon' target='_blank'>@jantimon</a> for the hint.</li>
       </ul>
@@ -194,9 +160,5 @@
   "donationChain": {
     "message": "Donation chain &mdash; You donate &rarr; I can buy some coffee &rarr; faster updates &amp; more features &rarr; you profit!",
     "description": "Donation workflow text"
-  },
-  "bitcoin": {
-    "message": "Address:",
-    "description": "Bitcoin address"
   }
 }
