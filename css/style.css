@@ -70,6 +70,10 @@ label {
   margin-bottom: 5px;
 }
 
+.quiji-ticket-id {
+  padding: 3px 0 3px 5px;
+}
+
 /* Page stlying */
 ul {
   margin-top: 0;
