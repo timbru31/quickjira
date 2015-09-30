@@ -10,10 +10,10 @@
   </head>
   <body class="quiji">
     <section class="quiji-page">
-      <form class="options">
+      <form class="quiji-options">
         <h3 data-i18n="baseURL"></h3>
-        <p data-i18n="baseURLDescription"></p>
-        <input type="text" class="jira-url" id="jira-url" required>
+        <p class="quiji-options-url-text" data-i18n="baseURLDescription"></p>
+        <input type="text" class="quiji-options-jira-url" required>
         <h3 data-i18n="defaultAction"></h3>
         <p data-i18n="defaultActionDescription"></p>
         <select name="default option">
@@ -21,8 +21,8 @@
           <option data-i18n="newTab"></option>
         </select>
         <div>
-          <input type="submit" class="save">
-          <p class="info" class="status"></p>
+          <input type="submit" class="quiji-options-save" value="Save options">
+          <p class="quiji-options-status red"></p>
         </div>
       </form>
     </section>

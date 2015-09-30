@@ -1,16 +1,17 @@
+'use strict';
+
+const urlPattern = /^https?:\/\/(?:www\.|(?!www))[^\s\.]+\.[^\s]{2,}|www\.[^\s]+\.[^\s]{2,}$/;
+
 // saves options (synced)
-var saveOptions = function(event) {
+let saveOptions = event => {
   // get base URL
   event.preventDefault();
-  debugger;
-  var status = document.getElementById('status');
-  var urlPattern = /^https?:\/\/(?:www\.|(?!www))[^\s\.]+\.[^\s]{2,}|www\.[^\s]+\.[^\s]{2,}$/;
-  var jira = document.getElementById('jira-url').value;
+  let status = document.querySelector('.quiji-options-status');
+  let jira = document.querySelector('.quiji-options-jira-url').value;
   if (!urlPattern.test(jira)) {
-    status.className += ' active';
     status.textContent = chrome.i18n.getMessage('validURL');
   } else {
-    var defaultOption = document.getElementById('default-option').value;
+    let defaultOption = document.querySelector('select').value;
     // Map currentTab to 0 and newTab to 1
     if (chrome.i18n.getMessage('currentTab') === defaultOption) {
       defaultOption = 0;
@@ -20,47 +21,40 @@ var saveOptions = function(event) {
     chrome.storage.sync.set({
       jiraURL: jira,
       defaultOption: defaultOption
-    }, function() {
+    }, () => {
       // notify user
-      status.classList.add('active');
       status.textContent = chrome.i18n.getMessage('savedOptions');
       // remove after 500ms
-      window.setTimeout(function() {
-        closeTab();
-      }, 500);
+      window.setTimeout(() => {
+        window.close();
+      }, 1000);
     });
   }
 };
 
-var closeTab = function() {
-  chrome.tabs.getCurrent(function(tab) {
-    chrome.tabs.remove(tab.id, function() { });
-  });
-};
-
 // restore the JIRA base url
-var restoreOptions = function() {
-  document.querySelector('.save').value = chrome.i18n.getMessage('saveOptions');
+let restoreOptions = () => {
+  document.querySelector('.quiji-options-save').value = chrome.i18n.getMessage('saveOptions');
   // fallback to empty string
   chrome.storage.sync.get({
     jiraURL: '',
     defaultOption: 0
-  }, function(options) {
+  }, options => {
     // set value
-    document.getElementById('jira-url').value = options.jiraURL;
+    document.querySelector('.quiji-options-jira-url').value = options.jiraURL;
     // Map 0 to currentTab and 1 to newTab
-    var defaultOption = chrome.i18n.getMessage("currentTab");
+    let defaultOption = chrome.i18n.getMessage("currentTab");
     if (options.defaultOption === 1) {
       defaultOption = chrome.i18n.getMessage("newTab");
     }
-    document.getElementById('default-option').value = defaultOption;
+    document.querySelector('select').value = defaultOption;
   });
 };
 
 // load options on DOMContentLoad
-document.addEventListener('DOMContentLoaded', function(e) {
+document.addEventListener('DOMContentLoaded', e => {
   restoreOptions();
-  document.getElementById('options').addEventListener('submit', function(e) {
+  document.querySelector('.quiji-options').addEventListener('submit', e => {
     saveOptions(e);
   });
 });

@@ -45,5 +45,5 @@
       "js/background.js"
     ]
   },
-  "minimum_chrome_version": "42"
+  "minimum_chrome_version": "45"
 }

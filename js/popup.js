@@ -1,6 +1,6 @@
-'use strict'
+'use strict';
 
-let handleSubmit = function() {
+let handleSubmit = () => {
   event.preventDefault();
   // close after success
   window.setTimeout(window.close, 1000);
@@ -10,11 +10,11 @@ let handleSubmit = function() {
   chrome.extension.getBackgroundPage().openTicket(ticket, event.target.newTab);
 };
 
-let renderDialog = function() {
+let renderDialog = () => {
   chrome.storage.sync.get({
     // fallback
     defaultOption: 'current tab'
-  }, function(options) {
+  }, options => {
     // get form
     let form = document.querySelector('.quiji-popup-form');
     // get buttons
@@ -37,4 +37,4 @@ let renderDialog = function() {
   });
 };
 
-window.addEventListener('load', renderDialog());
+document.addEventListener('DOMContentLoaded', e => { renderDialog() });

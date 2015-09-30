@@ -1,17 +1,16 @@
 /* General styling */
 body {
-  font-family: Arial, sans-serif;
   font-size: 13px;
   background: #ededed;
   margin: 0;
 }
 
-a:visited {
-  color: #0000EE;
-}
-
 input {
   width: 100px;
+}
+
+input[type=text]:invalid {
+  border: 1px solid #ff0000;
 }
 
 input[type=button] {
@@ -23,12 +22,12 @@ input[type=text], select {
   border-radius: 4px;
   background-color: #fff;
   border: 1px solid #ccc;
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
 }
 
 input[type=text]:focus, select:focus {
   border-color: #66afe9;
-  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6);
 }
 
 input[type=button], input[type=submit] {
@@ -55,6 +54,9 @@ label {
   line-height: 25px;
 }
 
+.red {
+  color: #ff0000;
+}
 
 /* Popup window styling */
 .quiji-popup {
@@ -98,36 +100,36 @@ li {
 
 
 /* Options styling */
-.save {
+/* override Chrome styles */
+:enabled:hover:-webkit-any(input[type="checkbox"],input[type="radio"],:-webkit-any(button,input[type="button"],input[type="submit"])) {
+  background-image: none;
+  border-color: #285e8e;
+  box-shadow: none;
+  color: #fff;
+}
+
+input[type=text].quiji-options-jira-url {
+  padding-left: 6px;
+  width: 100%;
+}
+
+.quiji-options-status {
+  display: inline;
+  vertical-align: bottom;
+  padding-left: 5px;
+}
+
+.quiji-options-url-text {
+  margin-bottom: 0;
+}
+
+.quiji-options-save {
   display: inline-block;
   margin: 20px auto 0;
   /* Override Chrome styles */
   background-image: none;
   box-shadow: none;
   text-shadow: none;
-}
-
-:enabled:hover:-webkit-any(select,input[type="checkbox"],input[type="radio"],:-webkit-any(button,input[type="button"],input[type="submit"])) {
-  background-image: none;
-  border-color: initial;
-  box-shadow: none;
-  color: #fff;
-}
-
-.jira-url {
-  width: 100%;
-}
-
-.status {
-  display: inline-block;
-}
-
-.active {
-  padding-left: 5px;
-}
-
-.red {
-  color: #ff0000;
 }
 
 .quiji-url {
@@ -140,6 +142,26 @@ li {
 }
 
 /* Donation styling */
-.quiji-donation {
-  margin-bottom: 50px;
+.quiji-donation-chain {
+  white-space: nowrap;
+}
+
+.quiji-donation-options {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+.quiji-donation-paypal {
+  margin-right: 20px;
+}
+
+.quiji-donation-bitcoin {
+  margin-left: 20px;
+}
+
+.quiji-donation-bitcoin-logo {
+  display: block;
+  margin: 0 auto;
 }

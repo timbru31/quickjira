@@ -32,7 +32,7 @@ Please see [LICENSE.md](LICENSE.md) for more information.
 * Updated to Chrome's new options dialog
 * CSS and JS (ES6) updates
 * use newer Chrome APIs like runtime.openOptionsPage()
-* Minimum Chrome version is now 42
+* Minimum Chrome version is now 45
 
 **0.5.1**
 * Added support for the QuickSearch URL of JIRA, please refer to the options page for more information. Thanks [@jantimon](https://twitter.com/jantimon) for the hint.

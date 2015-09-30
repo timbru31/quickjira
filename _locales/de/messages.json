@@ -57,8 +57,8 @@
   },
   "baseURLDescription": {
     "message":
-      "Bitte gib hier deine JIRA URL zur QuickSearch ein. Beachte, dass die URL mit <strong>=</strong> enden muss.<br>
-      Zum Beispiel <em>https://jira.atlassian.com/secure/QuickSearch.jspa?searchString=</em><br><br>
+      "Bitte gib hier deine JIRA URL zur QuickSearch ein. Beachte, dass die URL mit <strong>=</strong> (Gleichheitszeichen) enden muss.<br>
+      Zum Beispiel <em class='quiji-url'>https://jira.atlassian.com/secure/QuickSearch.jspa?searchString=</em><br>
       Mehr Information zur JIRA QuickSearch findest Du <a target='_blank' href='https://confluence.atlassian.com/display/JIRA/Using+Quick+Search#UsingQuickSearch-Smartquerying'>hier</a>.",
     "description": "Description text of the base URL"
   },
@@ -68,7 +68,7 @@
   },
   "defaultActionDescription": {
     "message":
-      "Wähle den Standard, was geschen soll, wenn du das Ticket per Enter öffnest.<br>
+      "Wähle den Standard, was geschehen soll, wenn du das Ticket mit der Enter Taste öffnest.<br>
       Öffne das Ticket entweder im aktuellen Tab oder in einem neuen Tab.",
     "description": "Description text for the default action"
   },
@@ -84,48 +84,6 @@
     "message": "Bitte gib eine gültige URL an!",
     "description": "Error message on invalid URL"
   },
-  "welcomeTitle": {
-    "message": "Willkommen zu Quick JIRA (quiji)",
-    "description": "Title in tab"
-  },
-  "considerDonating": {
-    "message": "Bitte denke über eine <a href='donation.html'>Spende</a> nach! :)",
-    "description": "Donation reminder"
-  },
-  "thanksForInstalling": {
-    "message": "Danke für die Installation, ich hoffe es gefällt dir.",
-    "description": "Greeting"
-  },
-  "features": {
-    "message": "Features",
-    "description": "Heading for feature list"
-  },
-  "featureList": {
-    "message": "
-      <li>Öffne das Ticket im aktuellen Tab oder im neuen Tab</li>
-      <li>
-        Shortcut (Standar ist STRG + SHIFT + K)<br>
-        <ul>
-          <li>Mac Benutzer bitte CMD statt CTRL benutzen</li>
-        </ul>
-      </li>
-      <li>Omnibox Keyword 'jira'</li>
-      <li>Ändere die Standardaktion</li>
-      <li>Rechtsklick (Kontextmenü) Support</li>
-    ",
-    "description": "current feature list"
-  },
-  "contactMe": {
-    "message": "Zögere nicht, mich zu kontaktieren, falls du einen Fehler gefunden hast oder ein Feature fehlt! :)",
-    "description": "Contact information"
-  },
-  "configureInfo": {
-    "message": "
-      Bitte konfiguriere die Erweiterung nach deinen Bedürfnissen.<br>
-      Du solltest hierfür die <a href='options.html'>Optionen</a> besuchen!
-    ",
-    "description": "Text to link to the options page"
-  },
   "changelogTitle": {
     "message": "Quick JIRA (quiji) wurde aktualisiert",
     "description": "Title in tab"
@@ -136,7 +94,15 @@
   },
   "changelogBox": {
     "message":
-      "<h3>v0.5.1<span class='red current-release'>&larr; Aktuelle Version</span></h3>
+      "<h3>v0.6<span class='quiji-current-release red'>&larr; Aktuelle Version</span></h3>
+      <ul>
+        <li>Chrome's neuer Optionsdialog wird ab sofort verwendet</li>
+        <li>CSS und JS (ES6) Updates</li>
+        <li>Neuere Chrome APIs wie runtime.openOptionsPage() werden genutzt</li>
+        <li>Minimale Chrome version beträgt nun 45</li>
+      </ul>
+      <hr>
+      <h3>v0.5.1</h3>
       <ul>
         <li>Support für die QuickSearch URL von JIRA hinzugefügt, mehr Informationen auf der Optionsseite. Danke dafür an <a href='https://twitter.com/jantimon' target='_blank'>@jantimon</a>.</li>
       </ul>
@@ -190,9 +156,5 @@
   "donationChain": {
     "message": "Spendenkette &mdash; Du spendest etwas &rarr; Ich kann mir Kaffee kaufen &rarr; schnellere Updates &amp; mehr Features &rarr; du profitierst!",
     "description": "Donation workflow text"
-  },
-  "bitcoin": {
-    "message": "Addresse:",
-    "description": "Bitcoin address"
   }
 }
