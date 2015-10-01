@@ -95,15 +95,6 @@ li {
   margin: 14px 17px; /* Chrome default */
 }
 
-.info {
-  color: #ff0000;
-  font-weight: bold;
-  padding-top: 5px;
-  margin-top: 20px;
-  vertical-align: -webkit-baseline-middle;
-}
-
-
 /* Options styling */
 /* override Chrome styles */
 :enabled:hover:-webkit-any(input[type="checkbox"],input[type="radio"],:-webkit-any(button,input[type="button"],input[type="submit"])) {
@@ -120,6 +111,7 @@ input[type=text].quiji-options-jira-url {
 
 .quiji-options-status {
   display: inline;
+  font-weight: bold;
   vertical-align: bottom;
   padding-left: 5px;
 }
