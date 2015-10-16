@@ -1,7 +1,7 @@
 /* General styling */
 body {
-  font-size: 13px;
   background: #ededed;
+  font-size: 13px;
   margin: 0;
 }
 
@@ -20,8 +20,8 @@ input[type=button] {
 }
 
 input[type=text], select {
-  border-radius: 4px;
   background-color: #fff;
+  border-radius: 4px;
   border: 1px solid #ccc;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
 }
@@ -32,17 +32,17 @@ input[type=text]:focus, select:focus {
 }
 
 input[type=button], input[type=submit] {
-  color: #fff;
   background-color: #20315e;
   border-color: #357ebd;
-  text-align: center;
-  vertical-align: middle;
+  border-radius: 4px;
   border: 1px solid transparent;
-  padding: 5px 11px;
+  color: #fff;
+  cursor: pointer;
   font-size: 12px;
   line-height: 1.2;
-  border-radius: 4px;
-  cursor: pointer;
+  padding: 5px 11px;
+  text-align: center;
+  vertical-align: middle;
 }
 
 input[type=button]:hover, input[type=button]:focus,
@@ -61,9 +61,9 @@ label {
 
 /* Popup window styling */
 .quiji-popup {
-  width: 120px;
   margin: 8px;
   text-align: center;
+  width: 120px;
 }
 
 .quiji-buttons input {
@@ -76,8 +76,8 @@ label {
 
 /* Page stlying */
 ul {
-  margin-top: 0;
   display: inline-block;
+  margin-top: 0;
 }
 
 li {
@@ -112,20 +112,20 @@ input[type=text].quiji-options-jira-url {
 .quiji-options-status {
   display: inline;
   font-weight: bold;
-  vertical-align: bottom;
   padding-left: 5px;
+  vertical-align: bottom;
 }
 
 .quiji-options-url-text {
   margin-bottom: 0;
 }
 
+/* Override Chrome styles */
 .quiji-options-save {
-  display: inline-block;
-  margin: 20px auto 0;
-  /* Override Chrome styles */
   background-image: none;
   box-shadow: none;
+  display: inline-block;
+  margin: 20px auto 0;
   text-shadow: none;
 }
 
@@ -144,8 +144,8 @@ input[type=text].quiji-options-jira-url {
 }
 
 .quiji-donation-options {
-  display: flex;
   align-items: center;
+  display: flex;
   justify-content: center;
   padding: 20px 0;
 }

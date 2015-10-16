@@ -1,4 +1,5 @@
 # Quick JIRA (quiji)
+[![Code Climate](https://codeclimate.com/github/timbru31/quickjira/badges/gpa.svg)](https://codeclimate.com/github/timbru31/quickjira)
 
 ## Info
 Ever wanted to open quickly a JIRA issue in your browser?

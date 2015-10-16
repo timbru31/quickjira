@@ -23,7 +23,7 @@ var openTicket = (ticket, newTab) => {
       } else {
         // update current tab
         chrome.tabs.update(tab.id, {
-            url: newURL
+          url: newURL
         });
       }
     });
@@ -79,8 +79,8 @@ chrome.omnibox.onInputEntered.addListener(text => {
 // Listen to install
 chrome.runtime.onInstalled.addListener(details => {
   switch(details.reason) {
-    case 'install':
-      chrome.runtime.openOptionsPage();
-      break;
+  case 'install':
+    chrome.runtime.openOptionsPage();
+    break;
   }
 });

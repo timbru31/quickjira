@@ -43,16 +43,16 @@ let restoreOptions = () => {
     // set value
     document.querySelector('.quiji-options-jira-url').value = options.jiraURL;
     // Map 0 to currentTab and 1 to newTab
-    let defaultOption = chrome.i18n.getMessage("currentTab");
+    let defaultOption = chrome.i18n.getMessage('currentTab');
     if (options.defaultOption === 1) {
-      defaultOption = chrome.i18n.getMessage("newTab");
+      defaultOption = chrome.i18n.getMessage('newTab');
     }
     document.querySelector('select').value = defaultOption;
   });
 };
 
 // load options on DOMContentLoad
-document.addEventListener('DOMContentLoaded', e => {
+document.addEventListener('DOMContentLoaded', () => {
   restoreOptions();
   document.querySelector('.quiji-options').addEventListener('submit', e => {
     saveOptions(e);

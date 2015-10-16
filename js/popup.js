@@ -29,7 +29,7 @@ let renderDialog = () => {
     currentButton.addEventListener('click', handleSubmit);
 
     // depending on the option attach newTab true or false to submit handler
-    form.newTab = options.defaultOption === 0 ? false : true
+    form.newTab = options.defaultOption === 0 ? false : true;
 
     // localization
     newButton.value = chrome.i18n.getMessage('newTab');
@@ -37,4 +37,4 @@ let renderDialog = () => {
   });
 };
 
-document.addEventListener('DOMContentLoaded', e => { renderDialog() });
+document.addEventListener('DOMContentLoaded', () => { renderDialog(); });
