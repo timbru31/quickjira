@@ -94,7 +94,12 @@
   },
   "changelogBox": {
     "message":
-      "<h3>v0.6<span class='quiji-current-release red'>&larr; Aktuelle Version</span></h3>
+      "<h3>v0.6.1<span class='quiji-current-release red'>&larr; Aktuelle Version</span></h3>
+      <ul>
+        <li>Veraltete API Methode entfernt</li>
+      </ul>
+      <hr>
+      <h3>v0.6</h3>
       <ul>
         <li>Chrome's neuer Optionsdialog wird ab sofort verwendet</li>
         <li>CSS und JS (ES6) Updates</li>

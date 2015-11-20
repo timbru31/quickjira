@@ -16,13 +16,13 @@ var openTicket = (ticket, newTab) => {
       // make URL
       newURL = jiraURL + ticket;
     }
-    chrome.tabs.getSelected(null, tab => {
+    chrome.tabs.query({active: true, currentWindow: true}, tabs => {
       if (newTab) {
         // open in new tab
         chrome.tabs.create({ url: newURL });
       } else {
         // update current tab
-        chrome.tabs.update(tab.id, {
+        chrome.tabs.update(tabs[0].id, {
           url: newURL
         });
       }

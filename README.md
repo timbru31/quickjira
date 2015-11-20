@@ -29,6 +29,9 @@ Please see [LICENSE.md](LICENSE.md) for more information.
 
 ## Changelog
 
+**0.6.1**
+* Removed deprecated API call
+
 **0.6**
 * Updated to Chrome's new options dialog
 * CSS and JS (ES6) updates

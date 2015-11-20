@@ -37,4 +37,7 @@ let renderDialog = () => {
   });
 };
 
-document.addEventListener('DOMContentLoaded', () => { renderDialog(); });
+document.addEventListener('DOMContentLoaded', () => {
+  renderDialog();
+});
+
