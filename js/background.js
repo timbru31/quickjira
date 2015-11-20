@@ -38,21 +38,16 @@ let handleSelectionNew = selection => {
   openTicket(selection.selectionText, true);
 };
 
-
-// right click (context menus)
-const contexts = ['selection'];
-let context = contexts[0];
-
 let parentId = chrome.contextMenus.create({
   'title': 'Quick JIRA',
-  'contexts': [context]
+  'contexts': ['selection']
 });
 
 let currentTabString = chrome.i18n.getMessage('openInCurrentTab');
 chrome.contextMenus.create({
   'title': currentTabString,
   'parentId': parentId,
-  'contexts': [context],
+  'contexts': ['selection'],
   'onclick': handleSelectionCurrent
 });
 
@@ -60,7 +55,7 @@ let newTabString = chrome.i18n.getMessage('openInNewTab');
 chrome.contextMenus.create({
   'title': newTabString,
   'parentId': parentId,
-  'contexts': [context],
+  'contexts': ['selection'],
   'onclick': handleSelectionNew
 });
 
