@@ -21,8 +21,8 @@ input[type=button] {
 
 input[type=text], select {
   background-color: #fff;
-  border-radius: 4px;
   border: 1px solid #ccc;
+  border-radius: 4px;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
 }
 
@@ -33,9 +33,9 @@ input[type=text]:focus, select:focus {
 
 input[type=button], input[type=submit] {
   background-color: #20315e;
+  border: 1px solid transparent;
   border-color: #357ebd;
   border-radius: 4px;
-  border: 1px solid transparent;
   color: #fff;
   cursor: pointer;
   font-size: 12px;
