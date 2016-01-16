@@ -13,6 +13,7 @@ Just configure the "base url" and you are ready to go!
 The settings are synced via your Google account across other browsers.
 
 [![Quick JIRA @Chrome Web Store](https://developer.chrome.com/webstore/images/ChromeWebStore_Badge_v2_206x58.png "QuickJIRA @Chrome Web Store")](https://chrome.google.com/webstore/detail/quick-jira/acdnmaeifljongleeegkkfnfcopblokj)
+<img alt="Quick JIRA @Opera add-ons" src="https://dev.opera.com/extensions/branding-guidelines/addons_206x58_en@2x.png" height="58" width="206">(soon)
 
 ## Features
 * open issue in current or new tab
