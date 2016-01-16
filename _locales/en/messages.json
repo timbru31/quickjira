@@ -101,6 +101,7 @@
       "<h3>v0.6.1<span class='quiji-current-release red'>&larr; current release</span></h3>
       <ul>
         <li>Removed deprecated API call</li>
+        <li>Added shortcuts to open the selected text as a ticket in the current (Alt + K) or a new tab (Alt + Shift + K)</li>
       </ul>
       <hr>
       <h3>v0.6</h3>

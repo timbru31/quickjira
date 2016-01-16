@@ -2,21 +2,24 @@
 [![Code Climate](https://codeclimate.com/github/timbru31/quickjira/badges/gpa.svg)](https://codeclimate.com/github/timbru31/quickjira)
 
 ## Info
-Ever wanted to open quickly a JIRA issue in your browser?
+Ever wanted to open a JIRA issue really fast in your browser?
 Tired of typing the whole address over and over again?
-And even more tired of the awesome omnisearch but the need to delte the old ticket id?
+And even more tired of the awesome omnisearch but the need to delete the old ticket id?
 
 If you can answer yes, then this extension is for you!
 You can now open up a JIRA issue within a second - in your current or a new tab.
 
 Just configure the "base url" and you are ready to go!
-The settings are synced via your Google account
+The settings are synced via your Google account across other browsers.
 
 [![Quick JIRA @Chrome Web Store](https://developer.chrome.com/webstore/images/ChromeWebStore_Badge_v2_206x58.png "QuickJIRA @Chrome Web Store")](https://chrome.google.com/webstore/detail/quick-jira/acdnmaeifljongleeegkkfnfcopblokj)
 
 ## Features
 * open issue in current or new tab
-* shortcut (default is CTRL + SHIFT + K)
+* shortcuts
+  * Popup (default is CTRL/CMD + Shift + K)
+  * Open selected text in the current tab (Alt + K)
+  * Open selected text in a new tab (Alt + Shift + K)
 * omnibox keyword "jira"
 * configure default action
 * right click (context menu) integration
@@ -31,6 +34,7 @@ Please see [LICENSE.md](LICENSE.md) for more information.
 
 **0.6.1**
 * Removed deprecated API call
+* Added shortcuts to open the selected text as a ticket in the current (Alt + K) or a new tab (Alt + Shift + K)
 
 **0.6**
 * Updated to Chrome's new options dialog

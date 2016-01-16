@@ -97,6 +97,7 @@
       "<h3>v0.6.1<span class='quiji-current-release red'>&larr; Aktuelle Version</span></h3>
       <ul>
         <li>Veraltete API Methode entfernt</li>
+        <li>Neue Shortcuts, um markierten Text als Ticket im aktuellen Tab (Alt + K) or einem neuen Tab (Alt + Shift + K) zu öffnen.</li>
       </ul>
       <hr>
       <h3>v0.6</h3>

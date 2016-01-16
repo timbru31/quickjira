@@ -70,6 +70,30 @@ chrome.omnibox.onInputEntered.addListener(text => {
   });
 });
 
+let funcToInject = () => {
+  'use strict';
+  let selection = window.getSelection();
+  return (selection.rangeCount > 0) ? selection.toString() : '';
+};
+
+const jsCodeStr = `;(${funcToInject})();`;
+
+// Listen to commands
+chrome.commands.onCommand.addListener((cmd) => {
+  chrome.tabs.executeScript({
+    code: jsCodeStr,
+    allFrames: true
+  }, function(selectedTextPerFrame) {
+    if (!chrome.runtime.lastError && ((selectedTextPerFrame.length > 0) && (typeof(selectedTextPerFrame[0]) === 'string'))) {
+      let selectedText = selectedTextPerFrame[0];
+      if (cmd === 'open-ticket-in-current-tab') {
+        openTicket(selectedText, false);
+      } else if (cmd === 'open-ticket-in-new-tab') {
+        openTicket(selectedText, true);
+      }
+    }
+  });
+});
 
 // Listen to install
 chrome.runtime.onInstalled.addListener(details => {

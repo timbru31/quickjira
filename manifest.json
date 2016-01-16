@@ -17,7 +17,8 @@
   },
   "permissions": [
     "storage",
-    "contextMenus"
+    "contextMenus",
+    "<all_urls>"
   ],
   "icons": {
     "16": "images/icon16.png",
@@ -27,6 +28,26 @@
     "128": "images/icon128.png"
   },
   "commands": {
+    "open-ticket-in-current-tab": {
+      "description": "__MSG_openInCurrentTab__",
+      "suggested_key": {
+        "default": "Alt+K",
+        "windows": "Alt+K",
+        "mac": "Alt+K",
+        "chromeos": "Alt+K",
+        "linux": "Alt+K"
+      }
+    },
+    "open-ticket-in-new-tab": {
+      "description": "__MSG_openInNewTab__",
+      "suggested_key": {
+        "default": "Alt+Shift+K",
+        "windows": "Alt+Shift+K",
+        "mac": "Alt+Shift+K",
+        "chromeos": "Alt+Shift+K",
+        "linux": "Alt+Shift+K"
+      }
+    },
     "_execute_browser_action": {
       "suggested_key": {
         "default": "Ctrl+Shift+K",
