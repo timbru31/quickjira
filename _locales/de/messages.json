@@ -56,10 +56,7 @@
     "description": "base URL you need to enter for a valid ticket URL"
   },
   "baseURLDescription": {
-    "message":
-      "Bitte gib hier deine JIRA URL zur QuickSearch ein. Beachte, dass die URL mit <strong>=</strong> (Gleichheitszeichen) enden muss.<br>
-      Zum Beispiel <em class='quiji-url'>https://jira.atlassian.com/secure/QuickSearch.jspa?searchString=</em><br>
-      Mehr Information zur JIRA QuickSearch findest Du <a target='_blank' href='https://confluence.atlassian.com/display/JIRA/Using+Quick+Search#UsingQuickSearch-Smartquerying'>hier</a>.",
+    "message": "Bitte gib hier deine JIRA URL zur QuickSearch ein. Beachte, dass die URL mit <strong>=</strong> (Gleichheitszeichen) enden muss.<br>Zum Beispiel <em class='quiji-url'>https://jira.atlassian.com/secure/QuickSearch.jspa?searchString=</em><br>Mehr Information zur JIRA QuickSearch findest Du <a target='_blank' href='https://confluence.atlassian.com/display/JIRA/Using+Quick+Search#UsingQuickSearch-Smartquerying'>hier</a>.",
     "description": "Description text of the base URL"
   },
   "defaultAction": {
@@ -67,9 +64,7 @@
     "description": "Default action (new tab or current tab) for opening a ticket"
   },
   "defaultActionDescription": {
-    "message":
-      "Wähle den Standard, was geschehen soll, wenn du das Ticket mit der Enter Taste öffnest.<br>
-      Öffne das Ticket entweder im aktuellen Tab oder in einem neuen Tab.",
+    "message": "Wähle den Standard, was geschehen soll, wenn du das Ticket mit der Enter Taste öffnest.<br>Öffne das Ticket entweder im aktuellen Tab oder in einem neuen Tab.",
     "description": "Description text for the default action"
   },
   "saveOptions": {
@@ -91,65 +86,6 @@
   "changelogHeader": {
     "message": "Änderungen von Quick JIRA (quiji)",
     "description": "Header of changelog"
-  },
-  "changelogBox": {
-    "message":
-      "<h3>v0.6.1<span class='quiji-current-release red'>&larr; Aktuelle Version</span></h3>
-      <ul>
-        <li>Veraltete API Methode entfernt</li>
-        <li>Neue Shortcuts, um markierten Text als Ticket im aktuellen Tab (Alt + K) or einem neuen Tab (Alt + Shift + K) zu öffnen.</li>
-      </ul>
-      <hr>
-      <h3>v0.6</h3>
-      <ul>
-        <li>Chrome's neuer Optionsdialog wird ab sofort verwendet</li>
-        <li>CSS und JS (ES6) Updates</li>
-        <li>Neuere Chrome APIs wie runtime.openOptionsPage() werden genutzt</li>
-        <li>Minimale Chrome version beträgt nun 45</li>
-      </ul>
-      <hr>
-      <h3>v0.5.1</h3>
-      <ul>
-        <li>Support für die QuickSearch URL von JIRA hinzugefügt, mehr Informationen auf der Optionsseite. Danke dafür an <a href='https://twitter.com/jantimon' target='_blank'>@jantimon</a>.</li>
-      </ul>
-      <hr>
-      <h3>v0.5</h3>
-      <ul>
-        <li>Shortcut gefixt (leider geändert zu CTRL + SHIFT + K)</li>
-        <li>wenn Probleme auftreten, bitte Quick JIRA neu installieren</li>
-        <li>Übersetzungen aktualisiert</li>
-      </ul>
-      <hr>
-      <h3>v0.4</h3>
-      <ul>
-        <li>Spendeninfo hinzugefügt</li>
-        <li>Rechtsklick Menü (Kontextmenü) hinzugefügt</li>
-      </ul>
-      <hr>
-      <h3>v0.3.1</h3>
-      <ul>
-        <li>Links zu Changelog und Optionen im Footer hinzugefügt</li>
-        <li>neue Buttons, Eingabefelder und ein generell verbessertes Aussehen!</li>
-      </ul>
-      <hr>
-      <h3>v0.3</h3>
-      <ul>
-        <li>Chrome API wird zum Tab schließen genutzt</li>
-        <li>Willkommen Seite und Changelog hinzugefügt</li>
-        <li>Footer hinzugefügt</li>
-      </ul>
-      <hr>
-      <h3>v0.2</h3>
-      <ul>
-        <li>URL Validierung hinzugefügt</li>
-        <li>Omnibox Keyword 'jira' hinzugefügt</li>
-      </ul>
-      <hr>
-      <h3>v0.1</h3>
-      <ul>
-        <li>erste Version veröffentlicht</li>
-      </ul>",
-    "description": "current changelog. Please do not alter"
   },
   "donationTitle": {
     "message": "Quick JIRA (quiji) Spende",
