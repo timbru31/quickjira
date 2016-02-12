@@ -2,6 +2,7 @@
 
 const urlPattern = /^https?:\/\/(?:www\.|(?!www))[^\s\.]+\.[^\s]{2,}|www\.[^\s]+\.[^\s]{2,}$/;
 
+
 // saves options (synced)
 let saveOptions = event => {
   // get base URL

@@ -1,14 +1,14 @@
 {
   "name": "Quick JIRA",
   "short_name": "quiji",
-  "version": "0.6.1",
+  "version": "0.7.0",
   "manifest_version": 2,
   "author": "Tim 'xGhOsTkiLLeRx' Brust",
   "description": "__MSG_appDesc__",
   "browser_action": {
     "default_icon": "images/icon.png",
-    "default_title": "__MSG_defaultTitle__",
-    "default_popup": "html/popup.html"
+    "default_popup": "html/popup.html",
+    "default_title": "__MSG_defaultTitle__"
   },
   "default_locale": "en",
   "options_ui": {
@@ -16,9 +16,9 @@
     "page": "html/options.html"
   },
   "permissions": [
-    "storage",
+    "activeTab",
     "contextMenus",
-    "<all_urls>"
+    "storage"
   ],
   "icons": {
     "16": "images/icon16.png",

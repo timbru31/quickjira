@@ -33,6 +33,9 @@ Please see [LICENSE.md](LICENSE.md) for more information.
 
 ## Changelog
 
+**0.7.0**
+* Fixed permission for selected text shortcut
+
 **0.6.1**
 * Removed deprecated API call
 * Added shortcuts to open the selected text as a ticket in the current (Alt + K) or a new tab (Alt + Shift + K)
