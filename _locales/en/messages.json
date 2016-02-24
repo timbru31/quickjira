@@ -1,6 +1,6 @@
 {
   "version": {
-    "message": "Quick JIRA v0.7.0",
+    "message": "Quick JIRA v0.8.0",
     "description": "Please do not alter this value"
   },
   "options": {
@@ -38,6 +38,10 @@
   "newTab": {
     "message": "new tab",
     "description": "Button for opening in a new tab"
+  },
+  "lastTicket": {
+    "message": "last ticket",
+    "description": "Button for opening the last ticket again"
   },
   "openInNewTab": {
     "message": "Open in a new tab",

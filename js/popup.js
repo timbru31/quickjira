@@ -2,26 +2,43 @@
 
 let handleSubmit = () => {
   event.preventDefault();
-  // close after success
-  window.setTimeout(window.close, 1000);
   // get ticket
   let ticket = encodeURIComponent(document.querySelector('.quiji-ticket-id').value);
   // call the background method
-  chrome.extension.getBackgroundPage().openTicket(ticket, event.target.newTab);
+  if (ticket) {
+    // close after success
+    window.setTimeout(window.close, 1000);
+    chrome.extension.getBackgroundPage().openTicket(ticket, event.target.newTab);
+  }
+};
+
+let handleLastTicket = (event, defaultOption, lastTicket) => {
+  event.preventDefault();
+  // close after success
+  window.setTimeout(window.close, 1000);
+  chrome.extension.getBackgroundPage().openTicket(lastTicket, defaultOption);
 };
 
 let renderDialog = () => {
   chrome.storage.sync.get({
     // fallback
-    defaultOption: 'current tab'
+    defaultOption: 0,
+    lastTicket: ''
   }, options => {
     // get form
-    let form = document.querySelector('.quiji-popup-form');
+    const form = document.querySelector('.quiji-popup-form');
     // get buttons
-    let newButton = document.querySelector('.quiji-new-tab');
+    const newButton = document.querySelector('.quiji-new-tab');
     newButton.newTab = true;
-    let currentButton = document.querySelector('.quiji-current-tab');
+    const currentButton = document.querySelector('.quiji-current-tab');
     currentButton.newTab = false;
+
+    const lastTicketButton = document.querySelector('.quiji-last-ticket');
+    if (!options.lastTicket) {
+      lastTicketButton.disabled = true;
+    } else {
+      lastTicketButton.addEventListener('click', e => handleLastTicket(e, options.defaultOption, options.lastTicket));
+    }
 
     // attach click and submit listener
     form.addEventListener('submit', handleSubmit);
@@ -34,6 +51,7 @@ let renderDialog = () => {
     // localization
     newButton.value = chrome.i18n.getMessage('newTab');
     currentButton.value = chrome.i18n.getMessage('currentTab');
+    lastTicketButton.value = chrome.i18n.getMessage('lastTicket');
   });
 };
 

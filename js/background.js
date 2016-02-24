@@ -2,6 +2,10 @@
 
 // opens the given ticket in current or new tab
 var openTicket = (ticket, newTab) => {
+  chrome.storage.sync.set({
+    lastTicket: ticket
+  });
+
   chrome.storage.sync.get({
     jiraURL: ''
   }, options => {
@@ -16,6 +20,7 @@ var openTicket = (ticket, newTab) => {
       // make URL
       newURL = jiraURL + ticket;
     }
+
     chrome.tabs.query({active: true, currentWindow: true}, tabs => {
       if (newTab) {
         // open in new tab
@@ -59,14 +64,13 @@ chrome.contextMenus.create({
   'onclick': handleSelectionNew
 });
 
-
 // listen to omnibox jira
 chrome.omnibox.onInputEntered.addListener(text => {
   chrome.storage.sync.get({
     // fallback
-    defaultOption: 'current tab'
+    defaultOption: 0
   }, options => {
-    openTicket(text, options.defaultOption !== 'current tab');
+    openTicket(text, options.defaultOption !== 0);
   });
 });
 

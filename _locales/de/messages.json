@@ -35,6 +35,10 @@
     "message": "neuer Tab",
     "description": "Button for opening in a new tab"
   },
+  "lastTicket": {
+    "message": "letztes Ticket",
+    "description": "Button for opening the last ticket again"
+  },
   "openInNewTab": {
     "message": "In neuem Tab öffnen",
     "description": "Message display on right click"

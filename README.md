@@ -33,6 +33,11 @@ Please see [LICENSE.md](LICENSE.md) for more information.
 
 ## Changelog
 
+**0.8.0**
+* Add button to open the re-open the last ticket (synced via storage)
+* Don't close or submit the popup form when no input is entered
+* Fixed omnibox not respecting default setting
+
 **0.7.0**
 * Fixed permission for selected text shortcut
 
