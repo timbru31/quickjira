@@ -19,11 +19,7 @@ input[type=button] {
   width: auto;
 }
 
-input[type=button]:disabled {
-  background-color: grey;
-  border-color: grey;
-}
-
+input[type=button]:disabled,
 input[type=button]:disabled:hover,
 input[type=button]:disabled:focus {
   background-color: grey;
