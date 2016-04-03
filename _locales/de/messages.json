@@ -100,7 +100,7 @@
     "description": "Donation info header"
   },
   "donationChain": {
-    "message": "Spendenkette &mdash; Du spendest etwas &rarr; Ich kann mir Kaffee kaufen &rarr; schnellere Updates &amp; mehr Features &rarr; du profitierst!",
+    "message": "Spendenkette &mdash; Du spendest etwas &rarr; Ich kann mir Kaffee kaufen &rarr; schnellere Updates &amp; mehr Features &rarr; du profitierst! :)",
     "description": "Donation workflow text"
   }
 }

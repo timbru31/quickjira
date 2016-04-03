@@ -104,7 +104,7 @@
     "description": "Donation info header"
   },
   "donationChain": {
-    "message": "Donation chain &mdash; You donate &rarr; I can buy some coffee &rarr; faster updates &amp; more features &rarr; you profit!",
+    "message": "Donation chain &mdash; You donate &rarr; I can buy some coffee &rarr; faster updates &amp; more features &rarr; you profit! :)",
     "description": "Donation workflow text"
   }
 }

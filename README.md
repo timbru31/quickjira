@@ -1,5 +1,8 @@
 # Quick JIRA (quiji)
 [![Code Climate](https://codeclimate.com/github/timbru31/quickjira/badges/gpa.svg)](https://codeclimate.com/github/timbru31/quickjira)
+[![Chrome Web Store](https://img.shields.io/badge/Chrome%20Web%20Store-v0.8.0-orange.svg)](https://chrome.google.com/webstore/detail/quick-jira/acdnmaeifljongleeegkkfnfcopblokj)
+[![Opera Add-ons](https://img.shields.io/badge/Opera%20Add--ons-v0.8.0-orange.svg)](https://addons.opera.com/extensions/details/quick-jira)
+[![License](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-blue.svg)](LICENSE.md)
 
 ## Info
 Ever wanted to open a JIRA issue really fast in your browser?
