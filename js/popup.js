@@ -1,25 +1,25 @@
 'use strict';
 
-let handleSubmit = () => {
+const handleSubmit = () => {
   event.preventDefault();
   // get ticket
-  let ticket = encodeURIComponent(document.querySelector('.quiji-ticket-id').value);
+  const ticket = encodeURIComponent(document.querySelector('.quiji-ticket-id').value);
   // call the background method
   if (ticket) {
     // close after success
-    window.setTimeout(window.close, 1000);
+    // window.setTimeout(window.close, 1000);
     chrome.extension.getBackgroundPage().openTicket(ticket, event.target.newTab);
   }
 };
 
-let handleLastTicket = (event, defaultOption, lastTicket) => {
+const handleLastTicket = (event, defaultOption, lastTicket) => {
   event.preventDefault();
   // close after success
   window.setTimeout(window.close, 1000);
   chrome.extension.getBackgroundPage().openTicket(lastTicket, defaultOption);
 };
 
-let renderDialog = () => {
+const renderDialog = () => {
   chrome.storage.sync.get({
     // fallback
     defaultOption: 0,

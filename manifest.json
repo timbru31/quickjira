@@ -1,7 +1,7 @@
 {
   "name": "Quick JIRA",
   "short_name": "quiji",
-  "version": "0.8.0",
+  "version": "0.8.1",
   "manifest_version": 2,
   "author": "Tim 'xGhOsTkiLLeRx' Brust",
   "description": "__MSG_appDesc__",
@@ -66,5 +66,5 @@
       "js/background.js"
     ]
   },
-  "minimum_chrome_version": "45"
+  "minimum_chrome_version": "49"
 }

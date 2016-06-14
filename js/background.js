@@ -10,7 +10,7 @@ var openTicket = (ticket, newTab) => {
     jiraURL: ''
   }, options => {
     // get saved JIRA URL
-    let jiraURL = options.jiraURL;
+    const jiraURL = options.jiraURL;
     let newURL;
     if (!jiraURL) {
       // go to options page
@@ -35,20 +35,20 @@ var openTicket = (ticket, newTab) => {
   });
 };
 
-let handleSelectionCurrent = selection => {
+const handleSelectionCurrent = selection => {
   openTicket(selection.selectionText, false);
 };
 
-let handleSelectionNew = selection => {
+const handleSelectionNew = selection => {
   openTicket(selection.selectionText, true);
 };
 
-let parentId = chrome.contextMenus.create({
+const parentId = chrome.contextMenus.create({
   'title': 'Quick JIRA',
   'contexts': ['selection']
 });
 
-let currentTabString = chrome.i18n.getMessage('openInCurrentTab');
+const currentTabString = chrome.i18n.getMessage('openInCurrentTab');
 chrome.contextMenus.create({
   'title': currentTabString,
   'parentId': parentId,
@@ -56,7 +56,7 @@ chrome.contextMenus.create({
   'onclick': handleSelectionCurrent
 });
 
-let newTabString = chrome.i18n.getMessage('openInNewTab');
+const newTabString = chrome.i18n.getMessage('openInNewTab');
 chrome.contextMenus.create({
   'title': newTabString,
   'parentId': parentId,
@@ -74,9 +74,8 @@ chrome.omnibox.onInputEntered.addListener(text => {
   });
 });
 
-let funcToInject = () => {
-  'use strict';
-  let selection = window.getSelection();
+const funcToInject = () => {
+  const selection = window.getSelection();
   return (selection.rangeCount > 0) ? selection.toString() : '';
 };
 
@@ -87,9 +86,9 @@ chrome.commands.onCommand.addListener((cmd) => {
   chrome.tabs.executeScript({
     code: jsCodeStr,
     allFrames: true
-  }, function(selectedTextPerFrame) {
+  }, selectedTextPerFrame => {
     if (!chrome.runtime.lastError && ((selectedTextPerFrame.length > 0) && (typeof(selectedTextPerFrame[0]) === 'string'))) {
-      let selectedText = selectedTextPerFrame[0];
+      const selectedText = selectedTextPerFrame[0];
       if (cmd === 'open-ticket-in-current-tab') {
         openTicket(selectedText, false);
       } else if (cmd === 'open-ticket-in-new-tab') {

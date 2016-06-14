@@ -3,11 +3,11 @@
 const urlPattern = /^https?:\/\/(?:www\.|(?!www))[^\s\.]+\.[^\s]{2,}|www\.[^\s]+\.[^\s]{2,}$/;
 
 // saves options (synced)
-let saveOptions = event => {
+const saveOptions = event => {
   // get base URL
   event.preventDefault();
-  let status = document.querySelector('.quiji-options-status');
-  let jira = document.querySelector('.quiji-options-jira-url').value;
+  const status = document.querySelector('.quiji-options-status');
+  const jira = document.querySelector('.quiji-options-jira-url').value;
   if (!urlPattern.test(jira)) {
     status.textContent = chrome.i18n.getMessage('validURL');
   } else {
@@ -33,7 +33,7 @@ let saveOptions = event => {
 };
 
 // restore the JIRA base url
-let restoreOptions = () => {
+const restoreOptions = () => {
   document.querySelector('.quiji-options-save').value = chrome.i18n.getMessage('saveOptions');
   // fallback to empty string
   chrome.storage.sync.get({
