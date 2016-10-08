@@ -58,4 +58,3 @@ const renderDialog = () => {
 document.addEventListener('DOMContentLoaded', () => {
   renderDialog();
 });
-
