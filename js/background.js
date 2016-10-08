@@ -21,7 +21,7 @@ var openTicket = (ticket, newTab) => {
       newURL = jiraURL + ticket;
     }
 
-    chrome.tabs.query({active: true, currentWindow: true}, tabs => {
+    chrome.tabs.query({ active: true, currentWindow: true }, tabs => {
       if (newTab) {
         // open in new tab
         chrome.tabs.create({ url: newURL });
@@ -87,7 +87,7 @@ chrome.commands.onCommand.addListener((cmd) => {
     code: jsCodeStr,
     allFrames: true
   }, selectedTextPerFrame => {
-    if (!chrome.runtime.lastError && ((selectedTextPerFrame.length > 0) && (typeof(selectedTextPerFrame[0]) === 'string'))) {
+    if (!chrome.runtime.lastError && ((selectedTextPerFrame.length > 0) && (typeof (selectedTextPerFrame[0]) === 'string'))) {
       const selectedText = selectedTextPerFrame[0];
       if (cmd === 'open-ticket-in-current-tab') {
         openTicket(selectedText, false);
@@ -100,9 +100,7 @@ chrome.commands.onCommand.addListener((cmd) => {
 
 // Listen to install
 chrome.runtime.onInstalled.addListener(details => {
-  switch(details.reason) {
-  case 'install':
+  if (details.reason === 'install') {
     chrome.runtime.openOptionsPage();
-    break;
   }
 });
