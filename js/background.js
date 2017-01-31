@@ -1,12 +1,14 @@
 'use strict';
 
+const storage = chrome.storage.sync || chrome.storage.local;
+
 // opens the given ticket in current or new tab
 var openTicket = (ticket, newTab) => {
-  chrome.storage.sync.set({
+  storage.set({
     lastTicket: ticket
   });
 
-  chrome.storage.sync.get({
+  storage.get({
     jiraURL: ''
   }, options => {
     // get saved JIRA URL
@@ -64,15 +66,17 @@ chrome.contextMenus.create({
   'onclick': handleSelectionNew
 });
 
-// listen to omnibox jira
-chrome.omnibox.onInputEntered.addListener(text => {
-  chrome.storage.sync.get({
-    // fallback
-    defaultOption: 0
-  }, options => {
-    openTicket(text, options.defaultOption !== 0);
+// listen to omnibox jira, if supported
+if (chrome.omnibox) {
+  chrome.omnibox.onInputEntered.addListener(text => {
+    storage.get({
+      // fallback
+      defaultOption: 0
+    }, options => {
+      openTicket(text, options.defaultOption !== 0);
+    });
   });
-});
+}
 
 const funcToInject = () => {
   const selection = window.getSelection();

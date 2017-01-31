@@ -1,6 +1,7 @@
 'use strict';
 
 const urlPattern = /^https?:\/\/(?:www\.|(?!www))[^\s\.]+\.[^\s]{2,}|www\.[^\s]+\.[^\s]{2,}$/;
+const storage = chrome.storage.sync || chrome.storage.local;
 
 // saves options (synced)
 const saveOptions = event => {
@@ -18,7 +19,7 @@ const saveOptions = event => {
     } else {
       defaultOption = 1;
     }
-    chrome.storage.sync.set({
+    storage.set({
       jiraURL: jira,
       defaultOption: defaultOption
     }, () => {
@@ -36,7 +37,7 @@ const saveOptions = event => {
 const restoreOptions = () => {
   document.querySelector('.quiji-options-save').value = chrome.i18n.getMessage('saveOptions');
   // fallback to empty string
-  chrome.storage.sync.get({
+  storage.get({
     jiraURL: '',
     defaultOption: 0
   }, options => {

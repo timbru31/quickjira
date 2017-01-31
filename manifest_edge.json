@@ -14,10 +14,7 @@
         "default_title": "__MSG_defaultTitle__"
     },
     "default_locale": "en",
-    "options_ui": {
-        "chrome_style": true,
-        "page": "html/options.html"
-    },
+    "options_page": "html/options.html",
     "permissions": [
         "activeTab",
         "contextMenus",
@@ -61,13 +58,16 @@
             }
         }
     },
-    "omnibox": {
+    "addressbar": {
         "keyword": "jira"
     },
-  "background": {
-        "scripts": [
-        "js/background.js"
-        ]
+    "background": {
+        "page": "background.html",
+        "persistent": true
     },
-    "minimum_chrome_version": "49"
+    "minimum_edge_version": "33.14281.1000.0",
+    "-ms-preload": {
+        "backgroundScript": "backgroundScriptsAPIBridge.js",
+        "contentScript": "contentScriptsAPIBridge.js"
+    }
 }

@@ -1,13 +1,17 @@
 'use strict';
 
-const handleSubmit = () => {
-  event.preventDefault();
+const storage = chrome.storage.sync || chrome.storage.local;
+
+const handleSubmit = (event) => {
+  if (event) {
+    event.preventDefault();
+  }
   // get ticket
   const ticket = encodeURIComponent(document.querySelector('.quiji-ticket-id').value);
   // call the background method
   if (ticket) {
     // close after success
-    // window.setTimeout(window.close, 1000);
+    window.setTimeout(window.close, 1000);
     chrome.extension.getBackgroundPage().openTicket(ticket, event.target.newTab);
   }
 };
@@ -20,7 +24,7 @@ const handleLastTicket = (event, defaultOption, lastTicket) => {
 };
 
 const renderDialog = () => {
-  chrome.storage.sync.get({
+  storage.get({
     // fallback
     defaultOption: 0,
     lastTicket: ''
@@ -52,6 +56,9 @@ const renderDialog = () => {
     newButton.value = chrome.i18n.getMessage('newTab');
     currentButton.value = chrome.i18n.getMessage('currentTab');
     lastTicketButton.value = chrome.i18n.getMessage('lastTicket');
+
+    // Firefox has no autofocus, set it manually
+    setTimeout(() => document.querySelector('#quiji-ticket-id').focus(), 0);
   });
 };
 
