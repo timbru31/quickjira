@@ -1,7 +1,7 @@
 'use strict';
 
 // Opera does not support browser. http://stackoverflow.com/a/37646525/1902598
-const _browser = browser || chrome;
+const _browser = this._browser || this.browser || this.chrome;
 const urlPattern = /^https?:\/\/(?:www\.|(?!www))[^\s\.]+\.[^\s]{2,}|www\.[^\s]+\.[^\s]{2,}$/;
 const storage = _browser.storage.sync || _browser.storage.local;
 
@@ -44,7 +44,7 @@ const restoreOptions = () => {
     defaultOption: 0
   }, options => {
     // set value
-    document.querySelector('.quiji-options-jira-url').value = options && options.jiraURL;
+    document.querySelector('.quiji-options-jira-url').value = options && options.jiraURL || '';
     // Map 0 to currentTab and 1 to newTab
     let defaultOption = _browser.i18n.getMessage('currentTab');
     if (options && options.defaultOption === 1) {

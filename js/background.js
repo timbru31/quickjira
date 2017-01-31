@@ -1,7 +1,7 @@
 'use strict';
 
 // Opera does not support browser. http://stackoverflow.com/a/37646525/1902598
-const _browser = browser || chrome;
+const _browser = this.browser || this.chrome;
 const storage = _browser.storage.sync || _browser.storage.local;
 
 // opens the given ticket in current or new tab

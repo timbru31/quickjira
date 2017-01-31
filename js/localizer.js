@@ -3,7 +3,6 @@
 // thanks!
 
 // Opera does not support browser. http://stackoverflow.com/a/37646525/1902598
-const _browser = browser || chrome;
 const translate = messageID => {
   return _browser.i18n.getMessage(messageID);
 };
