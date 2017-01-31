@@ -29,12 +29,6 @@ The settings are synced via your Google account across other browsers.
 * configure default action
 * right click (context menu) integration
 
-## License
-This plugin is released under the
-*Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)* license.
-
-Please see [LICENSE.md](LICENSE.md) for more information.
-
 ## Changelog
 
 See [CHANGELOG.md](CHANGELOG.md) for a complete changelog.
@@ -52,3 +46,6 @@ Please indent using two spaces only, have a newline at the EOF and use UNIX line
 
 ![BitCoin](https://dl.dropboxusercontent.com/u/26476995/bitcoin_logo.png "Donation via BitCoins")
 Address: 1NnrRgdy7CfiYN63vKHiypSi3MSctCP55C
+
+---
+Built by (c) Tim Brust and contributors. Released under the MIT license.
