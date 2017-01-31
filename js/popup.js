@@ -1,6 +1,7 @@
 'use strict';
-
-const storage = chrome.storage.sync || chrome.storage.local;
+// Opera does not support browser. http://stackoverflow.com/a/37646525/1902598
+const browser = browser || chrome;
+const storage = browser.storage.sync || browser.storage.local;
 
 const handleSubmit = (event) => {
   if (event) {
@@ -12,7 +13,7 @@ const handleSubmit = (event) => {
   if (ticket) {
     // close after success
     window.setTimeout(window.close, 1000);
-    chrome.extension.getBackgroundPage().openTicket(ticket, event.target.newTab);
+    browser.extension.getBackgroundPage().openTicket(ticket, event.target.newTab);
   }
 };
 
@@ -20,7 +21,7 @@ const handleLastTicket = (event, defaultOption, lastTicket) => {
   event.preventDefault();
   // close after success
   window.setTimeout(window.close, 1000);
-  chrome.extension.getBackgroundPage().openTicket(lastTicket, defaultOption);
+  browser.extension.getBackgroundPage().openTicket(lastTicket, defaultOption);
 };
 
 const renderDialog = () => {
@@ -55,9 +56,9 @@ const renderDialog = () => {
     form.newTab = !options || options.defaultOption === 0 ? false : true;
 
     // localization
-    newButton.value = chrome.i18n.getMessage('newTab');
-    currentButton.value = chrome.i18n.getMessage('currentTab');
-    lastTicketButton.value = chrome.i18n.getMessage('lastTicket');
+    newButton.value = browser.i18n.getMessage('newTab');
+    currentButton.value = browser.i18n.getMessage('currentTab');
+    lastTicketButton.value = browser.i18n.getMessage('lastTicket');
 
     // Firefox has no autofocus, set it manually
     setTimeout(() => document.querySelector('#quiji-ticket-id').focus(), 0);

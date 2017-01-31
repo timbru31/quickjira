@@ -71,9 +71,5 @@
     "page": "background.html",
     "persistent": true
   },
-  "minimum_edge_version": "33.14281.1000.0",
-  "-ms-preload": {
-    "backgroundScript": "backgroundScriptsAPIBridge.js",
-    "contentScript": "contentScriptsAPIBridge.js"
-  }
+  "minimum_edge_version": "33.14281.1000.0"
 }

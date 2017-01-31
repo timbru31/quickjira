@@ -1,6 +1,8 @@
 'use strict';
 
-const storage = chrome.storage.sync || chrome.storage.local;
+// Opera does not support browser. http://stackoverflow.com/a/37646525/1902598
+const browser = browser || chrome;
+const storage = browser.storage.sync || browser.storage.local;
 
 // opens the given ticket in current or new tab
 var openTicket = (ticket, newTab) => {
@@ -16,20 +18,20 @@ var openTicket = (ticket, newTab) => {
     let newURL;
     if (!jiraURL) {
       // go to options page
-      chrome.runtime.openOptionsPage();
+      browser.runtime.openOptionsPage();
       return;
     } else {
       // make URL
       newURL = jiraURL + ticket;
     }
 
-    chrome.tabs.query({ active: true, currentWindow: true }, tabs => {
+    browser.tabs.query({ active: true, currentWindow: true }, tabs => {
       if (newTab) {
         // open in new tab
-        chrome.tabs.create({ url: newURL });
+        browser.tabs.create({ url: newURL });
       } else {
         // update current tab
-        chrome.tabs.update(tabs[0].id, {
+        browser.tabs.update(tabs[0].id, {
           url: newURL
         });
       }
@@ -45,21 +47,21 @@ const handleSelectionNew = selection => {
   openTicket(selection.selectionText, true);
 };
 
-const parentId = chrome.contextMenus.create({
+const parentId = browser.contextMenus.create({
   'title': 'Quick JIRA',
   'contexts': ['selection']
 });
 
-const currentTabString = chrome.i18n.getMessage('openInCurrentTab');
-chrome.contextMenus.create({
+const currentTabString = browser.i18n.getMessage('openInCurrentTab');
+browser.contextMenus.create({
   'title': currentTabString,
   'parentId': parentId,
   'contexts': ['selection'],
   'onclick': handleSelectionCurrent
 });
 
-const newTabString = chrome.i18n.getMessage('openInNewTab');
-chrome.contextMenus.create({
+const newTabString = browser.i18n.getMessage('openInNewTab');
+browser.contextMenus.create({
   'title': newTabString,
   'parentId': parentId,
   'contexts': ['selection'],
@@ -67,8 +69,8 @@ chrome.contextMenus.create({
 });
 
 // listen to omnibox jira, if supported
-if (chrome.omnibox) {
-  chrome.omnibox.onInputEntered.addListener(text => {
+if (browser.omnibox) {
+  browser.omnibox.onInputEntered.addListener(text => {
     storage.get({
       // fallback
       defaultOption: 0
@@ -86,12 +88,12 @@ const funcToInject = () => {
 const jsCodeStr = `;(${funcToInject})();`;
 
 // Listen to commands
-chrome.commands.onCommand.addListener((cmd) => {
-  chrome.tabs.executeScript({
+browser.commands.onCommand.addListener((cmd) => {
+  browser.tabs.executeScript({
     code: jsCodeStr,
     allFrames: true
   }, selectedTextPerFrame => {
-    if (!chrome.runtime.lastError && ((selectedTextPerFrame.length > 0) && (typeof (selectedTextPerFrame[0]) === 'string'))) {
+    if (!browser.runtime.lastError && ((selectedTextPerFrame.length > 0) && (typeof (selectedTextPerFrame[0]) === 'string'))) {
       const selectedText = selectedTextPerFrame[0];
       if (cmd === 'open-ticket-in-current-tab') {
         openTicket(selectedText, false);
@@ -103,8 +105,8 @@ chrome.commands.onCommand.addListener((cmd) => {
 });
 
 // Listen to install
-chrome.runtime.onInstalled.addListener(details => {
+browser.runtime.onInstalled.addListener(details => {
   if (details.reason === 'install') {
-    chrome.runtime.openOptionsPage();
+    browser.runtime.openOptionsPage();
   }
 });

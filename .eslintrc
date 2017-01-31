@@ -40,6 +40,7 @@
   },
   "extends": "eslint:recommended",
   "globals": {
-    "chrome": false
+    "chrome": false,
+    "browser": false
   }
 }

@@ -2,8 +2,10 @@
 // based on https://code.google.com/p/adblockforchrome/source/browse/trunk/functions.js
 // thanks!
 
+// Opera does not support browser. http://stackoverflow.com/a/37646525/1902598
+const browser = browser || chrome;
 const translate = messageID => {
-  return chrome.i18n.getMessage(messageID);
+  return browser.i18n.getMessage(messageID);
 };
 
 const localizePage = () => {
