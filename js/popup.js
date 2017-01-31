@@ -13,7 +13,7 @@ const handleSubmit = (event) => {
   // call the background method
   if (ticket) {
     // close after success
-    window.setTimeout(window.close, 1000);
+    window.setTimeout(() => window.close(), 1000);
     _browser.extension.getBackgroundPage().openTicket(ticket, event.target.newTab);
   }
 };
@@ -21,7 +21,7 @@ const handleSubmit = (event) => {
 const handleLastTicket = (event, defaultOption, lastTicket) => {
   event.preventDefault();
   // close after success
-  window.setTimeout(window.close, 1000);
+  window.setTimeout(() => window.close(), 1000);
   _browser.extension.getBackgroundPage().openTicket(lastTicket, defaultOption);
 };
 
