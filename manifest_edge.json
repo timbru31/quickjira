@@ -1,73 +1,73 @@
 {
-    "name": "Quick JIRA",
-    "short_name": "quiji",
-    "version": "0.8.1",
-    "manifest_version": 2,
-    "author": "Tim 'xGhOsTkiLLeRx' Brust",
-    "description": "__MSG_appDesc__",
-    "browser_action": {
-        "default_icon": {
-            "16": "images/icon16.png",
-            "32": "images/icon32.png"
-        },
-        "default_popup": "html/popup.html",
-        "default_title": "__MSG_defaultTitle__"
+  "name": "Quick JIRA",
+  "short_name": "quiji",
+  "version": "0.8.1",
+  "manifest_version": 2,
+  "author": "Tim 'xGhOsTkiLLeRx' Brust",
+  "description": "__MSG_appDesc__",
+  "browser_action": {
+    "default_icon": {
+      "16": "images/icon16.png",
+      "32": "images/icon32.png"
     },
-    "default_locale": "en",
-    "options_page": "html/options.html",
-    "permissions": [
-        "activeTab",
-        "contextMenus",
-        "storage"
-    ],
-    "icons": {
-        "16": "images/icon16.png",
-        "32": "images/icon32.png",
-        "48": "images/icon48.png",
-        "64": "images/icon64.png",
-        "128": "images/icon128.png"
+    "default_popup": "html/popup.html",
+    "default_title": "__MSG_defaultTitle__"
+  },
+  "default_locale": "en",
+  "options_page": "html/options.html",
+  "permissions": [
+    "activeTab",
+    "contextMenus",
+    "storage"
+  ],
+  "icons": {
+    "16": "images/icon16.png",
+    "32": "images/icon32.png",
+    "48": "images/icon48.png",
+    "64": "images/icon64.png",
+    "128": "images/icon128.png"
+  },
+  "commands": {
+    "open-ticket-in-current-tab": {
+      "description": "__MSG_openInCurrentTab__",
+      "suggested_key": {
+        "default": "Alt+K",
+        "windows": "Alt+K",
+        "mac": "Alt+K",
+        "chromeos": "Alt+K",
+        "linux": "Alt+K"
+      }
     },
-    "commands": {
-        "open-ticket-in-current-tab": {
-            "description": "__MSG_openInCurrentTab__",
-            "suggested_key": {
-                "default": "Alt+K",
-                "windows": "Alt+K",
-                "mac": "Alt+K",
-                "chromeos": "Alt+K",
-                "linux": "Alt+K"
-            }
-        },
-        "open-ticket-in-new-tab": {
-            "description": "__MSG_openInNewTab__",
-            "suggested_key": {
-                "default": "Alt+Shift+K",
-                "windows": "Alt+Shift+K",
-                "mac": "Alt+Shift+K",
-                "chromeos": "Alt+Shift+K",
-                "linux": "Alt+Shift+K"
-            }
-        },
-        "_execute_browser_action": {
-            "suggested_key": {
-                "default": "Ctrl+Shift+K",
-                "windows": "Ctrl+Shift+K",
-                "mac": "Command+Shift+K",
-                "chromeos": "Ctrl+Shift+K",
-                "linux": "Ctrl+Shift+K"
-            }
-        }
+    "open-ticket-in-new-tab": {
+      "description": "__MSG_openInNewTab__",
+      "suggested_key": {
+        "default": "Alt+Shift+K",
+        "windows": "Alt+Shift+K",
+        "mac": "Alt+Shift+K",
+        "chromeos": "Alt+Shift+K",
+        "linux": "Alt+Shift+K"
+      }
     },
-    "addressbar": {
-        "keyword": "jira"
-    },
-    "background": {
-        "page": "background.html",
-        "persistent": true
-    },
-    "minimum_edge_version": "33.14281.1000.0",
-    "-ms-preload": {
-        "backgroundScript": "backgroundScriptsAPIBridge.js",
-        "contentScript": "contentScriptsAPIBridge.js"
+    "_execute_browser_action": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+K",
+        "windows": "Ctrl+Shift+K",
+        "mac": "Command+Shift+K",
+        "chromeos": "Ctrl+Shift+K",
+        "linux": "Ctrl+Shift+K"
+      }
     }
+  },
+  "addressbar": {
+    "keyword": "jira"
+  },
+  "background": {
+    "page": "background.html",
+    "persistent": true
+  },
+  "minimum_edge_version": "33.14281.1000.0",
+  "-ms-preload": {
+    "backgroundScript": "backgroundScriptsAPIBridge.js",
+    "contentScript": "contentScriptsAPIBridge.js"
+  }
 }
