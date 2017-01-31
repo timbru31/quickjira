@@ -3,6 +3,7 @@
 #### v0.9.0
 * Update icons displayed in navigation bar
 * Various code refactorings to allow usage on Edge and Firefox
+* Fallback to local storage if sync is not available
 
 #### v0.8.0
 * Add button to open the re-open the last ticket (synced via storage)
