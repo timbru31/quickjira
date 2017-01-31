@@ -12,7 +12,7 @@ var openTicket = (ticket, newTab) => {
     jiraURL: ''
   }, options => {
     // get saved JIRA URL
-    const jiraURL = options.jiraURL;
+    const jiraURL = options && options.jiraURL;
     let newURL;
     if (!jiraURL) {
       // go to options page

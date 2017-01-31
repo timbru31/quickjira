@@ -190,6 +190,7 @@ input[type=text].quiji-options-jira-url {
   }
 
   input.quiji-options-jira-url[type="text"] {
+    margin-top: 6px;
     width: 80%;
   }
 }

@@ -38,10 +38,12 @@ const renderDialog = () => {
     currentButton.newTab = false;
 
     const lastTicketButton = document.querySelector('.quiji-last-ticket');
-    if (!options.lastTicket) {
-      lastTicketButton.disabled = true;
-    } else {
-      lastTicketButton.addEventListener('click', e => handleLastTicket(e, options.defaultOption, options.lastTicket));
+    if (options) {
+      if (!options.lastTicket) {
+        lastTicketButton.disabled = true;
+      } else {
+        lastTicketButton.addEventListener('click', e => handleLastTicket(e, options.defaultOption, options.lastTicket));
+      }
     }
 
     // attach click and submit listener
@@ -50,7 +52,7 @@ const renderDialog = () => {
     currentButton.addEventListener('click', handleSubmit);
 
     // depending on the option attach newTab true or false to submit handler
-    form.newTab = options.defaultOption === 0 ? false : true;
+    form.newTab = !options || options.defaultOption === 0 ? false : true;
 
     // localization
     newButton.value = chrome.i18n.getMessage('newTab');
