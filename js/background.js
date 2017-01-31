@@ -1,8 +1,8 @@
 'use strict';
 
 // Opera does not support browser. http://stackoverflow.com/a/37646525/1902598
-const browser = browser || chrome;
-const storage = browser.storage.sync || browser.storage.local;
+const _browser = browser || chrome;
+const storage = _browser.storage.sync || _browser.storage.local;
 
 // opens the given ticket in current or new tab
 var openTicket = (ticket, newTab) => {
@@ -18,20 +18,29 @@ var openTicket = (ticket, newTab) => {
     let newURL;
     if (!jiraURL) {
       // go to options page
-      browser.runtime.openOptionsPage();
+      try {
+        _browser.runtime.openOptionsPage();
+      } catch (e) {
+        // Edge issue. https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/9929926/
+        const optionsPage = _browser.runtime.getManifest()["options_page"];
+        const optionsPageUrl = _browser.runtime.getURL(optionsPage);
+        _browser.tabs.query({ active: true, currentWindow: true }, () => {
+          _browser.tabs.create({ url: optionsPageUrl });
+        });
+      }
       return;
     } else {
       // make URL
       newURL = jiraURL + ticket;
     }
 
-    browser.tabs.query({ active: true, currentWindow: true }, tabs => {
+    _browser.tabs.query({ active: true, currentWindow: true }, tabs => {
       if (newTab) {
         // open in new tab
-        browser.tabs.create({ url: newURL });
+        _browser.tabs.create({ url: newURL });
       } else {
         // update current tab
-        browser.tabs.update(tabs[0].id, {
+        _browser.tabs.update(tabs[0].id, {
           url: newURL
         });
       }
@@ -47,21 +56,21 @@ const handleSelectionNew = selection => {
   openTicket(selection.selectionText, true);
 };
 
-const parentId = browser.contextMenus.create({
+const parentId = _browser.contextMenus.create({
   'title': 'Quick JIRA',
   'contexts': ['selection']
 });
 
-const currentTabString = browser.i18n.getMessage('openInCurrentTab');
-browser.contextMenus.create({
+const currentTabString = _browser.i18n.getMessage('openInCurrentTab');
+_browser.contextMenus.create({
   'title': currentTabString,
   'parentId': parentId,
   'contexts': ['selection'],
   'onclick': handleSelectionCurrent
 });
 
-const newTabString = browser.i18n.getMessage('openInNewTab');
-browser.contextMenus.create({
+const newTabString = _browser.i18n.getMessage('openInNewTab');
+_browser.contextMenus.create({
   'title': newTabString,
   'parentId': parentId,
   'contexts': ['selection'],
@@ -69,8 +78,8 @@ browser.contextMenus.create({
 });
 
 // listen to omnibox jira, if supported
-if (browser.omnibox) {
-  browser.omnibox.onInputEntered.addListener(text => {
+if (_browser.omnibox) {
+  _browser.omnibox.onInputEntered.addListener(text => {
     storage.get({
       // fallback
       defaultOption: 0
@@ -88,12 +97,12 @@ const funcToInject = () => {
 const jsCodeStr = `;(${funcToInject})();`;
 
 // Listen to commands
-browser.commands.onCommand.addListener((cmd) => {
-  browser.tabs.executeScript({
+_browser.commands.onCommand.addListener((cmd) => {
+  _browser.tabs.executeScript({
     code: jsCodeStr,
     allFrames: true
   }, selectedTextPerFrame => {
-    if (!browser.runtime.lastError && ((selectedTextPerFrame.length > 0) && (typeof (selectedTextPerFrame[0]) === 'string'))) {
+    if (!_browser.runtime.lastError && ((selectedTextPerFrame.length > 0) && (typeof (selectedTextPerFrame[0]) === 'string'))) {
       const selectedText = selectedTextPerFrame[0];
       if (cmd === 'open-ticket-in-current-tab') {
         openTicket(selectedText, false);
@@ -105,8 +114,17 @@ browser.commands.onCommand.addListener((cmd) => {
 });
 
 // Listen to install
-browser.runtime.onInstalled.addListener(details => {
+_browser.runtime.onInstalled.addListener(details => {
   if (details.reason === 'install') {
-    browser.runtime.openOptionsPage();
+    try {
+      _browser.runtime.openOptionsPage();
+    } catch (e) {
+      // Edge issue. https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/9929926/
+      const optionsPage = _browser.runtime.getManifest()["options_page"];
+      const optionsPageUrl = _browser.runtime.getURL(optionsPage);
+      _browser.tabs.query({ active: true, currentWindow: true }, () => {
+        _browser.tabs.create({ url: optionsPageUrl });
+      });
+    }
   }
 });
