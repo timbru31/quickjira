@@ -41,6 +41,6 @@
   "extends": "eslint:recommended",
   "globals": {
     "chrome": false,
-    "browser": false
+    "_browser": false
   }
 }
