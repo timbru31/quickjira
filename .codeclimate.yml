@@ -2,6 +2,7 @@
 engines:
   eslint:
     enabled: true
+    channel: "eslint-3"
   csslint:
     enabled: true
 ratings:
