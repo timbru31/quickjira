@@ -84,7 +84,8 @@ if (_browser.omnibox) {
       // fallback
       defaultOption: 0
     }, options => {
-      openTicket(text, options.defaultOption !== 0);
+      const newTab = options && options.defaultOption !== 0 || false;
+      openTicket(text, newTab);
     });
   });
 }
