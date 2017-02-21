@@ -1,5 +1,8 @@
 # Changelog
 
+#### v0.9.1 (not yet released)
+* Fix omnibox for Firefox when no URL was configured
+
 #### v0.9.0
 * Update icons displayed in navigation bar
 * Various code refactorings to allow usage on Edge and Firefox
