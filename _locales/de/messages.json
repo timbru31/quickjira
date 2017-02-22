@@ -60,15 +60,23 @@
     "description": "base URL you need to enter for a valid ticket URL"
   },
   "baseURLDescription": {
-    "message": "Bitte gib hier deine JIRA URL zur QuickSearch ein. Beachte, dass die URL mit <strong>=</strong> (Gleichheitszeichen) enden muss.<br>Zum Beispiel <em class='quiji-url'>https://jira.atlassian.com/secure/QuickSearch.jspa?searchString=</em><br>Mehr Information zur JIRA QuickSearch findest Du <a target='_blank' href='https://confluence.atlassian.com/display/JIRA/Using+Quick+Search#UsingQuickSearch-Smartquerying'>hier</a>.",
+    "message": "Bitte gib hier deine JIRA URL zur QuickSearch ein. Beachte, dass die URL mit Gleichheitszeichen enden muss.",
     "description": "Description text of the base URL"
+  },
+  "baseURLExample": {
+    "message": "Zum Beispiel:",
+    "description": "Info text with an example JIRA URL. URL is followed after the sentence"
+  },
+  "baseURLMoreInfo": {
+    "message": " Mehr Information zur JIRA QuickSearch findest Du hier:",
+    "description": "Info text for the JIRA QuickSearch function. URL is followed after the sentence"
   },
   "defaultAction": {
     "message": "Standard Aktion",
     "description": "Default action (new tab or current tab) for opening a ticket"
   },
   "defaultActionDescription": {
-    "message": "Wähle den Standard, was geschehen soll, wenn du das Ticket mit der Enter Taste öffnest.<br>Öffne das Ticket entweder im aktuellen Tab oder in einem neuen Tab.",
+    "message": "Wähle den Standard, was geschehen soll, wenn du das Ticket mit der Enter Taste öffnest. Öffne das Ticket entweder im aktuellen Tab oder in einem neuen Tab.",
     "description": "Description text for the default action"
   },
   "saveOptions": {
@@ -100,7 +108,7 @@
     "description": "Donation info header"
   },
   "donationChain": {
-    "message": "Spendenkette &mdash; Du spendest etwas &rarr; Ich kann mir Kaffee kaufen &rarr; schnellere Updates &amp; mehr Features &rarr; du profitierst! :)",
+    "message": "Spendenkette — Du spendest etwas → Ich kann mir Kaffee kaufen → schnellere Updates & mehr Features → du profitierst! :)",
     "description": "Donation workflow text"
   }
 }

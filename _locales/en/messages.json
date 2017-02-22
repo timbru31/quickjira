@@ -24,7 +24,7 @@
     "description": "Link in footer"
   },
   "handmade": {
-    "message": "Made with <span class='red'>&#10084;</span> by timbru31",
+    "message": "Made with ❤️️ and ☕ by timbru31",
     "description": "Text in footer"
   },
   "appDesc": {
@@ -64,15 +64,23 @@
     "description": "base URL you need to enter for a valid ticket URL"
   },
   "baseURLDescription": {
-    "message": "Please enter here the JIRA URL for the QuickSearch. Please keep in mind that the URL needs to end with a <strong>=</strong> (equals sign)<br>For example <em class='quiji-url'>https://jira.atlassian.com/secure/QuickSearch.jspa?searchString=</em><br>More information regarding the JIRA QuickSearch can be found <a target='_blank' href='https://confluence.atlassian.com/display/JIRA/Using+Quick+Search#UsingQuickSearch-Smartquerying'>here</a>.",
+    "message": "Please enter here the JIRA URL for the Quick Search. Please keep in mind that the URL needs to end with an equals sign.",
     "description": "Description text of the base URL"
+  },
+  "baseURLExample": {
+    "message": "For example:",
+    "description": "Info text with an example JIRA URL. URL is followed after the sentence"
+  },
+  "baseURLMoreInfo": {
+    "message": " More information regarding the JIRA Quick Search can be found here:",
+    "description": "Info text for the JIRA QuickSearch function. URL is followed after the sentence"
   },
   "defaultAction": {
     "message": "Default action",
     "description": "Default action (new tab or current tab) for opening a ticket"
   },
   "defaultActionDescription": {
-    "message": "Choose between the default action when the form is submitted via the enter key.<br>Either open the ticket in the current or a new tab",
+    "message": "Choose between the default action when the form is submitted via the enter key. Either open the ticket in the current or a new tab.",
     "description": "Description text for the default action"
   },
   "saveOptions": {
@@ -104,7 +112,7 @@
     "description": "Donation info header"
   },
   "donationChain": {
-    "message": "Donation chain &mdash; You donate &rarr; I can buy some coffee &rarr; faster updates &amp; more features &rarr; you profit! :)",
+    "message": "Donation chain — You donate → I can buy some coffee → faster updates & more features → you profit! :)",
     "description": "Donation workflow text"
   }
 }

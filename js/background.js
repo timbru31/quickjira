@@ -1,10 +1,9 @@
 'use strict';
 
-// Opera does not support browser. http://stackoverflow.com/a/37646525/1902598
+// Chrome and Opera do not support browser. http://stackoverflow.com/a/37646525/1902598
 const _browser = this.browser || this.chrome;
 const storage = _browser.storage.sync || _browser.storage.local;
 
-// opens the given ticket in current or new tab
 var openTicket = (ticket, newTab) => {
   storage.set({
     lastTicket: ticket
@@ -13,11 +12,9 @@ var openTicket = (ticket, newTab) => {
   storage.get({
     jiraURL: ''
   }, options => {
-    // get saved JIRA URL
     const jiraURL = options && options.jiraURL;
     let newURL;
     if (!jiraURL) {
-      // go to options page
       try {
         _browser.runtime.openOptionsPage();
       } catch (e) {
@@ -30,16 +27,13 @@ var openTicket = (ticket, newTab) => {
       }
       return;
     } else {
-      // make URL
       newURL = jiraURL + ticket;
     }
 
     _browser.tabs.query({ active: true, currentWindow: true }, tabs => {
       if (newTab) {
-        // open in new tab
         _browser.tabs.create({ url: newURL });
       } else {
-        // update current tab
         _browser.tabs.update(tabs[0].id, {
           url: newURL
         });
@@ -77,7 +71,6 @@ _browser.contextMenus.create({
   'onclick': handleSelectionNew
 });
 
-// listen to omnibox jira, if supported
 if (_browser.omnibox) {
   _browser.omnibox.onInputEntered.addListener(text => {
     storage.get({
@@ -97,7 +90,6 @@ const funcToInject = () => {
 
 const jsCodeStr = `;(${funcToInject})();`;
 
-// Listen to commands
 _browser.commands.onCommand.addListener((cmd) => {
   _browser.tabs.executeScript({
     code: jsCodeStr,
@@ -114,18 +106,19 @@ _browser.commands.onCommand.addListener((cmd) => {
   });
 });
 
-// Listen to install
-_browser.runtime.onInstalled.addListener(details => {
-  if (details.reason === 'install') {
-    try {
-      _browser.runtime.openOptionsPage();
-    } catch (e) {
-      // Edge issue. https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/9929926/
-      const optionsPage = _browser.runtime.getManifest()['options_page'];
-      const optionsPageUrl = _browser.runtime.getURL(optionsPage);
-      _browser.tabs.query({ active: true, currentWindow: true }, () => {
-        _browser.tabs.create({ url: optionsPageUrl });
-      });
+if (_browser.runtime && _browser.runtime.onInstalled) {
+  _browser.runtime.onInstalled.addListener(details => {
+    if (details.reason === 'install') {
+      try {
+        _browser.runtime.openOptionsPage();
+      } catch (e) {
+        // Edge issue. https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/9929926/
+        const optionsPage = _browser.runtime.getManifest()['options_page'];
+        const optionsPageUrl = _browser.runtime.getURL(optionsPage);
+        _browser.tabs.query({ active: true, currentWindow: true }, () => {
+          _browser.tabs.create({ url: optionsPageUrl });
+        });
+      }
     }
-  }
-});
+  });
+}
