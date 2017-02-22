@@ -2,6 +2,8 @@
 
 #### v0.9.1 (not yet released)
 * Fix omnibox for Firefox when no URL was configured
+* Guard Firefox issue when runtime.onInstalled is not available
+* Use textContent over innerHTML for localization
 
 #### v0.9.0
 * Update icons displayed in navigation bar
