@@ -1,6 +1,6 @@
 # Changelog
 
-#### v0.9.1 (not yet released)
+#### v0.9.1
 * Fix omnibox for Firefox when no URL was configured
 * Guard Firefox issue when runtime.onInstalled is not available
 * Use textContent over innerHTML for localization
