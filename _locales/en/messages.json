@@ -1,6 +1,6 @@
 {
   "version": {
-    "message": "Quick JIRA v0.9.0",
+    "message": "Quick JIRA v0.10.0",
     "description": "Please do not alter this value"
   },
   "options": {
@@ -82,6 +82,14 @@
   "defaultActionDescription": {
     "message": "Choose between the default action when the form is submitted via the enter key. Either open the ticket in the current or a new tab.",
     "description": "Description text for the default action"
+  },
+  "shortcuts": {
+    "message": "Keyboard shortcuts",
+    "description": "Headline for shortcuts"
+  },
+  "shortcutsDescription": {
+    "message": "List of current shortcuts for actions",
+    "description": "Info text for current shortcuts"
   },
   "saveOptions": {
     "message": "Save options",

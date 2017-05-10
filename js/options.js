@@ -47,8 +47,46 @@ const restoreOptions = () => {
   });
 };
 
+const createDefaultShortcuts = (shortcutList) => {
+  let listItem = document.createElement('li');
+  listItem.textContent = 'Popup: Ctrl+Shift+K';
+  shortcutList.appendChild(listItem);
+  listItem = document.createElement('li');
+  listItem.textContent = 'Open in new tab: Alt+Shift+K';
+  shortcutList.appendChild(listItem);
+  listItem = document.createElement('li');
+  listItem.textContent = 'Open in current tab: Alt+K';
+  shortcutList.appendChild(listItem);
+};
+
+const loadShortcuts = () => {
+  const shortcutList = document.querySelector('.quiji-shortcuts');
+  if (!_browser.commands) {
+    createDefaultShortcuts(shortcutList);
+  } else {
+    _browser.commands.getAll(commands => {
+      commands.map(command => {
+        const listItem = document.createElement('li');
+        switch (command.name) {
+          case '_execute_browser_action':
+            listItem.textContent = `Popup: ${command.shortcut || 'Ctrl+Shift+K'}`;
+            break;
+          case 'open-ticket-in-new-tab':
+            listItem.textContent = `Open in new tab: ${command.shortcut || 'Alt+Shift+K'}`;
+            break;
+          case 'open-ticket-in-current-tab':
+            listItem.textContent = `Open in current tab: ${command.shortcut || 'Alt+K'}`;
+            break;
+        }
+        shortcutList.appendChild(listItem);
+      });
+    });
+  }
+};
+
 document.addEventListener('DOMContentLoaded', () => {
   restoreOptions();
+  loadShortcuts();
   document.querySelector('.quiji-options').addEventListener('submit', e => {
     saveOptions(e);
   });

@@ -1,5 +1,8 @@
 # Changelog
 
+#### v0.10.0 (not yet released)
+* Display currently assigned shortcuts on the options page
+
 #### v0.9.1
 * Fix omnibox for Firefox when no URL was configured
 * Guard Firefox issue when runtime.onInstalled is not available
