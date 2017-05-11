@@ -50,26 +50,28 @@ const handleSelectionNew = selection => {
   openTicket(selection.selectionText, true);
 };
 
-const parentId = _browser.contextMenus.create({
-  'title': 'Quick JIRA',
-  'contexts': ['selection']
-});
+if (_browser.contextMenus) {
+  const parentId = _browser.contextMenus.create({
+    'title': 'Quick JIRA',
+    'contexts': ['selection']
+  });
 
-const currentTabString = _browser.i18n.getMessage('openInCurrentTab');
-_browser.contextMenus.create({
-  'title': currentTabString,
-  'parentId': parentId,
-  'contexts': ['selection'],
-  'onclick': handleSelectionCurrent
-});
+  const currentTabString = _browser.i18n.getMessage('openInCurrentTab');
+  _browser.contextMenus.create({
+    'title': currentTabString,
+    'parentId': parentId,
+    'contexts': ['selection'],
+    'onclick': handleSelectionCurrent
+  });
 
-const newTabString = _browser.i18n.getMessage('openInNewTab');
-_browser.contextMenus.create({
-  'title': newTabString,
-  'parentId': parentId,
-  'contexts': ['selection'],
-  'onclick': handleSelectionNew
-});
+  const newTabString = _browser.i18n.getMessage('openInNewTab');
+  _browser.contextMenus.create({
+    'title': newTabString,
+    'parentId': parentId,
+    'contexts': ['selection'],
+    'onclick': handleSelectionNew
+  });
+}
 
 if (_browser.omnibox) {
   _browser.omnibox.onInputEntered.addListener(text => {
