@@ -1,18 +1,50 @@
 {
+  "version": {
+    "message": "Quick JIRA v0.8.0",
+    "description": "Please do not alter this value"
+  },
+  "options": {
+    "message": "Opciónes",
+    "description": "Link in footer"
+  },
+  "changelog": {
+    "message": "Registro de cambios",
+    "description": "Link in footer"
+  },
+  "support": {
+    "message": "Soporte",
+    "description": "Link in footer"
+  },
+  "feedback": {
+    "message": "Retroalimentación",
+    "description": "Link in footer"
+  },
+  "donate": {
+    "message": "¿Donar?",
+    "description": "Link in footer"
+  },
+  "handmade": {
+    "message": "Made with <span class='red'>&#10084;</span> by xGhOsTkiLLeRx",
+    "description": "Text in footer"
+  },
   "appDesc": {
     "message": "Rápidamente abre la JIRA con el billete correspondiente",
     "description": "The description of the application, displayed in the web store."
   },
   "currentTab": {
     "message": "pestaña actual",
-    "description": "Button for opening in current tab"
+    "description": "Button for opening in the current tab"
   },
   "newTab": {
-    "message": "nueva pestaña",
-    "description": "Button for opening in new tab"
+    "message": "pestaña nueva",
+    "description": "Button for opening in a new tab"
+  },
+  "lastTicket": {
+    "message": "pasado billete",
+    "description": "Button for opening the last ticket again"
   },
   "openInNewTab": {
-    "message": "Abrir en nueava pestaña",
+    "message": "Abrir en una pestaña nueava",
     "description": "Message display on right click"
   },
   "openInCurrentTab": {
@@ -22,5 +54,57 @@
   "defaultTitle": {
     "message": "Rápidamente abrir JIRA billetes",
     "description": "Message displayed on the settings page of Chrome"
+  },
+  "optionsTitle": {
+    "message": "Quick JIRA (quiji) opciónes",
+    "description": "Title in tab"
+  },
+  "baseURL": {
+    "message": "JIRA base URL",
+    "description": "base URL you need to enter for a valid ticket URL"
+  },
+  "baseURLDescription": {
+    "message": "Please enter here the JIRA URL for the QuickSearch. Please keep in mind that the URL needs to end with a <strong>=</strong> (equals sign)<br>For example <em class='quiji-url'>https://jira.atlassian.com/secure/QuickSearch.jspa?searchString=</em><br>More information regarding the JIRA QuickSearch can be found <a target='_blank' href='https://confluence.atlassian.com/display/JIRA/Using+Quick+Search#UsingQuickSearch-Smartquerying'>here</a>.",
+    "description": "Description text of the base URL"
+  },
+  "defaultAction": {
+    "message": "Acción normal",
+    "description": "Default action (new tab or current tab) for opening a ticket"
+  },
+  "defaultActionDescription": {
+    "message": "Choose between the default action when the form is submitted via the enter key.<br>Either open the ticket in the current or a new tab",
+    "description": "Description text for the default action"
+  },
+  "saveOptions": {
+    "message": "Guardar opciónes",
+    "description": "Text for button"
+  },
+  "savedOptions": {
+    "message": "Opciónes ha guardado",
+    "description": "Text displayed when button is pressed"
+  },
+  "validURL": {
+    "message": "Please specify a valid URL!",
+    "description": "Error message on invalid URL"
+  },
+  "changelogTitle": {
+    "message": "Quick JIRA (quiji) ha actualizado",
+    "description": "Title in tab"
+  },
+  "changelogHeader": {
+    "message": "Registro de cambios de Quick JIRA (quiji)",
+    "description": "Header of changelog"
+  },
+  "donationTitle": {
+    "message": "Quick JIRA (quiji) donación",
+    "description": "Text in tab"
+  },
+  "supportDevelopment": {
+    "message": "¿Quieres fomentar el desarrollo de Quick JIRA?",
+    "description": "Donation info header"
+  },
+  "donationChain": {
+    "message": "Donation chain &mdash; You donate &rarr; I can buy some coffee &rarr; faster updates &amp; more features &rarr; you profit! :)",
+    "description": "Donation workflow text"
   }
 }
