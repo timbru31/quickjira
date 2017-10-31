@@ -1,6 +1,6 @@
 # Changelog
 
-#### v0.10.0 (not yet released)
+#### v0.10.0
 * Display currently assigned shortcuts on the options page
 * Updated logo to reflect the new JIRA logo
 
