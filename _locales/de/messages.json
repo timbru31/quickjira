@@ -20,7 +20,7 @@
     "description": "Link in footer"
   },
   "handmade": {
-    "message": "Mit <span class='red'>&#10084;</span> programmiert von timbru31",
+    "message": "Entwickelt mit ❤️️ und ☕ von timbru31",
     "description": "Text in footer"
   },
   "appDesc": {
@@ -78,6 +78,14 @@
   "defaultActionDescription": {
     "message": "Wähle den Standard, was geschehen soll, wenn du das Ticket mit der Enter Taste öffnest. Öffne das Ticket entweder im aktuellen Tab oder in einem neuen Tab.",
     "description": "Description text for the default action"
+  },
+  "shortcuts": {
+    "message": "Tastaturkürzel",
+    "description": "Headline for shortcuts"
+  },
+  "shortcutsDescription": {
+    "message": "Aktuell belegete Tastaturkürzel",
+    "description": "Info text for current shortcuts"
   },
   "saveOptions": {
     "message": "Speichern",

@@ -1,8 +1,4 @@
 {
-  "version": {
-    "message": "Quick JIRA v0.8.0",
-    "description": "Please do not alter this value"
-  },
   "options": {
     "message": "Opciónes",
     "description": "Link in footer"
@@ -24,7 +20,7 @@
     "description": "Link in footer"
   },
   "handmade": {
-    "message": "Made with <span class='red'>&#10084;</span> by xGhOsTkiLLeRx",
+    "message": "Made with ❤️️ and ☕ by timbru31",
     "description": "Text in footer"
   },
   "appDesc": {
@@ -67,6 +63,14 @@
     "message": "Please enter here the JIRA URL for the QuickSearch. Please keep in mind that the URL needs to end with a <strong>=</strong> (equals sign)<br>For example <em class='quiji-url'>https://jira.atlassian.com/secure/QuickSearch.jspa?searchString=</em><br>More information regarding the JIRA QuickSearch can be found <a target='_blank' href='https://confluence.atlassian.com/display/JIRA/Using+Quick+Search#UsingQuickSearch-Smartquerying'>here</a>.",
     "description": "Description text of the base URL"
   },
+  "baseURLExample": {
+    "message": "For example:",
+    "description": "Info text with an example JIRA URL. URL is followed after the sentence"
+  },
+  "baseURLMoreInfo": {
+    "message": " More information regarding the JIRA Quick Search can be found here:",
+    "description": "Info text for the JIRA QuickSearch function. URL is followed after the sentence"
+  },
   "defaultAction": {
     "message": "Acción normal",
     "description": "Default action (new tab or current tab) for opening a ticket"
@@ -74,6 +78,14 @@
   "defaultActionDescription": {
     "message": "Choose between the default action when the form is submitted via the enter key.<br>Either open the ticket in the current or a new tab",
     "description": "Description text for the default action"
+  },
+  "shortcuts": {
+    "message": "Keyboard shortcuts",
+    "description": "Headline for shortcuts"
+  },
+  "shortcutsDescription": {
+    "message": "List of current shortcuts for actions",
+    "description": "Info text for current shortcuts"
   },
   "saveOptions": {
     "message": "Guardar opciónes",
@@ -104,7 +116,7 @@
     "description": "Donation info header"
   },
   "donationChain": {
-    "message": "Donation chain &mdash; You donate &rarr; I can buy some coffee &rarr; faster updates &amp; more features &rarr; you profit! :)",
+    "message": "Donation chain — You donate → I can buy some coffee → faster updates & more features → you profit! :)",
     "description": "Donation workflow text"
   }
 }

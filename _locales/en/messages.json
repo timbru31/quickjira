@@ -88,7 +88,7 @@
     "description": "Headline for shortcuts"
   },
   "shortcutsDescription": {
-    "message": "List of current shortcuts for actions",
+    "message": "List of currently assigned shortcuts",
     "description": "Info text for current shortcuts"
   },
   "saveOptions": {

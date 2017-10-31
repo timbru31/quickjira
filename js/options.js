@@ -52,10 +52,10 @@ const createDefaultShortcuts = (shortcutList) => {
   listItem.textContent = 'Popup: Ctrl+Shift+K';
   shortcutList.appendChild(listItem);
   listItem = document.createElement('li');
-  listItem.textContent = 'Open in new tab: Alt+Shift+K';
+  listItem.textContent = `${_browser.i18n.getMessage('openInNewTab')}: Alt+Shift+K`;
   shortcutList.appendChild(listItem);
   listItem = document.createElement('li');
-  listItem.textContent = 'Open in current tab: Alt+K';
+  listItem.textContent = `${_browser.i18n.getMessage('openInCurrentTab')}: Alt+K`;
   shortcutList.appendChild(listItem);
 };
 
@@ -72,10 +72,10 @@ const loadShortcuts = () => {
             listItem.textContent = `Popup: ${command.shortcut || 'Ctrl+Shift+K'}`;
             break;
           case 'open-ticket-in-new-tab':
-            listItem.textContent = `Open in new tab: ${command.shortcut || 'Alt+Shift+K'}`;
+            listItem.textContent = `${_browser.i18n.getMessage('openInNewTab')}: ${command.shortcut || 'Alt+Shift+K'}`;
             break;
           case 'open-ticket-in-current-tab':
-            listItem.textContent = `Open in current tab: ${command.shortcut || 'Alt+K'}`;
+            listItem.textContent = `${_browser.i18n.getMessage('openInCurrentTab')}: ${command.shortcut || 'Alt+K'}`;
             break;
         }
         shortcutList.appendChild(listItem);
