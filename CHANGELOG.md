@@ -1,6 +1,6 @@
 # Changelog
 
-#### v0.10.1 (Firefox only)
+#### v0.10.2 (Firefox only)
 * Fix issue that prevented the extension to load when commands are unsupported
 
 #### v0.10.0

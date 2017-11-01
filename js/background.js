@@ -92,7 +92,7 @@ const funcToInject = () => {
 
 const jsCodeStr = `;(${funcToInject})();`;
 
-if (!_browser.commands) {
+if (_browser.commands) {
   _browser.commands.onCommand.addListener((cmd) => {
     _browser.tabs.executeScript({
       code: jsCodeStr,
