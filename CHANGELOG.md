@@ -1,5 +1,8 @@
 # Changelog
 
+#### v0.10.1 (Firefox only)
+* Fix issue that prevented the extension to load when commands are unsupported
+
 #### v0.10.0
 * Display currently assigned shortcuts on the options page
 * Updated logo to reflect the new JIRA logo

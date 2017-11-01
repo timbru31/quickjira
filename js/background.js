@@ -92,21 +92,23 @@ const funcToInject = () => {
 
 const jsCodeStr = `;(${funcToInject})();`;
 
-_browser.commands.onCommand.addListener((cmd) => {
-  _browser.tabs.executeScript({
-    code: jsCodeStr,
-    allFrames: true
-  }, selectedTextPerFrame => {
-    if (!_browser.runtime.lastError && ((selectedTextPerFrame.length > 0) && (typeof (selectedTextPerFrame[0]) === 'string'))) {
-      const selectedText = selectedTextPerFrame[0];
-      if (cmd === 'open-ticket-in-current-tab') {
-        openTicket(selectedText, false);
-      } else if (cmd === 'open-ticket-in-new-tab') {
-        openTicket(selectedText, true);
+if (!_browser.commands) {
+  _browser.commands.onCommand.addListener((cmd) => {
+    _browser.tabs.executeScript({
+      code: jsCodeStr,
+      allFrames: true
+    }, selectedTextPerFrame => {
+      if (!_browser.runtime.lastError && ((selectedTextPerFrame.length > 0) && (typeof (selectedTextPerFrame[0]) === 'string'))) {
+        const selectedText = selectedTextPerFrame[0];
+        if (cmd === 'open-ticket-in-current-tab') {
+          openTicket(selectedText, false);
+        } else if (cmd === 'open-ticket-in-new-tab') {
+          openTicket(selectedText, true);
+        }
       }
-    }
+    });
   });
-});
+}
 
 if (_browser.runtime && _browser.runtime.onInstalled) {
   _browser.runtime.onInstalled.addListener(details => {
