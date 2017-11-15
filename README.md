@@ -22,7 +22,7 @@ The settings are synced via your Google account across other browsers.
 
 [![Quick JIRA @Chrome Web Store](https://developer.chrome.com/webstore/images/ChromeWebStore_Badge_v2_206x58.png "QuickJIRA @Chrome Web Store")](https://chrome.google.com/webstore/detail/quick-jira/acdnmaeifljongleeegkkfnfcopblokj)
 [<img alt="Quick JIRA @Opera add-ons" src="https://dev.opera.com/extensions/branding-guidelines/addons_206x58_en@2x.png" height="58" width="206">](https://addons.opera.com/extensions/details/quick-jira)
-[<img alt="Quick JIRA @Add-Ons for Firefox" src="./images/firefox_logo-wordmark-horiz_RGB.png" height="58">](https://addons.mozilla.org/firefox/addon/quickjira)
+[<img alt="Quick JIRA @Add-Ons for Firefox" src="./images/firefox-logo-horizontal-lockup.png" height="58">](https://addons.mozilla.org/firefox/addon/quickjira)
 
 
 ## Features
