@@ -6,6 +6,14 @@ body {
   font: message-box;
 }
 
+a {
+  color: #0921ea;
+}
+
+a:visited {
+  color: #0921ea;
+}
+
 input {
   width: 100px;
 }
@@ -71,8 +79,13 @@ label {
 
 /* Popup window styling */
 .quiji-popup {
+  display: flex;
+  justify-content: center;
   margin: 8px;
   text-align: center;
+}
+
+.quiji-popup-form {
   width: 120px;
 }
 
