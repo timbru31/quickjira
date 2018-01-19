@@ -17,7 +17,7 @@ var openTicket = (ticket, newTab) => {
         _browser.runtime.openOptionsPage();
       } catch (e) {
         // Edge issue. https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/9929926/
-        const optionsPage = _browser.runtime.getManifest()['options_page'];
+        const optionsPage = _browser.runtime.getManifest().options_page;
         const optionsPageUrl = _browser.runtime.getURL(optionsPage);
         _browser.tabs.query({ active: true, currentWindow: true }, () => {
           _browser.tabs.create({ url: optionsPageUrl });
@@ -107,7 +107,7 @@ if (_browser.runtime && _browser.runtime.onInstalled) {
         _browser.runtime.openOptionsPage();
       } catch (e) {
         // Edge issue. https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/9929926/
-        const optionsPage = _browser.runtime.getManifest()['options_page'];
+        const optionsPage = _browser.runtime.getManifest().options_page;
         const optionsPageUrl = _browser.runtime.getURL(optionsPage);
         _browser.tabs.query({ active: true, currentWindow: true }, () => {
           _browser.tabs.create({ url: optionsPageUrl });
