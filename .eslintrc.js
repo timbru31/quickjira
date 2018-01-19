@@ -1,4 +1,5 @@
-{
+module.exports = {
+  "extends": "eslint:recommended",
   "rules": {
     "indent": [
       2,
@@ -41,7 +42,6 @@
     "browser": true,
     "node": true
   },
-  "extends": "eslint:recommended",
   "globals": {
     "chrome": false,
     "_browser": false
