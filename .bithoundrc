@@ -1,0 +1,7 @@
+{
+  "critics": {
+    "lint": {
+      "engine": "eslint"
+    }
+  }
+}
