@@ -1,5 +1,3 @@
-'use strict';
-
 // Chrome and Opera do not support browser. http://stackoverflow.com/a/37646525/1902598
 const _browser = this._browser || this.browser || this.chrome;
 const storage = _browser.storage.sync || _browser.storage.local;
@@ -34,14 +32,7 @@ const renderDialog = () => {
     const currentButton = document.querySelector('.quiji-current-tab');
     currentButton.newTab = false;
 
-    const lastTicketButton = document.querySelector('.quiji-last-ticket');
-    if (options) {
-      if (!options.lastTicket) {
-        lastTicketButton.disabled = true;
-      } else {
-        lastTicketButton.addEventListener('click', e => handleLastTicket(e, options.defaultOption, options.lastTicket));
-      }
-    }
+    const lastTicketButton = createLastTicketButton(options);
 
     form.addEventListener('submit', handleSubmit);
     newButton.addEventListener('click', handleSubmit);
@@ -61,3 +52,16 @@ const renderDialog = () => {
 document.addEventListener('DOMContentLoaded', () => {
   renderDialog();
 });
+
+function createLastTicketButton(options) {
+  const lastTicketButton = document.querySelector('.quiji-last-ticket');
+  if (options) {
+    if (!options.lastTicket) {
+      lastTicketButton.disabled = true;
+    }
+    else {
+      lastTicketButton.addEventListener('click', e => handleLastTicket(e, options.defaultOption, options.lastTicket));
+    }
+  }
+  return lastTicketButton;
+}

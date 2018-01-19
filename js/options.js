@@ -1,8 +1,6 @@
-'use strict';
-
 // Chrome and Opera do not support browser. http://stackoverflow.com/a/37646525/1902598
 const _browser = this._browser || this.browser || this.chrome;
-const urlPattern = /^https?:\/\/(?:www\.|(?!www))[^\s\.]+\.[^\s]{2,}|www\.[^\s]+\.[^\s]{2,}$/;
+const urlPattern = /^https?:\/\/(?:www\.|(?!www))[^\s.]+\.[^\s]{2,}|www\.[^\s]+\.[^\s]{2,}$/;
 const storage = _browser.storage.sync || _browser.storage.local;
 
 const saveOptions = event => {

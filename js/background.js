@@ -1,5 +1,3 @@
-'use strict';
-
 // Chrome and Opera do not support browser. http://stackoverflow.com/a/37646525/1902598
 const _browser = this.browser || this.chrome;
 const storage = _browser.storage.sync || _browser.storage.local;
@@ -30,15 +28,7 @@ var openTicket = (ticket, newTab) => {
       newURL = jiraURL + ticket;
     }
 
-    _browser.tabs.query({ active: true, currentWindow: true }, tabs => {
-      if (newTab) {
-        _browser.tabs.create({ url: newURL });
-      } else {
-        _browser.tabs.update(tabs[0].id, {
-          url: newURL
-        });
-      }
-    });
+    openURLInTab(newTab, newURL);
   });
 };
 
@@ -123,6 +113,19 @@ if (_browser.runtime && _browser.runtime.onInstalled) {
           _browser.tabs.create({ url: optionsPageUrl });
         });
       }
+    }
+  });
+}
+
+function openURLInTab(newTab, newURL) {
+  _browser.tabs.query({ active: true, currentWindow: true }, tabs => {
+    if (newTab) {
+      _browser.tabs.create({ url: newURL });
+    }
+    else {
+      _browser.tabs.update(tabs[0].id, {
+        url: newURL
+      });
     }
   });
 }
