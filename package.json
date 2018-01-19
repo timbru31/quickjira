@@ -1,0 +1,23 @@
+{
+  "name": "quickjira",
+  "private": true,
+  "version": "0.11.0",
+  "description": "Quickly opens the JIRA with the corresponding ticket",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/timbru31/quickjira.git"
+  },
+  "author": "timbru31",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/timbru31/quickjira/issues"
+  },
+  "homepage": "https://github.com/timbru31/quickjira#readme",
+  "devDependencies": {
+    "eslint": "^4.15.0",
+    "stylelint": "^8.4.0"
+  }
+}
