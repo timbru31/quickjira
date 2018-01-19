@@ -1,5 +1,8 @@
 # Changelog
 
+#### v0.11.0
+* Added Spanish translation (by [Jesús Roldán](https://github.com/xeBuz))
+
 #### v0.10.2 (Firefox only)
 * Fix issue that prevented the extension to load when commands are unsupported
 

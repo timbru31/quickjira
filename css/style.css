@@ -14,10 +14,6 @@ a:visited {
   color: #0921ea;
 }
 
-input {
-  width: 100px;
-}
-
 input[type=text]:invalid {
   border: 1px solid #ff0000;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(255,0, 0, .6);
@@ -94,6 +90,7 @@ label {
 }
 
 .quiji-ticket-id {
+  width: 100px;
   padding: 3px 0 3px 5px;
 }
 

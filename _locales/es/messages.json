@@ -1,4 +1,8 @@
 {
+  "version": {
+    "message": "Quick JIRA v0.11.0",
+    "description": "Please do not alter this value"
+  },
   "options": {
     "message": "Opciones",
     "description": "Link in footer"
@@ -60,7 +64,7 @@
     "description": "base URL you need to enter for a valid ticket URL"
   },
   "baseURLDescription": {
-    "message": "Por favor ingresa la URL de Jira QuickSearch. Tenga en cuenta que la URL necesita terminar con <strong>=</strong> (símbolo igual)<br>. Por ejemplo <em class='quiji-url'>https://jira.atlassian.com/secure/QuickSearch.jspa?searchString=</em><br>Más información acerca de JIRA QuickSearch <a target='_blank' href='https://confluence.atlassian.com/display/JIRA/Using+Quick+Search#UsingQuickSearch-Smartquerying'>aquí</a>.",
+    "message": "Por favor ingresa la URL de Jira QuickSearch. Tenga en cuenta que la URL necesita terminar con símbolo igual",
     "description": "Description text of the base URL"
   },
   "baseURLExample": {

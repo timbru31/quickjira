@@ -1,4 +1,8 @@
 {
+  "version": {
+    "message": "Quick JIRA v0.11.0",
+    "description": "Please do not alter this value"
+  },
   "options": {
     "message": "Optionen",
     "description": "Link in footer"
