@@ -1,7 +1,5 @@
 # Quick JIRA (quiji)
 [![Code Climate](https://codeclimate.com/github/timbru31/quickjira/badges/gpa.svg)](https://codeclimate.com/github/timbru31/quickjira)
-[![bitHound Overall Score](https://www.bithound.io/github/timbru31/quickjira/badges/score.svg)](https://www.bithound.io/github/timbru31/quickjira)
-[![bitHound Code](https://www.bithound.io/github/timbru31/quickjira/badges/code.svg)](https://www.bithound.io/github/timbru31/quickjira)
 
 [![Chrome Web Store](https://img.shields.io/chrome-web-store/v/acdnmaeifljongleeegkkfnfcopblokj.svg)](https://chrome.google.com/webstore/detail/amazon-tag-remover/acdnmaeifljongleeegkkfnfcopblokj)
 [![Opera Add-ons](https://img.shields.io/badge/Opera%20Add--ons-v0.11.0-orange.svg)](https://addons.opera.com/extensions/details/quick-jira)
