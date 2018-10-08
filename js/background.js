@@ -3,6 +3,7 @@ const _browser = this.browser || this.chrome;
 const storage = _browser.storage.sync || _browser.storage.local;
 
 var openTicket = (ticket, newTab) => {
+  ticket = ticket.replace(/%20/gi, '');
   storage.set({
     lastTicket: ticket
   });
