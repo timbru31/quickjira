@@ -1,0 +1,18 @@
+{
+	"compilerOptions": {
+		"declaration": false,
+		"module": "es2015",
+		"noImplicitAny": true,
+		"noImplicitReturns": false,
+		"strictNullChecks": true,
+		"experimentalDecorators": true,
+		"strictFunctionTypes": true,
+		"noImplicitThis": true,
+		"outDir": "dist/js",
+		"removeComments": true,
+		"target": "es2018",
+		"lib": ["dom", "es2018"],
+		"types": ["chrome"]
+	},
+	"include": ["src/js/*.ts"]
+}

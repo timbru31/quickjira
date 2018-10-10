@@ -1,7 +1,0 @@
-{
-  "critics": {
-    "lint": {
-      "engine": "eslint"
-    }
-  }
-}
