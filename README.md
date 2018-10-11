@@ -1,10 +1,19 @@
 # Quick JIRA (quiji)
 
-[![Chrome Web Store](https://img.shields.io/chrome-web-store/v/acdnmaeifljongleeegkkfnfcopblokj.svg)](https://chrome.google.com/webstore/detail/amazon-tag-remover/acdnmaeifljongleeegkkfnfcopblokj)
+[![Build Status](https://travis-ci.org/timbru31/quickjira.svg?branch=master)](https://travis-ci.org/timbru31/quickjira)
+
+[![Dependency Status](https://david-dm.org/timbru31/quickjira.svg)](https://david-dm.org/timbru31/quickjira)
+[![devDependency Status](https://david-dm.org/timbru31/quickjira/dev-status.svg)](https://david-dm.org/timbru31/quickjira#info=devDependencies)
+
+[![Known Vulnerabilities](https://snyk.io/test/github/timbru31/quickjira/badge.svg)](https://snyk.io/test/github/timbru31/quickjira)
+
+[![Chrome Web Store](https://img.shields.io/chrome-web-store/v/acdnmaeifljongleeegkkfnfcopblokj.svg)](https://chrome.google.com/webstore/detail/quickjira/acdnmaeifljongleeegkkfnfcopblokj)
 [![Opera Add-ons](https://img.shields.io/badge/Opera%20Add--ons-v0.11.0-orange.svg)](https://addons.opera.com/extensions/details/quick-jira)
 [![Add-Ons for Firefox](https://img.shields.io/amo/v/quickjira.svg)](https://addons.mozilla.org/firefox/addon/quickjira/)
 
-[![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
+[![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=timbru31/quickjira)](https://dependabot.com)
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE.md)
 
 ## Info
 
