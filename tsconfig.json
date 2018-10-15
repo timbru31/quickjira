@@ -1,18 +1,21 @@
 {
 	"compilerOptions": {
 		"declaration": false,
-		"module": "es2015",
+		"experimentalDecorators": true,
+		"jsx": "react",
+		"jsxFactory": "h",
+		"lib": ["dom", "es2018"],
+		"module": "commonjs",
 		"noImplicitAny": true,
 		"noImplicitReturns": false,
-		"strictNullChecks": true,
-		"experimentalDecorators": true,
-		"strictFunctionTypes": true,
 		"noImplicitThis": true,
-		"outDir": "dist/js",
+		"outDir": "./extension/dist",
 		"removeComments": true,
-		"target": "es2018",
-		"lib": ["dom", "es2018"],
+		"sourceMap": true,
+		"strictFunctionTypes": true,
+		"strictNullChecks": true,
+		"target": "es5",
 		"types": ["chrome"]
 	},
-	"include": ["src/js/*.ts"]
+	"include": ["src/**/*.ts", "src/**/*.tsx"]
 }

@@ -1,0 +1,211 @@
+/* General styling */
+body {
+	background: #ededed;
+	font-size: 13px;
+	font: message-box;
+	margin: 0;
+}
+
+a {
+	color: #0921ea;
+}
+
+a:visited {
+	color: #0921ea;
+}
+
+input[type='text']:invalid {
+	border: 1px solid #ff0000;
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 0, 0, 0.6);
+}
+
+input[type='button'] {
+	min-width: 100px;
+	width: auto;
+}
+
+input[type='button']:disabled,
+input[type='button']:disabled:hover,
+input[type='button']:disabled:focus {
+	background-color: grey;
+	border-color: grey;
+	cursor: not-allowed;
+}
+
+input[type='text'],
+select {
+	background-color: #fff;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+	min-height: 2em;
+}
+
+input[type='text']:focus,
+select:focus {
+	border-color: #66afe9;
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+}
+
+input[type='button'],
+input[type='submit'] {
+	background-color: #20315e;
+	border: 1px solid transparent;
+	border-color: #357ebd;
+	border-radius: 4px;
+	color: #fff;
+	cursor: pointer;
+	font-size: 12px;
+	line-height: 1.2;
+	padding: 5px 11px;
+	text-align: center;
+	vertical-align: middle;
+}
+
+input[type='button']:hover,
+input[type='button']:focus,
+input[type='submit']:hover,
+input[type='submit']:focus {
+	background-color: #3071a9;
+	border-color: #285e8e;
+}
+
+label {
+	line-height: 25px;
+}
+
+.red {
+	color: #ff0000;
+}
+
+/* Popup window styling */
+.quiji-popup {
+	display: flex;
+	justify-content: center;
+	margin: 8px;
+	text-align: center;
+}
+
+.quiji-popup-form {
+	width: 120px;
+}
+
+.quiji-buttons input {
+	margin-bottom: 5px;
+}
+
+.quiji-ticket-id {
+	width: 100px;
+	padding: 3px 0 3px 5px;
+}
+
+/* Page stlying */
+ul {
+	display: inline-block;
+	margin-top: 0;
+}
+
+li {
+	text-align: left;
+}
+
+.quiji-footer {
+	background-color: #fff;
+	padding: 10px 20px;
+	white-space: nowrap;
+}
+
+.quiji-page {
+	font-size: 14px;
+	margin: 14px 17px; /* Chrome default */
+}
+
+/* Options styling */
+/* override Chrome styles */
+:enabled:hover:-webkit-any(input[type='checkbox'], input[type='radio'], :-webkit-any(button, input[type='button'], input[type='submit'])) {
+	background-image: none;
+	border-color: #285e8e;
+	box-shadow: none;
+	color: #fff;
+}
+
+input[type='text'].quiji-options-jira-url {
+	margin-top: 3px;
+	min-height: 2em;
+	padding-left: 6px;
+	width: 100%;
+}
+
+.quiji-options-status {
+	display: inline;
+	font-weight: bold;
+	padding-left: 5px;
+	vertical-align: bottom;
+}
+
+.quiji-options-url-text {
+	margin-bottom: 0;
+}
+
+/* Override Chrome styles */
+.quiji-options-save {
+	background-image: none;
+	box-shadow: none;
+	display: inline-block;
+	margin: 20px auto 0;
+	text-shadow: none;
+}
+
+.quiji-url {
+	white-space: nowrap;
+}
+
+/* Changelog styling */
+.quiji-current-release {
+	padding-left: 10px;
+}
+
+/* Donation styling */
+.quiji-donation-chain {
+	white-space: nowrap;
+}
+
+.quiji-donation-options {
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	padding: 20px 0;
+}
+
+.quiji-donation-paypal {
+	margin-right: 20px;
+}
+
+.quiji-donation-bitcoin {
+	margin-left: 20px;
+}
+
+.quiji-donation-bitcoin-logo {
+	display: block;
+	margin: 0 auto;
+}
+
+@-moz-document url-prefix() {
+	body {
+		background-color: unset;
+	}
+
+	.quiji-page {
+		margin: 0;
+	}
+
+	.quiji-footer {
+		background-color: unset;
+		padding: 10px 0;
+	}
+
+	input.quiji-options-jira-url[type='text'] {
+		margin-top: 6px;
+		width: 80%;
+	}
+}
