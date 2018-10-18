@@ -226,10 +226,10 @@ acorn@^5.0.3, acorn@^5.5.0, acorn@^5.6.0:
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-5.7.3.tgz#67aa231bf8812974b85235a96771eb6bd07ea279"
   integrity sha512-T/zvzYRfbVojPWahDsE5evJdHb3oJoQfFbsrKM7w5Zcs++Tr257tia3BmMP8XYVjp1S9RZXQMh7gao96BlqZOw==
 
-addons-linter@^1.3.5:
-  version "1.3.5"
-  resolved "https://registry.yarnpkg.com/addons-linter/-/addons-linter-1.3.5.tgz#e36094587780266e64f813efbcc27bd2cba26d2e"
-  integrity sha512-V3lo+ApTxG42wQUipLKc0GXjpA9msuhYwD1IOZ1sOkj7AY7AfOf2/CPlfH2E6cB4OOgjafPGpyUOn7uHzen9sQ==
+addons-linter@^1.3.6:
+  version "1.3.6"
+  resolved "https://registry.yarnpkg.com/addons-linter/-/addons-linter-1.3.6.tgz#03da708daa65b2290747b79182512e0db28fdd8d"
+  integrity sha512-gSAyC+oCswXHwdV29PWhlv+1c8cHaO2e2A7kGaSc3TztsPIvy9+dAiSLr6Ckwfm5WQFreJtUr5PySdrAnWWcMA==
   dependencies:
     "@babel/polyfill" "7.0.0"
     "@babel/register" "7.0.0"
@@ -240,7 +240,7 @@ addons-linter@^1.3.5:
     columnify "1.5.4"
     common-tags "1.8.0"
     crx-parser "0.1.2"
-    deepmerge "2.2.0"
+    deepmerge "2.2.1"
     dispensary "0.25.0"
     es6-promisify "5.0.0"
     eslint "5.0.1"
@@ -259,16 +259,16 @@ addons-linter@^1.3.5:
     postcss "7.0.5"
     probe-image-size "4.0.0"
     relaxed-json "1.0.1"
-    semver "5.5.1"
+    semver "5.6.0"
     shelljs "0.8.2"
-    snyk "^1.100.1"
+    snyk "1.103.2"
     source-map-support "0.5.6"
     strip-bom-stream "3.0.0"
     tosource "1.0.0"
     upath "1.1.0"
     whatwg-url "7.0.0"
     xmldom "0.1.27"
-    yargs "12.0.1"
+    yargs "12.0.2"
     yauzl "2.9.2"
   optionalDependencies:
     fsevents "1.2.4"
@@ -1361,12 +1361,7 @@ deep-is@~0.1.3:
   resolved "https://registry.yarnpkg.com/deep-is/-/deep-is-0.1.3.tgz#b369d6fb5dbc13eecf524f91b070feedc357cf34"
   integrity sha1-s2nW+128E+7PUk+RsHD+7cNXzzQ=
 
-deepmerge@2.2.0:
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/deepmerge/-/deepmerge-2.2.0.tgz#17087b22e1dccf14310ec892e696269e85374b45"
-  integrity sha512-7iuEZ5j20aoFhiiaFZiSipk23nPl+UGKsglMJ+dy27HTpQ3wm2tj2esD/UHXlrqh5o6p6MW7m+fYSUz4JvuqVQ==
-
-deepmerge@^2.0.1:
+deepmerge@2.2.1, deepmerge@^2.0.1:
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/deepmerge/-/deepmerge-2.2.1.tgz#5d3ff22a01c00f645405a2fbc17d0778a1801170"
   integrity sha512-R9hc1Xa/NOBi9WRVUWg19rl1UB7Tt4kuPd+thNJgFZoxXsTz7ncaPaeIm+40oSGuP33DfMb4sZt1QIGiJzC4EA==
@@ -5369,10 +5364,15 @@ semver-compare@^1.0.0:
   resolved "https://registry.yarnpkg.com/semver-compare/-/semver-compare-1.0.0.tgz#0dee216a1c941ab37e9efb1788f6afc5ff5537fc"
   integrity sha1-De4hahyUGrN+nvsXiPavxf9VN/w=
 
-"semver@2 || 3 || 4 || 5", semver@5.5.1, semver@^5.0.1, semver@^5.1.0, semver@^5.3.0, semver@^5.4.1, semver@^5.5.0, semver@^5.5.1:
+"semver@2 || 3 || 4 || 5", semver@^5.0.1, semver@^5.1.0, semver@^5.3.0, semver@^5.4.1, semver@^5.5.0, semver@^5.5.1:
   version "5.5.1"
   resolved "https://registry.yarnpkg.com/semver/-/semver-5.5.1.tgz#7dfdd8814bdb7cabc7be0fb1d734cfb66c940477"
   integrity sha512-PqpAxfrEhlSUWge8dwIp4tZnQ25DIOthpiaHNIthsjEFQD6EvqUKUDM7L8O2rShkFccYo1VjJR0coWfNkCubRw==
+
+semver@5.6.0:
+  version "5.6.0"
+  resolved "https://registry.yarnpkg.com/semver/-/semver-5.6.0.tgz#7e74256fbaa49c75aa7c7a205cc22799cac80004"
+  integrity sha512-RS9R6R35NYgQn++fkDWaOmqGoj4Ek9gGs+DPxNUZKuwE183xjJroKvyo1IzVFeXvUrvmALy6FWD5xrdJT25gMg==
 
 set-blocking@^2.0.0, set-blocking@~2.0.0:
   version "2.0.0"
@@ -5662,10 +5662,10 @@ snyk-try-require@1.3.1, snyk-try-require@^1.1.1:
     lru-cache "^4.0.0"
     then-fs "^2.0.0"
 
-snyk@^1.100.1:
-  version "1.103.0"
-  resolved "https://registry.yarnpkg.com/snyk/-/snyk-1.103.0.tgz#850de8ac2f20c311bc7de0629f5966d6f7f5a644"
-  integrity sha512-KUt05fGpj1g59raSxfJgGTOFZXFTgtRhVxdzCPOFUgeYzMdnEDp/HY+IwgnrT9whgWz/gqbvzupwDUzykRLEZA==
+snyk@1.103.2:
+  version "1.103.2"
+  resolved "https://registry.yarnpkg.com/snyk/-/snyk-1.103.2.tgz#a40923053683b675b27de57f45cc3b71cda2ff80"
+  integrity sha512-rmMsNW94SQdmWQEtVDW1hiGKb3r7Gx1hVb0bTuK9mCm4/lHGmyuAG7QYdcwdhMrhGjg7yQDWCEXorEnq2JLs7Q==
   dependencies:
     abbrev "^1.1.1"
     ansi-escapes "^3.1.0"
@@ -6743,16 +6743,16 @@ yargs-parser@^7.0.0:
   dependencies:
     camelcase "^4.1.0"
 
-yargs@12.0.1:
-  version "12.0.1"
-  resolved "https://registry.yarnpkg.com/yargs/-/yargs-12.0.1.tgz#6432e56123bb4e7c3562115401e98374060261c2"
-  integrity sha512-B0vRAp1hRX4jgIOWFtjfNjd9OA9RWYZ6tqGA9/I/IrTMsxmKvtWy+ersM+jzpQqbC3YfLzeABPdeTgcJ9eu1qQ==
+yargs@12.0.2, yargs@~12.0.1:
+  version "12.0.2"
+  resolved "https://registry.yarnpkg.com/yargs/-/yargs-12.0.2.tgz#fe58234369392af33ecbef53819171eff0f5aadc"
+  integrity sha512-e7SkEx6N6SIZ5c5H22RTZae61qtn3PYUE8JYbBFlK9sYmh3DMQ6E5ygtaG/2BW0JZi4WGgTR2IV5ChqlqrDGVQ==
   dependencies:
     cliui "^4.0.0"
     decamelize "^2.0.0"
     find-up "^3.0.0"
     get-caller-file "^1.0.1"
-    os-locale "^2.0.0"
+    os-locale "^3.0.0"
     require-directory "^2.1.1"
     require-main-filename "^1.0.1"
     set-blocking "^2.0.0"
@@ -6792,24 +6792,6 @@ yargs@^8.0.1:
     which-module "^2.0.0"
     y18n "^3.2.1"
     yargs-parser "^7.0.0"
-
-yargs@~12.0.1:
-  version "12.0.2"
-  resolved "https://registry.yarnpkg.com/yargs/-/yargs-12.0.2.tgz#fe58234369392af33ecbef53819171eff0f5aadc"
-  integrity sha512-e7SkEx6N6SIZ5c5H22RTZae61qtn3PYUE8JYbBFlK9sYmh3DMQ6E5ygtaG/2BW0JZi4WGgTR2IV5ChqlqrDGVQ==
-  dependencies:
-    cliui "^4.0.0"
-    decamelize "^2.0.0"
-    find-up "^3.0.0"
-    get-caller-file "^1.0.1"
-    os-locale "^3.0.0"
-    require-directory "^2.1.1"
-    require-main-filename "^1.0.1"
-    set-blocking "^2.0.0"
-    string-width "^2.0.0"
-    which-module "^2.0.0"
-    y18n "^3.2.1 || ^4.0.0"
-    yargs-parser "^10.1.0"
 
 yauzl@2.9.2:
   version "2.9.2"
