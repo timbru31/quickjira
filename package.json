@@ -32,7 +32,7 @@
 		"lint-staged": "^8.1.0",
 		"prettier": "^1.15.3",
 		"standard-version": "^4.4.0",
-		"stylelint": "^9.9.0",
+		"stylelint": "^9.10.0",
 		"stylelint-config-recommended": "^2.1.0",
 		"tslint": "^5.12.1",
 		"tslint-config-prettier": "^1.17.0",
