@@ -1,5 +1,9 @@
 # Changelog
 
+#### v0.11.1
+
+-   Remove spaces from tickets (by [Jesús Roldán](https://github.com/xeBuz))
+
 #### v0.11.0
 
 -   Added Spanish translation (by [Jesús Roldán](https://github.com/xeBuz))
