@@ -1,6 +1,6 @@
 # Changelog
 
-### v0.11.2
+#### v0.11.2
 
 -   Make space trimming configurable
 
