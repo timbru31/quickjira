@@ -3,18 +3,23 @@ const _browser = this.browser || this.chrome;
 const storage = _browser.storage.sync || _browser.storage.local;
 
 var openTicket = (ticket, newTab) => {
-	(ticket = decodeURIComponent(ticket).replace(/\s/g, '')),
-		storage.set({
-			lastTicket: ticket
-		});
-
 	storage.get(
 		{
-			jiraURL: ''
+			jiraURL: '',
+			trimSpaces: 0
 		},
 		options => {
 			const jiraURL = options && options.jiraURL;
+			const trimSpaces = options && options.trimSpaces !== 0;
 			let newURL;
+
+			if (trimSpaces) {
+				ticket = decodeURIComponent(ticket).replace(/\s/g, '');
+			}
+			storage.set({
+				lastTicket: ticket
+			});
+
 			if (!jiraURL) {
 				try {
 					_browser.runtime.openOptionsPage();

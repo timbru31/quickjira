@@ -17,10 +17,14 @@ const saveOptions = event => {
 		} else {
 			defaultOption = 1;
 		}
+
+		const trimSpaces = document.querySelector('#trim-spaces').checked ? 1 : 0;
+
 		storage.set(
 			{
 				jiraURL: jira,
-				defaultOption: defaultOption
+				defaultOption,
+				trimSpaces
 			},
 			() => {
 				status.textContent = _browser.i18n.getMessage('savedOptions');
@@ -37,7 +41,8 @@ const restoreOptions = () => {
 	storage.get(
 		{
 			jiraURL: '',
-			defaultOption: 0
+			defaultOption: 0,
+			trimSpaces: 0
 		},
 		options => {
 			document.querySelector('.quiji-options-jira-url').value = (options && options.jiraURL) || '';
@@ -47,6 +52,8 @@ const restoreOptions = () => {
 				defaultOption = _browser.i18n.getMessage('newTab');
 			}
 			document.querySelector('select').value = defaultOption;
+
+			document.querySelector('#trim-spaces').checked = options && options.trimSpaces === 1 ? true : false;
 		}
 	);
 };

@@ -1,5 +1,9 @@
 # Changelog
 
+### v0.11.2
+
+-   Make space trimming configurable
+
 #### v0.11.1
 
 -   Remove spaces from tickets (by [Jesús Roldán](https://github.com/xeBuz))
