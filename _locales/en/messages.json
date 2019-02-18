@@ -96,7 +96,7 @@
 		"description": "Headline for trim spaces"
 	},
 	"trimSpacesDescription": {
-		"message": "Trim spaces from entered tickes. Disable if you plan to use the JIRA Quick Search.",
+		"message": "Trim spaces from entered tickets. Disable if you plan to use the JIRA Quick Search.",
 		"description": "Info text for trim spaces"
 	},
 	"saveOptions": {
