@@ -250,12 +250,12 @@ acorn@^6.0.7:
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-6.1.0.tgz#b0a3be31752c97a0f7013c5f4903b71a05db6818"
   integrity sha512-MW/FjM+IvU9CgBzjO3UIPCE2pyEwUsoFl+VGdczOPEdxfGFjuKny/gN54mOuX7Qxmb9Rg9MCn2oKiSUeW+pjrw==
 
-addons-linter@^1.6.2:
-  version "1.6.2"
-  resolved "https://registry.yarnpkg.com/addons-linter/-/addons-linter-1.6.2.tgz#07f4bd7810f629c843aaf26dbe14d487669609fe"
-  integrity sha512-9TCSEXAwuPT1IHigPudjkfd3LESf3nxzI37XnvTDU3N0/N465QajEiGliprjfz6/9oq8A7okEh8Gi/khRkawIQ==
+addons-linter@^1.6.3:
+  version "1.6.3"
+  resolved "https://registry.yarnpkg.com/addons-linter/-/addons-linter-1.6.3.tgz#dc78570536975824f499224892bfab85e25f8741"
+  integrity sha512-H7iMY0RKC1JQZb+77rNEYTOALS8vgCOFZ1Fcwg1YynFTNlUQA/EIEsji8DEU5DLhquaRhz2zX18oBxBpayFUZw==
   dependencies:
-    ajv "6.9.2"
+    ajv "6.10.0"
     ajv-merge-patch "4.1.0"
     chalk "2.4.2"
     cheerio "1.0.0-rc.2"
@@ -265,7 +265,7 @@ addons-linter@^1.6.2:
     deepmerge "3.2.0"
     dispensary "0.31.0"
     es6-promisify "6.0.1"
-    eslint "5.14.1"
+    eslint "5.15.1"
     eslint-plugin-no-unsafe-innerhtml "1.0.16"
     eslint-visitor-keys "1.0.0"
     espree "5.0.1"
@@ -275,14 +275,14 @@ addons-linter@^1.6.2:
     glob "7.1.3"
     is-mergeable-object "1.1.0"
     jed "1.1.1"
-    mdn-browser-compat-data "0.0.68"
+    mdn-browser-compat-data "0.0.69"
     os-locale "3.1.0"
     pino "5.11.1"
     po2json "0.4.5"
     postcss "7.0.14"
     probe-image-size "4.0.0"
     regenerator-runtime "0.13.1"
-    relaxed-json "1.0.1"
+    relaxed-json "1.0.3"
     semver "5.6.0"
     source-map-support "0.5.10"
     strip-bom-stream "3.0.0"
@@ -308,10 +308,10 @@ ajv-merge-patch@4.1.0:
     fast-json-patch "^2.0.6"
     json-merge-patch "^0.2.3"
 
-ajv@6.9.2, ajv@^6.5.3, ajv@^6.9.1:
-  version "6.9.2"
-  resolved "https://registry.yarnpkg.com/ajv/-/ajv-6.9.2.tgz#4927adb83e7f48e5a32b45729744c71ec39c9c7b"
-  integrity sha512-4UFy0/LgDo7Oa/+wOAlj44tp9K78u38E5/359eSrqEp1Z5PdVfimCcs7SluXMP755RUQu6d2b4AvF0R1C9RZjg==
+ajv@6.10.0, ajv@^6.5.3, ajv@^6.9.1:
+  version "6.10.0"
+  resolved "https://registry.yarnpkg.com/ajv/-/ajv-6.10.0.tgz#90d0d54439da587cd7e843bfb7045f50bd22bdf1"
+  integrity sha512-nffhOpkymDECQyR0mnsUtoCE8RlX38G0rYP+wgLWFyZuUyuuojSSvi/+euOiQBIn63whYwYVIIH1TvE3tu4OEg==
   dependencies:
     fast-deep-equal "^2.0.1"
     fast-json-stable-stringify "^2.0.0"
@@ -1559,10 +1559,10 @@ eslint-plugin-no-unsafe-innerhtml@1.0.16:
   dependencies:
     eslint "^3.7.1"
 
-eslint-scope@^4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/eslint-scope/-/eslint-scope-4.0.0.tgz#50bf3071e9338bcdc43331794a0cb533f0136172"
-  integrity sha512-1G6UTDi7Jc1ELFwnR58HV4fK9OQK4S6N985f166xqXxpjU6plxFISJa2Ba9KCQuFa8RCnj/lSFJbHo7UFDBnUA==
+eslint-scope@^4.0.2:
+  version "4.0.2"
+  resolved "https://registry.yarnpkg.com/eslint-scope/-/eslint-scope-4.0.2.tgz#5f10cd6cabb1965bf479fa65745673439e21cb0e"
+  integrity sha512-5q1+B/ogmHl8+paxtOKx38Z8LtWkVGuNt3+GQNErqwLl6ViNp/gdJGMCjZNxZ8j/VYjDNZ2Fo+eQc1TAVPIzbg==
   dependencies:
     esrecurse "^4.1.0"
     estraverse "^4.1.1"
@@ -1577,10 +1577,10 @@ eslint-visitor-keys@1.0.0, eslint-visitor-keys@^1.0.0:
   resolved "https://registry.yarnpkg.com/eslint-visitor-keys/-/eslint-visitor-keys-1.0.0.tgz#3f3180fb2e291017716acb4c9d6d5b5c34a6a81d"
   integrity sha512-qzm/XxIbxm/FHyH341ZrbnMUpe+5Bocte9xkmFMzPMjRaZMcXww+MpBptFvtU+79L362nqiLhekCxCxDPaUMBQ==
 
-eslint@5.14.1:
-  version "5.14.1"
-  resolved "https://registry.yarnpkg.com/eslint/-/eslint-5.14.1.tgz#490a28906be313685c55ccd43a39e8d22efc04ba"
-  integrity sha512-CyUMbmsjxedx8B0mr79mNOqetvkbij/zrXnFeK2zc3pGRn3/tibjiNAv/3UxFEyfMDjh+ZqTrJrEGBFiGfD5Og==
+eslint@5.15.1:
+  version "5.15.1"
+  resolved "https://registry.yarnpkg.com/eslint/-/eslint-5.15.1.tgz#8266b089fd5391e0009a047050795b1d73664524"
+  integrity sha512-NTcm6vQ+PTgN3UBsALw5BMhgO6i5EpIjQF/Xb5tIh3sk9QhrFafujUOczGz4J24JBlzWclSB9Vmx8d+9Z6bFCg==
   dependencies:
     "@babel/code-frame" "^7.0.0"
     ajv "^6.9.1"
@@ -1588,7 +1588,7 @@ eslint@5.14.1:
     cross-spawn "^6.0.5"
     debug "^4.0.1"
     doctrine "^3.0.0"
-    eslint-scope "^4.0.0"
+    eslint-scope "^4.0.2"
     eslint-utils "^1.3.1"
     eslint-visitor-keys "^1.0.0"
     espree "^5.0.1"
@@ -3255,10 +3255,10 @@ mdast-util-compact@^1.0.0:
   dependencies:
     unist-util-visit "^1.1.0"
 
-mdn-browser-compat-data@0.0.68:
-  version "0.0.68"
-  resolved "https://registry.yarnpkg.com/mdn-browser-compat-data/-/mdn-browser-compat-data-0.0.68.tgz#23fdf7a24f245c65f73c6543cea14f453e60693e"
-  integrity sha512-ERFWHZFrEishlYX1J+UIZbqlQ7rBr/hpnDIo8EWNq/x9+mYeVNXft8lGLNP2eJFgzcrpYNJjmAS3Y1D2R9y3Dw==
+mdn-browser-compat-data@0.0.69:
+  version "0.0.69"
+  resolved "https://registry.yarnpkg.com/mdn-browser-compat-data/-/mdn-browser-compat-data-0.0.69.tgz#4d459d27c2d2a8c2c32b5890f97762af4ddb1996"
+  integrity sha512-tTUJBARovqwuLl3vhDwpj9E89gufIsiW1mCivecQiKGSH3xtm/81aSsKF3G8vwTRsZC63sH75i7O2nZrV6YbOA==
   dependencies:
     extend "3.0.2"
 
@@ -4193,12 +4193,12 @@ regexpp@^2.0.1:
   resolved "https://registry.yarnpkg.com/regexpp/-/regexpp-2.0.1.tgz#8d19d31cf632482b589049f8281f93dbcba4d07f"
   integrity sha512-lv0M6+TkDVniA3aD1Eg0DVpfU/booSu7Eev3TDO/mZKHBfVjgCGTV4t4buppESEYDtkArYFOxTJWv6S5C+iaNw==
 
-relaxed-json@1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/relaxed-json/-/relaxed-json-1.0.1.tgz#7c8d4aa2f095704cd020e32e8099bcae103f0bd4"
-  integrity sha1-fI1KovCVcEzQIOMugJm8rhA/C9Q=
+relaxed-json@1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/relaxed-json/-/relaxed-json-1.0.3.tgz#eb2101ae0ee60e82267d95ed0ddf19a3604b8c1e"
+  integrity sha512-b7wGPo7o2KE/g7SqkJDDbav6zmrEeP4TK2VpITU72J/M949TLe/23y/ZHJo+pskcGM52xIfFoT9hydwmgr1AEg==
   dependencies:
-    chalk "^1.0.0"
+    chalk "^2.4.2"
     commander "^2.6.0"
 
 remark-parse@^6.0.0:
