@@ -250,10 +250,10 @@ acorn@^6.0.7:
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-6.1.0.tgz#b0a3be31752c97a0f7013c5f4903b71a05db6818"
   integrity sha512-MW/FjM+IvU9CgBzjO3UIPCE2pyEwUsoFl+VGdczOPEdxfGFjuKny/gN54mOuX7Qxmb9Rg9MCn2oKiSUeW+pjrw==
 
-addons-linter@^1.6.3:
-  version "1.6.3"
-  resolved "https://registry.yarnpkg.com/addons-linter/-/addons-linter-1.6.3.tgz#dc78570536975824f499224892bfab85e25f8741"
-  integrity sha512-H7iMY0RKC1JQZb+77rNEYTOALS8vgCOFZ1Fcwg1YynFTNlUQA/EIEsji8DEU5DLhquaRhz2zX18oBxBpayFUZw==
+addons-linter@^1.6.4:
+  version "1.6.4"
+  resolved "https://registry.yarnpkg.com/addons-linter/-/addons-linter-1.6.4.tgz#b67bdade51e377433134f60bbfb15a0a2f6f1027"
+  integrity sha512-zYBALzXUuV5qT+8BPBSR0suKecXmXi4h4eFT6noSKxSUDU4wwhrjtBN65F+5gHrwwYBAWNlUsxRE5jcvzCpTbg==
   dependencies:
     ajv "6.10.0"
     ajv-merge-patch "4.1.0"
@@ -263,7 +263,7 @@ addons-linter@^1.6.3:
     common-tags "1.8.0"
     crx-parser "0.1.2"
     deepmerge "3.2.0"
-    dispensary "0.31.0"
+    dispensary "0.32.0"
     es6-promisify "6.0.1"
     eslint "5.15.1"
     eslint-plugin-no-unsafe-innerhtml "1.0.16"
@@ -275,7 +275,7 @@ addons-linter@^1.6.3:
     glob "7.1.3"
     is-mergeable-object "1.1.0"
     jed "1.1.1"
-    mdn-browser-compat-data "0.0.69"
+    mdn-browser-compat-data "0.0.70"
     os-locale "3.1.0"
     pino "5.11.1"
     po2json "0.4.5"
@@ -284,13 +284,13 @@ addons-linter@^1.6.3:
     regenerator-runtime "0.13.1"
     relaxed-json "1.0.3"
     semver "5.6.0"
-    source-map-support "0.5.10"
+    source-map-support "0.5.11"
     strip-bom-stream "3.0.0"
     tosource "1.0.0"
-    upath "1.1.0"
+    upath "1.1.1"
     whatwg-url "7.0.0"
     xmldom "0.1.27"
-    yargs "13.2.1"
+    yargs "13.2.2"
     yauzl "2.10.0"
   optionalDependencies:
     fsevents "2.0.1"
@@ -1333,10 +1333,10 @@ dir-glob@^2.2.1:
   dependencies:
     path-type "^3.0.0"
 
-dispensary@0.31.0:
-  version "0.31.0"
-  resolved "https://registry.yarnpkg.com/dispensary/-/dispensary-0.31.0.tgz#304dfcc2a6db896abef205d0d312ce4ae943961d"
-  integrity sha512-ffT8wYMwGhf+KtacSLD5TZVDMUG+/pM4usfHNr1e7LUYE9cox82IoRINlooEngq0T6s1tIUrEciSI4p/rWI/fw==
+dispensary@0.32.0:
+  version "0.32.0"
+  resolved "https://registry.yarnpkg.com/dispensary/-/dispensary-0.32.0.tgz#87b0fb26af1c32e02a16491fa2ef2d1fb12810fc"
+  integrity sha512-t2rwURVA+PlVDPscOHTQynt5CBwX9JjXrNVyyqgPJeRk+JNHToUlujNdbjroIFJgb7f7UjuvoNaxLaVMHcxJdw==
   dependencies:
     array-from "~2.1.1"
     async "~2.6.0"
@@ -3255,10 +3255,10 @@ mdast-util-compact@^1.0.0:
   dependencies:
     unist-util-visit "^1.1.0"
 
-mdn-browser-compat-data@0.0.69:
-  version "0.0.69"
-  resolved "https://registry.yarnpkg.com/mdn-browser-compat-data/-/mdn-browser-compat-data-0.0.69.tgz#4d459d27c2d2a8c2c32b5890f97762af4ddb1996"
-  integrity sha512-tTUJBARovqwuLl3vhDwpj9E89gufIsiW1mCivecQiKGSH3xtm/81aSsKF3G8vwTRsZC63sH75i7O2nZrV6YbOA==
+mdn-browser-compat-data@0.0.70:
+  version "0.0.70"
+  resolved "https://registry.yarnpkg.com/mdn-browser-compat-data/-/mdn-browser-compat-data-0.0.70.tgz#7eb8a7314f994538b70390e7048df1770fed9855"
+  integrity sha512-++gDpMmrHmZVIFTK9x3z7UjSAM3MYEwZe38yzNejVQe6OUHiLgRvlMW6TQznpIUGuWLesLGUGOg6iyj6JcTB2g==
   dependencies:
     extend "3.0.2"
 
@@ -4589,10 +4589,10 @@ source-map-resolve@^0.5.0:
     source-map-url "^0.4.0"
     urix "^0.1.0"
 
-source-map-support@0.5.10, source-map-support@~0.5.4:
-  version "0.5.10"
-  resolved "https://registry.yarnpkg.com/source-map-support/-/source-map-support-0.5.10.tgz#2214080bc9d51832511ee2bab96e3c2f9353120c"
-  integrity sha512-YfQ3tQFTK/yzlGJuX8pTwa4tifQj4QS2Mj7UegOu8jAz59MqIiMGPXxQhVQiIMNzayuUSF/jEuVnfFF5JqybmQ==
+source-map-support@0.5.11, source-map-support@~0.5.4:
+  version "0.5.11"
+  resolved "https://registry.yarnpkg.com/source-map-support/-/source-map-support-0.5.11.tgz#efac2ce0800355d026326a0ca23e162aeac9a4e2"
+  integrity sha512-//sajEx/fGL3iw6fltKMdPvy8kL3kJ2O3iuYlRoT3k9Kb4BjOoZ+BZzaNHeuaruSt+Kf3Zk9tnfAQg9/AJqUVQ==
   dependencies:
     buffer-from "^1.0.0"
     source-map "^0.6.0"
@@ -5289,10 +5289,10 @@ unset-value@^1.0.0:
     has-value "^0.3.1"
     isobject "^3.0.0"
 
-upath@1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/upath/-/upath-1.1.0.tgz#35256597e46a581db4793d0ce47fa9aebfc9fabd"
-  integrity sha512-bzpH/oBhoS/QI/YtbkqCg6VEiPYjSZtrHQM6/QnJS6OL9pKUFLqb3aFh4Scvwm45+7iAgiMkLhSbaZxUqmrprw==
+upath@1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/upath/-/upath-1.1.1.tgz#497f7c1090b0818f310bbfb06783586a68d28014"
+  integrity sha512-D0yetkpIOKiZQquxjM2Syvy48Y1DbZ0SWxgsZiwd9GCWRpc75vN8ytzem14WDSg+oiX6+Qt31FpiS/ExODCrLg==
 
 uri-js@^4.2.2:
   version "4.2.2"
@@ -5488,10 +5488,10 @@ yargs-parser@^13.0.0:
     camelcase "^5.0.0"
     decamelize "^1.2.0"
 
-yargs@13.2.1, yargs@~13.2.0:
-  version "13.2.1"
-  resolved "https://registry.yarnpkg.com/yargs/-/yargs-13.2.1.tgz#c8888bcf24424bd4e5a834348366f6fcc37bb8d9"
-  integrity sha512-HgY0xHGmPPakg6kEDufqxZuXVtvPZcipORC8O7S44iEnwsUmP+qnhReHc6d1dyeIZkrPmYFblh45Z2oeDn++fQ==
+yargs@13.2.2, yargs@~13.2.0:
+  version "13.2.2"
+  resolved "https://registry.yarnpkg.com/yargs/-/yargs-13.2.2.tgz#0c101f580ae95cea7f39d927e7770e3fdc97f993"
+  integrity sha512-WyEoxgyTD3w5XRpAQNYUB9ycVH/PQrToaTXdYXRdOXvEy1l19br+VJsc0vcO8PTGg5ro/l/GY7F/JMEBmI0BxA==
   dependencies:
     cliui "^4.0.0"
     find-up "^3.0.0"
