@@ -36,7 +36,7 @@
 		"stylelint-config-recommended": "^2.1.0",
 		"tslint": "^5.14.0",
 		"tslint-config-prettier": "^1.18.0",
-		"typescript": "^3.3.3333"
+		"typescript": "^3.3.4000"
 	},
 	"husky": {
 		"hooks": {
