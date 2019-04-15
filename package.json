@@ -33,7 +33,7 @@
 		"prettier": "^1.16.4",
 		"standard-version": "^5.0.2",
 		"stylelint": "^9.10.1",
-		"stylelint-config-recommended": "^2.1.0",
+		"stylelint-config-recommended": "^2.2.0",
 		"tslint": "^5.15.0",
 		"tslint-config-prettier": "^1.18.0",
 		"typescript": "^3.4.3"
