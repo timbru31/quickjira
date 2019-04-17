@@ -250,20 +250,20 @@ acorn@^6.0.7:
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-6.1.0.tgz#b0a3be31752c97a0f7013c5f4903b71a05db6818"
   integrity sha512-MW/FjM+IvU9CgBzjO3UIPCE2pyEwUsoFl+VGdczOPEdxfGFjuKny/gN54mOuX7Qxmb9Rg9MCn2oKiSUeW+pjrw==
 
-addons-linter@^1.8.0:
-  version "1.8.0"
-  resolved "https://registry.yarnpkg.com/addons-linter/-/addons-linter-1.8.0.tgz#45f794b8affa6b68015bf50621d9eeeed167a99c"
-  integrity sha512-JKhfQgwv7xPaD5FK4qPIvmGWcUHxg2aIyvVYAQ4LhPcu83DDocLseUIOGHnvqfj9NSn31AllYwMQV80NJ3IukA==
+addons-linter@^1.9.0:
+  version "1.9.0"
+  resolved "https://registry.yarnpkg.com/addons-linter/-/addons-linter-1.9.0.tgz#8dce61175201294a2a32dc2f188a416f1ae87a87"
+  integrity sha512-srmtNH1CTYrimH8XtVvG+i651KGWkRuJT4UJ/3PK0XETov5xve8C8WG2FEwq/ApWiif5fNEpTM4iI2ia5MvbkA==
   dependencies:
     ajv "6.10.0"
     ajv-merge-patch "4.1.0"
     chalk "2.4.2"
-    cheerio "1.0.0-rc.2"
+    cheerio "1.0.0-rc.3"
     columnify "1.5.4"
     common-tags "1.8.0"
     crx-parser "0.1.2"
     deepmerge "3.2.0"
-    dispensary "0.33.0"
+    dispensary "0.34.0"
     es6-promisify "6.0.1"
     eslint "5.16.0"
     eslint-plugin-no-unsafe-innerhtml "1.0.16"
@@ -275,16 +275,16 @@ addons-linter@^1.8.0:
     glob "7.1.3"
     is-mergeable-object "1.1.0"
     jed "1.1.1"
-    mdn-browser-compat-data "0.0.73"
+    mdn-browser-compat-data "0.0.75"
     os-locale "3.1.0"
-    pino "5.12.0"
+    pino "5.12.2"
     po2json "0.4.5"
     postcss "7.0.14"
     probe-image-size "4.0.0"
     regenerator-runtime "0.13.2"
     relaxed-json "1.0.3"
     semver "6.0.0"
-    source-map-support "0.5.11"
+    source-map-support "0.5.12"
     strip-bom-stream "3.0.0"
     tosource "1.0.0"
     upath "1.1.2"
@@ -762,13 +762,13 @@ chardet@^0.7.0:
   resolved "https://registry.yarnpkg.com/chardet/-/chardet-0.7.0.tgz#90094849f0937f2eedc2425d0d28a9e5f0cbad9e"
   integrity sha512-mT8iDcrh03qDGRRmoA2hmBJnxpllMR+0/0qlzjqZES6NdiWDcZkCNAk4rPFZ9Q85r27unkiNNg8ZOiwZXBHwcA==
 
-cheerio@1.0.0-rc.2:
-  version "1.0.0-rc.2"
-  resolved "https://registry.yarnpkg.com/cheerio/-/cheerio-1.0.0-rc.2.tgz#4b9f53a81b27e4d5dac31c0ffd0cfa03cc6830db"
-  integrity sha1-S59TqBsn5NXawxwP/Qz6A8xoMNs=
+cheerio@1.0.0-rc.3:
+  version "1.0.0-rc.3"
+  resolved "https://registry.yarnpkg.com/cheerio/-/cheerio-1.0.0-rc.3.tgz#094636d425b2e9c0f4eb91a46c05630c9a1a8bf6"
+  integrity sha512-0td5ijfUPuubwLUu0OBoe98gZj8C/AA+RW3v67GPlGOrvxWjZmBXiBCRU+I8VEiNyJzjth40POfHiz2RB3gImA==
   dependencies:
     css-select "~1.2.0"
-    dom-serializer "~0.1.0"
+    dom-serializer "~0.1.1"
     entities "~1.1.1"
     htmlparser2 "^3.9.1"
     lodash "^4.15.0"
@@ -1333,10 +1333,10 @@ dir-glob@^2.2.1:
   dependencies:
     path-type "^3.0.0"
 
-dispensary@0.33.0:
-  version "0.33.0"
-  resolved "https://registry.yarnpkg.com/dispensary/-/dispensary-0.33.0.tgz#fd767fc8fa67c8bf5a5b6126cd7e344eb58a1e2d"
-  integrity sha512-ZfNO2lxdlrd1JTBNEdYBJCAIcK/vFFFGaCAXWjf5sdtOIFslI1+xm2/H80jsQ7kNInAUQdAtYauzAl/dUlQQgQ==
+dispensary@0.34.0:
+  version "0.34.0"
+  resolved "https://registry.yarnpkg.com/dispensary/-/dispensary-0.34.0.tgz#67577406275098edaec7c9beac13bb398c084766"
+  integrity sha512-vlhiM8uGqksfXA3BawdE0HeBx2to96Vjkhy/u4Rg77r6ARg/D0/mdB8VGP98xkfbqAvvyEAM5jftWCrvlG2siw==
   dependencies:
     array-from "~2.1.1"
     async "~2.6.0"
@@ -1361,13 +1361,21 @@ doctrine@^3.0.0:
   dependencies:
     esutils "^2.0.2"
 
-dom-serializer@0, dom-serializer@~0.1.0:
+dom-serializer@0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/dom-serializer/-/dom-serializer-0.1.0.tgz#073c697546ce0780ce23be4a28e293e40bc30c82"
   integrity sha1-BzxpdUbOB4DOI75KKOKT5AvDDII=
   dependencies:
     domelementtype "~1.1.1"
     entities "~1.1.1"
+
+dom-serializer@~0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/dom-serializer/-/dom-serializer-0.1.1.tgz#1ec4059e284babed36eec2941d4a970a189ce7c0"
+  integrity sha512-l0IU0pPzLWSHBcieZbpOKgkIn3ts3vAh7ZuFyXNwJxJXk/c4Gwj9xaTJwIDVQCXawWD0qb3IzMGH5rglQaO0XA==
+  dependencies:
+    domelementtype "^1.3.0"
+    entities "^1.1.1"
 
 domelementtype@1, domelementtype@^1.3.0:
   version "1.3.0"
@@ -3250,10 +3258,10 @@ mdast-util-compact@^1.0.0:
   dependencies:
     unist-util-visit "^1.1.0"
 
-mdn-browser-compat-data@0.0.73:
-  version "0.0.73"
-  resolved "https://registry.yarnpkg.com/mdn-browser-compat-data/-/mdn-browser-compat-data-0.0.73.tgz#dcc62347d822e0f3bc788e33601d583897ce1345"
-  integrity sha512-sXiDsUCZL9qY792fOYcxK7FB59LaxSSc5CuqEBhU0Sl4sP5dPI6wF96eUOf7+GoEziHhrzXWxZyZPn6rus9ivA==
+mdn-browser-compat-data@0.0.75:
+  version "0.0.75"
+  resolved "https://registry.yarnpkg.com/mdn-browser-compat-data/-/mdn-browser-compat-data-0.0.75.tgz#babbb4a70bd8dadd8ceaf5e0b09ed546fb6befc4"
+  integrity sha512-aztPlwHCWm/yh/gGvWCHonrTTdyAwo5tmpTDGjl7dO3HthH5vfVivQQinlylndznbwlBWOxcY5jlAYDFVHR2bg==
   dependencies:
     extend "3.0.2"
 
@@ -3840,10 +3848,10 @@ pino-std-serializers@^2.3.0:
   resolved "https://registry.yarnpkg.com/pino-std-serializers/-/pino-std-serializers-2.3.0.tgz#34eeaab97c055c28e22c0542ae55978e7e427786"
   integrity sha512-klfGoOsP6sJH7ON796G4xoUSx2fkpFgKHO4YVVO2zmz31jR+etzc/QzGJILaOIiCD6HTCFgkPx+XN8nk+ruqPw==
 
-pino@5.12.0, pino@~5.12.0:
-  version "5.12.0"
-  resolved "https://registry.yarnpkg.com/pino/-/pino-5.12.0.tgz#1630c05000a4cd9a6e0ecf43f5bea0edfb213d69"
-  integrity sha512-tXlxRVUuYrsS8jfmki3lennOcibfmGnloitY8Zn1HUMNNtOCiYH8ctQFdK+cg/7QmE2vEnfMNAIK8H3/hPBUQw==
+pino@5.12.2, pino@~5.12.0:
+  version "5.12.2"
+  resolved "https://registry.yarnpkg.com/pino/-/pino-5.12.2.tgz#e9f43d918d455684280a6015254c5ad96a91f278"
+  integrity sha512-EunVRDkw/eQzgAudJiZuqzEQ20hDezixLRLrdxUMBzavvt5ot3vep7K8swRvXSgj2bKtbOmoHnrRMtYzRjfITQ==
   dependencies:
     fast-redact "^1.4.4"
     fast-safe-stringify "^2.0.6"
@@ -4589,10 +4597,10 @@ source-map-resolve@^0.5.0:
     source-map-url "^0.4.0"
     urix "^0.1.0"
 
-source-map-support@0.5.11, source-map-support@~0.5.4:
-  version "0.5.11"
-  resolved "https://registry.yarnpkg.com/source-map-support/-/source-map-support-0.5.11.tgz#efac2ce0800355d026326a0ca23e162aeac9a4e2"
-  integrity sha512-//sajEx/fGL3iw6fltKMdPvy8kL3kJ2O3iuYlRoT3k9Kb4BjOoZ+BZzaNHeuaruSt+Kf3Zk9tnfAQg9/AJqUVQ==
+source-map-support@0.5.12, source-map-support@~0.5.4:
+  version "0.5.12"
+  resolved "https://registry.yarnpkg.com/source-map-support/-/source-map-support-0.5.12.tgz#b4f3b10d51857a5af0138d3ce8003b201613d599"
+  integrity sha512-4h2Pbvyy15EE02G+JOZpUCmqWJuqrs+sEkzewTm++BPi7Hvn/HwcqLAcNxYAyI0x13CpPPn+kMjl+hplXMHITQ==
   dependencies:
     buffer-from "^1.0.0"
     source-map "^0.6.0"
