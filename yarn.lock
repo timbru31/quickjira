@@ -250,10 +250,10 @@ acorn@^6.0.7:
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-6.1.0.tgz#b0a3be31752c97a0f7013c5f4903b71a05db6818"
   integrity sha512-MW/FjM+IvU9CgBzjO3UIPCE2pyEwUsoFl+VGdczOPEdxfGFjuKny/gN54mOuX7Qxmb9Rg9MCn2oKiSUeW+pjrw==
 
-addons-linter@^1.9.0:
-  version "1.9.0"
-  resolved "https://registry.yarnpkg.com/addons-linter/-/addons-linter-1.9.0.tgz#8dce61175201294a2a32dc2f188a416f1ae87a87"
-  integrity sha512-srmtNH1CTYrimH8XtVvG+i651KGWkRuJT4UJ/3PK0XETov5xve8C8WG2FEwq/ApWiif5fNEpTM4iI2ia5MvbkA==
+addons-linter@^1.9.1:
+  version "1.9.1"
+  resolved "https://registry.yarnpkg.com/addons-linter/-/addons-linter-1.9.1.tgz#c335e840c75da235cc8d6537b8d3e65d8ee7b308"
+  integrity sha512-It1OpZNtv7JnEmE3qAbuxorP1rktAeKF35zpV+aAG16CinptJfGQoAe9T7iB7uiqsDum3G/QYvCFGf30187uuA==
   dependencies:
     ajv "6.10.0"
     ajv-merge-patch "4.1.0"
@@ -271,11 +271,11 @@ addons-linter@^1.9.0:
     espree "5.0.1"
     esprima "4.0.1"
     first-chunk-stream "2.0.0"
-    fluent-syntax "0.12.0"
+    fluent-syntax "0.13.0"
     glob "7.1.3"
     is-mergeable-object "1.1.0"
     jed "1.1.1"
-    mdn-browser-compat-data "0.0.75"
+    mdn-browser-compat-data "0.0.76"
     os-locale "3.1.0"
     pino "5.12.2"
     po2json "0.4.5"
@@ -293,7 +293,7 @@ addons-linter@^1.9.0:
     yargs "13.2.2"
     yauzl "2.10.0"
   optionalDependencies:
-    fsevents "2.0.3"
+    fsevents "2.0.6"
 
 ajv-keywords@^1.0.0:
   version "1.5.1"
@@ -1979,10 +1979,10 @@ flatted@^2.0.0:
   resolved "https://registry.yarnpkg.com/flatted/-/flatted-2.0.0.tgz#55122b6536ea496b4b44893ee2608141d10d9916"
   integrity sha512-R+H8IZclI8AAkSBRQJLVOsxwAoHd6WC40b4QTNWIjzAa6BXOBfQcM587MXDTVPeYaopFNWHUFLx7eNmHDSxMWg==
 
-fluent-syntax@0.12.0:
-  version "0.12.0"
-  resolved "https://registry.yarnpkg.com/fluent-syntax/-/fluent-syntax-0.12.0.tgz#6d08332516dcc4c2f5c382333ee5e723291f8c2c"
-  integrity sha512-ZQvs21EHRwta16BdIKPJ95AVzbmitgGIbVR6SWodr2t9aMLN5nh3Yj183fDP9lQdjNP1YrDc3kAOrlWVzwhMmQ==
+fluent-syntax@0.13.0:
+  version "0.13.0"
+  resolved "https://registry.yarnpkg.com/fluent-syntax/-/fluent-syntax-0.13.0.tgz#417144d99cba94ff474c422b3e6623d5a842855a"
+  integrity sha512-0Bk1AsliuYB550zr4JV9AYhsETsD3ELXUQzdXGJfIc1Ni/ukAfBdQInDhVMYJUaT2QxoamNslwkYF7MlOrPUwg==
 
 fn-name@~2.0.1:
   version "2.0.1"
@@ -2027,10 +2027,10 @@ fs.realpath@^1.0.0:
   resolved "https://registry.yarnpkg.com/fs.realpath/-/fs.realpath-1.0.0.tgz#1504ad2523158caa40db4a2787cb01411994ea4f"
   integrity sha1-FQStJSMVjKpA20onh8sBQRmU6k8=
 
-fsevents@2.0.3:
-  version "2.0.3"
-  resolved "https://registry.yarnpkg.com/fsevents/-/fsevents-2.0.3.tgz#49ffb097c132987fc84938f5e97c3a6632e04c13"
-  integrity sha512-kbyPVQrgcnetW389rufw+WAl9szz0ougHcW6faFZ/RDESUwgmCWnzmXHONmdKSWiadtj6VaaewwhyX7ckL+itw==
+fsevents@2.0.6:
+  version "2.0.6"
+  resolved "https://registry.yarnpkg.com/fsevents/-/fsevents-2.0.6.tgz#87b19df0bfb4a1a51d7ddb51b01b5f3bedb40c33"
+  integrity sha512-vfmKZp3XPM36DNF0qhW+Cdxk7xm7gTEHY1clv1Xq1arwRQuKZgAhw+NZNWbJBtuaNxzNXwhfdPYRrvIbjfS33A==
 
 functional-red-black-tree@^1.0.1:
   version "1.0.1"
@@ -3258,10 +3258,10 @@ mdast-util-compact@^1.0.0:
   dependencies:
     unist-util-visit "^1.1.0"
 
-mdn-browser-compat-data@0.0.75:
-  version "0.0.75"
-  resolved "https://registry.yarnpkg.com/mdn-browser-compat-data/-/mdn-browser-compat-data-0.0.75.tgz#babbb4a70bd8dadd8ceaf5e0b09ed546fb6befc4"
-  integrity sha512-aztPlwHCWm/yh/gGvWCHonrTTdyAwo5tmpTDGjl7dO3HthH5vfVivQQinlylndznbwlBWOxcY5jlAYDFVHR2bg==
+mdn-browser-compat-data@0.0.76:
+  version "0.0.76"
+  resolved "https://registry.yarnpkg.com/mdn-browser-compat-data/-/mdn-browser-compat-data-0.0.76.tgz#e19efd3735be6de070b6c08a869ecec6848a07b5"
+  integrity sha512-kLr0769mgs9o8MaCafVug7f2bmWY3+5UJXZ0jyXbD/PA/ry56G1uon2WU/JakLBzYxG8S+J8rC2oem6CB3wMqw==
   dependencies:
     extend "3.0.2"
 
