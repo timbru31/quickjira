@@ -281,10 +281,10 @@ acorn@^6.0.7:
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-6.1.1.tgz#7d25ae05bb8ad1f9b699108e1094ecd7884adc1f"
   integrity sha512-jPTiwtOxaHNaAPg/dmrJ/beuzLRnXtB0kQPQ8JpotKJgTB6rX6c8mlf315941pyjBSaPg8NHXS9fhP4u17DpGA==
 
-addons-linter@^1.9.4:
-  version "1.9.4"
-  resolved "https://registry.yarnpkg.com/addons-linter/-/addons-linter-1.9.4.tgz#ba9204919af7795fef4d5961750a2a19f9ad0a6d"
-  integrity sha512-vI7FVoQ+oIetUthKZxSbIwaEEepcNPL9pCccKu3/YHqnUHkVH1rTDZiccrwx/i28Iwddk4FT/C8xCn1P+Rgl9w==
+addons-linter@^1.9.6:
+  version "1.9.6"
+  resolved "https://registry.yarnpkg.com/addons-linter/-/addons-linter-1.9.6.tgz#00f3b07992a32247a4239975f675c67f0c140b09"
+  integrity sha512-zTKJ/VGJslFLm14Ap3w9VXb52Yo0VtWB44xkJNkwccC3oHU0i8vliTgw830QGjpWtumEDkeH9fpNm1EQYlsBWw==
   dependencies:
     ajv "6.10.0"
     ajv-merge-patch "4.1.0"
@@ -308,13 +308,13 @@ addons-linter@^1.9.4:
     jed "1.1.1"
     mdn-browser-compat-data "0.0.80"
     os-locale "3.1.0"
-    pino "5.12.5"
+    pino "5.12.6"
     po2json "0.4.5"
     postcss "7.0.16"
     probe-image-size "4.0.0"
     regenerator-runtime "0.13.2"
     relaxed-json "1.0.3"
-    semver "6.0.0"
+    semver "6.1.0"
     source-map-support "0.5.12"
     strip-bom-stream "4.0.0"
     tosource "1.0.0"
@@ -4478,10 +4478,10 @@ pino-std-serializers@^2.3.0:
   resolved "https://registry.yarnpkg.com/pino-std-serializers/-/pino-std-serializers-2.4.0.tgz#c0588b5ab0905ac55bae2cb61639ed93153681fb"
   integrity sha512-ysT2ylXu1aEec9k8cm/lz7emBcfpdxFWHqvHeGXf1wvfw7TKPMGhLWwS+ciHw6u4ffnmV+pkAMF4MUIZmZZdSg==
 
-pino@5.12.5, pino@~5.12.0:
-  version "5.12.5"
-  resolved "https://registry.yarnpkg.com/pino/-/pino-5.12.5.tgz#4cf008b91a13338a4198277a30a9b5eef8ab81b7"
-  integrity sha512-Y493vt9ci7Jez3WZ/aUArijTQZXbHgWvDB3TMZlTu731p2kan/qyJk5k46aveEmYFnTlEommc+PSncUcuiMrBg==
+pino@5.12.6, pino@~5.12.0:
+  version "5.12.6"
+  resolved "https://registry.yarnpkg.com/pino/-/pino-5.12.6.tgz#04a668278d7616db71871f1bd3e26f6918e05feb"
+  integrity sha512-LM5ug2b27uymIIkaBw54ncF+9DSf8S4z1uzw+Y5I94dRu3Z+lFuB13j0kg1InAeyxy+CsLGnWHKy9+zgTreFOg==
   dependencies:
     fast-redact "^1.4.4"
     fast-safe-stringify "^2.0.6"
@@ -5167,10 +5167,15 @@ semver-diff@^2.0.0:
   resolved "https://registry.yarnpkg.com/semver/-/semver-5.7.0.tgz#790a7cf6fea5459bac96110b29b60412dc8ff96b"
   integrity sha512-Ya52jSX2u7QKghxeoFGpLwCtGlt7j0oY9DYb5apt9nPlJ42ID+ulTXESnt/qAQcoSERyZ5sl3LDIOw0nAn/5DA==
 
-semver@6.0.0, semver@^6.0.0:
+semver@6.0.0:
   version "6.0.0"
   resolved "https://registry.yarnpkg.com/semver/-/semver-6.0.0.tgz#05e359ee571e5ad7ed641a6eec1e547ba52dea65"
   integrity sha512-0UewU+9rFapKFnlbirLi3byoOuhrSsli/z/ihNnvM24vgF+8sNBiI1LZPBSH9wJKUwaUbw+s3hToDLCXkrghrQ==
+
+semver@6.1.0, semver@^6.0.0:
+  version "6.1.0"
+  resolved "https://registry.yarnpkg.com/semver/-/semver-6.1.0.tgz#e95dc415d45ecf03f2f9f83b264a6b11f49c0cca"
+  integrity sha512-kCqEOOHoBcFs/2Ccuk4Xarm/KiWRSLEX9CAZF8xkJ6ZPlIoTZ8V5f7J16vYLJqDbR7KrxTJpR2lqjIEm2Qx9cQ==
 
 set-blocking@^2.0.0:
   version "2.0.0"
