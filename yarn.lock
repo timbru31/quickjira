@@ -281,10 +281,10 @@ acorn@^6.0.7:
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-6.1.1.tgz#7d25ae05bb8ad1f9b699108e1094ecd7884adc1f"
   integrity sha512-jPTiwtOxaHNaAPg/dmrJ/beuzLRnXtB0kQPQ8JpotKJgTB6rX6c8mlf315941pyjBSaPg8NHXS9fhP4u17DpGA==
 
-addons-linter@^1.9.6:
-  version "1.9.6"
-  resolved "https://registry.yarnpkg.com/addons-linter/-/addons-linter-1.9.6.tgz#00f3b07992a32247a4239975f675c67f0c140b09"
-  integrity sha512-zTKJ/VGJslFLm14Ap3w9VXb52Yo0VtWB44xkJNkwccC3oHU0i8vliTgw830QGjpWtumEDkeH9fpNm1EQYlsBWw==
+addons-linter@^1.9.7:
+  version "1.9.7"
+  resolved "https://registry.yarnpkg.com/addons-linter/-/addons-linter-1.9.7.tgz#c42521f42154dd1705d9d867296cca24f080a1a2"
+  integrity sha512-RaplYC2jzWuW3d3Bs1sbqX9OrE0QsX9Uj6Qh+4Y3g5V2VBGvoZxpIziFeeLHwSI1k070Zk46uV6SF3SgIoPozw==
   dependencies:
     ajv "6.10.0"
     ajv-merge-patch "4.1.0"
