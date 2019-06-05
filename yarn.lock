@@ -281,10 +281,10 @@ acorn@^6.0.7:
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-6.1.1.tgz#7d25ae05bb8ad1f9b699108e1094ecd7884adc1f"
   integrity sha512-jPTiwtOxaHNaAPg/dmrJ/beuzLRnXtB0kQPQ8JpotKJgTB6rX6c8mlf315941pyjBSaPg8NHXS9fhP4u17DpGA==
 
-addons-linter@^1.9.7:
-  version "1.9.7"
-  resolved "https://registry.yarnpkg.com/addons-linter/-/addons-linter-1.9.7.tgz#c42521f42154dd1705d9d867296cca24f080a1a2"
-  integrity sha512-RaplYC2jzWuW3d3Bs1sbqX9OrE0QsX9Uj6Qh+4Y3g5V2VBGvoZxpIziFeeLHwSI1k070Zk46uV6SF3SgIoPozw==
+addons-linter@^1.10.0:
+  version "1.10.0"
+  resolved "https://registry.yarnpkg.com/addons-linter/-/addons-linter-1.10.0.tgz#4b079647c860161602ff5772c1510bb63ec644ec"
+  integrity sha512-2i2qSayVPx4h1Aa2ZTdQlpgmjcCNIHZ4AJQS8V/QsBXIdmXl+Djmeyr096bjaC3Usq0rZfYhGgFdwR1dgHVItw==
   dependencies:
     ajv "6.10.0"
     ajv-merge-patch "4.1.0"
@@ -306,7 +306,7 @@ addons-linter@^1.9.7:
     glob "7.1.4"
     is-mergeable-object "1.1.0"
     jed "1.1.1"
-    mdn-browser-compat-data "0.0.80"
+    mdn-browser-compat-data "0.0.82"
     os-locale "3.1.0"
     pino "5.12.6"
     po2json "0.4.5"
@@ -314,7 +314,7 @@ addons-linter@^1.9.7:
     probe-image-size "4.0.0"
     regenerator-runtime "0.13.2"
     relaxed-json "1.0.3"
-    semver "6.1.0"
+    semver "6.1.1"
     source-map-support "0.5.12"
     strip-bom-stream "4.0.0"
     tosource "1.0.0"
@@ -3743,10 +3743,10 @@ mdast-util-compact@^1.0.0:
   dependencies:
     unist-util-visit "^1.1.0"
 
-mdn-browser-compat-data@0.0.80:
-  version "0.0.80"
-  resolved "https://registry.yarnpkg.com/mdn-browser-compat-data/-/mdn-browser-compat-data-0.0.80.tgz#c4cb5d59e0b44815f19435c9db12c73ee3631399"
-  integrity sha512-7hA5HAVdnhjSo9RL+e5rRIxyDfRFzP6rCzyqVdkp2C4LOUiDOuB2HGbQRJveScSjkezEvq8oZtbCF5oQikWqPw==
+mdn-browser-compat-data@0.0.82:
+  version "0.0.82"
+  resolved "https://registry.yarnpkg.com/mdn-browser-compat-data/-/mdn-browser-compat-data-0.0.82.tgz#1fdf4979e548eaeed193464d19dbb4381ba7768b"
+  integrity sha512-RmC87C45AgXLuNlkrGLCK2wh0zRwpFnnro5jsNxmS90xLCxfKmTLPtqM9cocKFD7Ro9pWmtvkIkRiesGakd1Ig==
   dependencies:
     extend "3.0.2"
 
@@ -5172,10 +5172,10 @@ semver@6.0.0:
   resolved "https://registry.yarnpkg.com/semver/-/semver-6.0.0.tgz#05e359ee571e5ad7ed641a6eec1e547ba52dea65"
   integrity sha512-0UewU+9rFapKFnlbirLi3byoOuhrSsli/z/ihNnvM24vgF+8sNBiI1LZPBSH9wJKUwaUbw+s3hToDLCXkrghrQ==
 
-semver@6.1.0, semver@^6.0.0:
-  version "6.1.0"
-  resolved "https://registry.yarnpkg.com/semver/-/semver-6.1.0.tgz#e95dc415d45ecf03f2f9f83b264a6b11f49c0cca"
-  integrity sha512-kCqEOOHoBcFs/2Ccuk4Xarm/KiWRSLEX9CAZF8xkJ6ZPlIoTZ8V5f7J16vYLJqDbR7KrxTJpR2lqjIEm2Qx9cQ==
+semver@6.1.1, semver@^6.0.0:
+  version "6.1.1"
+  resolved "https://registry.yarnpkg.com/semver/-/semver-6.1.1.tgz#53f53da9b30b2103cd4f15eab3a18ecbcb210c9b"
+  integrity sha512-rWYq2e5iYW+fFe/oPPtYJxYgjBm8sC4rmoGdUOgBB7VnwKt6HrL793l2voH1UlsyYZpJ4g0wfjnTEO1s1NP2eQ==
 
 set-blocking@^2.0.0:
   version "2.0.0"
