@@ -34,7 +34,7 @@
 		"standard-version": "^7.0.0",
 		"stylelint": "^10.1.0",
 		"stylelint-config-recommended": "^2.2.0",
-		"tslint": "^5.18.0",
+		"tslint": "^5.19.0",
 		"tslint-config-prettier": "^1.18.0",
 		"typescript": "^3.5.3"
 	},
