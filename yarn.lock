@@ -275,10 +275,10 @@ acorn@^7.0.0:
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-7.0.0.tgz#26b8d1cd9a9b700350b71c0905546f64d1284e7a"
   integrity sha512-PaF/MduxijYYt7unVGRuds1vBC9bFxbNf+VWqhOClfdgy7RlVkQqt610ig1/yxTgsDIfW1cWDel5EBbOy3jdtQ==
 
-addons-linter@^1.12.2:
-  version "1.12.2"
-  resolved "https://registry.yarnpkg.com/addons-linter/-/addons-linter-1.12.2.tgz#f72744f3595a61a20b1d4b53da193a1fdf305040"
-  integrity sha512-pjbHX2ykA7ZV//mmCjJEho6on/cxE/kazufNQtNu6K4y3lGKqRwjpWKEqfULbvi+vfQ288c0Cm68dWOKuKjqyA==
+addons-linter@^1.13.0:
+  version "1.13.0"
+  resolved "https://registry.yarnpkg.com/addons-linter/-/addons-linter-1.13.0.tgz#f0b519f73e27aafbbf956d50d4c22cb720c4dfd3"
+  integrity sha512-87Yff5w9medKLa8bf6ksNNCglEUiL9Qeekus6CRd+iAWBn4chgD8Fzic20cTAe49S4Z/DhY0euLrHytL3KF1yA==
   dependencies:
     ajv "6.10.2"
     ajv-merge-patch "4.1.0"
@@ -299,7 +299,7 @@ addons-linter@^1.12.2:
     glob "7.1.4"
     is-mergeable-object "1.1.1"
     jed "1.1.1"
-    mdn-browser-compat-data "0.0.93"
+    mdn-browser-compat-data "0.0.94"
     os-locale "4.0.0"
     pino "5.13.2"
     po2json "0.4.5"
@@ -3273,10 +3273,10 @@ mdast-util-compact@^1.0.0:
   dependencies:
     unist-util-visit "^1.1.0"
 
-mdn-browser-compat-data@0.0.93:
-  version "0.0.93"
-  resolved "https://registry.yarnpkg.com/mdn-browser-compat-data/-/mdn-browser-compat-data-0.0.93.tgz#60f316529876f9b0d425ccc74c6cf9f0812c88ce"
-  integrity sha512-rrgjwkQOz/c9LMLMuTRslvkx0m3/BQdw8eCT4GB2vyApPClD6yxjzFJ37xzIfSLqiF0fQkFNGrW7MkzHoR8LjA==
+mdn-browser-compat-data@0.0.94:
+  version "0.0.94"
+  resolved "https://registry.yarnpkg.com/mdn-browser-compat-data/-/mdn-browser-compat-data-0.0.94.tgz#eaa1653761ce95881ea1858a8c0ce6066d85f94b"
+  integrity sha512-O3zJqbmehz0Hn3wpk62taA0+jNF7yn6BDWqQ9Wh2bEoO9Rx1BYiTmNX565eNVbW0ixfQkY6Sp9FvY/rr79Qmyg==
   dependencies:
     extend "3.0.2"
 
