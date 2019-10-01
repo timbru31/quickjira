@@ -1,0 +1,13 @@
+on: push
+name: Security
+jobs:
+    runaSecurityAudit:
+        name: Run a security audit
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@master
+            - name: Run a security audit
+              uses: actions/npm@59b64a598378f31e49cb76f27d6f3312b582f680
+              with:
+                  entrypoint: npm
+                  args: audit
