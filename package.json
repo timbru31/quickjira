@@ -28,8 +28,8 @@
 	"devDependencies": {
 		"@types/chrome": "^0.0.89",
 		"addons-linter": "^1.14.0",
-		"husky": "^3.0.5",
-		"lint-staged": "^9.3.0",
+		"husky": "^3.0.7",
+		"lint-staged": "^9.4.1",
 		"prettier": "^1.18.2",
 		"standard-version": "^7.0.0",
 		"stylelint": "^11.0.0",
