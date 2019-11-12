@@ -418,10 +418,10 @@ acorn@^7.1.0:
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-7.1.0.tgz#949d36f2c292535da602283586c2477c57eb2d6c"
   integrity sha512-kL5CuoXA/dgxlBbVrflsflzQ3PAas7RYZB52NOm/6839iVYJgKMJ3cQJD+t2i5+qFa8h3MDpEOJiS64E8JLnSQ==
 
-addons-linter@^1.15.3:
-  version "1.15.3"
-  resolved "https://registry.yarnpkg.com/addons-linter/-/addons-linter-1.15.3.tgz#d0d7ee34f2e844cc603f408d8ab271419d2a9a23"
-  integrity sha512-43xxwMndxWxJ0uyZeR0QYP/c8i0y40oTKQi2Xmk9aWHn+BR74Ax5QyFy+/FXGcqpr76+kmDlPI41gUlaHeF57g==
+addons-linter@^1.16.0:
+  version "1.16.0"
+  resolved "https://registry.yarnpkg.com/addons-linter/-/addons-linter-1.16.0.tgz#a9e09709128252b0e0fdd0ee96ccff013c2cf45d"
+  integrity sha512-ZKOdSXw08/OehvsD/G2TuivDZ4zAJmIrhrf7QcfrwNA26vVfM5OyDI3xvzmVIaoHS3AtzR73I0THE6XB1kdz6A==
   dependencies:
     ajv "6.10.2"
     ajv-merge-patch "4.1.0"
@@ -450,8 +450,7 @@ addons-linter@^1.15.3:
     regenerator-runtime "0.13.3"
     relaxed-json "1.0.3"
     semver "6.3.0"
-    snyk "1.239.3"
-    source-map-support "0.5.15"
+    source-map-support "0.5.16"
     strip-bom-stream "4.0.0"
     tosource "1.0.0"
     upath "1.2.0"
@@ -5911,7 +5910,7 @@ snyk-try-require@1.3.1, snyk-try-require@^1.1.1, snyk-try-require@^1.3.1:
     lru-cache "^4.0.0"
     then-fs "^2.0.0"
 
-snyk@1.239.3, snyk@^1.230.5:
+snyk@^1.230.5:
   version "1.239.3"
   resolved "https://registry.yarnpkg.com/snyk/-/snyk-1.239.3.tgz#673eed0a1daf19addc14c2ea9c79578b1fd7373b"
   integrity sha512-E/6Szx4fqA+KbVAM2Ph5+j8fRUNaycLlsS9y5pIGEOKonj7XZ26TwazmtpysuI+ioVfwQrqp/hR5m8J6oErSLg==
@@ -5997,10 +5996,10 @@ source-map-resolve@^0.5.0:
     source-map-url "^0.4.0"
     urix "^0.1.0"
 
-source-map-support@0.5.15, source-map-support@^0.5.11, source-map-support@^0.5.7, source-map-support@~0.5.4:
-  version "0.5.15"
-  resolved "https://registry.yarnpkg.com/source-map-support/-/source-map-support-0.5.15.tgz#20fe16f16e74644e21a396c78c841fa66e35df6c"
-  integrity sha512-wYF5aX1J0+V51BDT3Om7uXNn0ct2FWiV4bvwiGVefxkm+1S1o5jsecE5lb2U28DDblzxzxeIDbTVpXHI9D/9hA==
+source-map-support@0.5.16, source-map-support@^0.5.11, source-map-support@^0.5.7, source-map-support@~0.5.4:
+  version "0.5.16"
+  resolved "https://registry.yarnpkg.com/source-map-support/-/source-map-support-0.5.16.tgz#0ae069e7fe3ba7538c64c98515e35339eac5a042"
+  integrity sha512-efyLRJDr68D9hBBNIPWFjhpFzURh+KJykQwvMyW5UiZzYwoF6l4YMMDIJJEyFWxWCqfyxLzz6tSfUFR+kXXsVQ==
   dependencies:
     buffer-from "^1.0.0"
     source-map "^0.6.0"
