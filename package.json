@@ -29,7 +29,7 @@
 		"@types/chrome": "^0.0.91",
 		"addons-linter": "^1.21.0",
 		"husky": "^4.0.10",
-		"lint-staged": "^9.5.0",
+		"lint-staged": "^10.0.1",
 		"prettier": "^1.19.1",
 		"standard-version": "^7.0.1",
 		"stylelint": "^13.0.0",
@@ -45,8 +45,7 @@
 	},
 	"lint-staged": {
 		"*.{ts,json,css,md,yml}": [
-			"prettier --write",
-			"git add"
+			"prettier --write"
 		]
 	}
 }
