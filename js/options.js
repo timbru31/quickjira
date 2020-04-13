@@ -3,7 +3,7 @@ const _browser = this._browser || this.browser || this.chrome;
 const urlPattern = /^https?:\/\/(?:www\.|(?!www))[^\s.]+\.[^\s]{2,}|www\.[^\s]+\.[^\s]{2,}$/;
 const storage = _browser.storage.sync || _browser.storage.local;
 
-const saveOptions = event => {
+const saveOptions = (event) => {
 	event.preventDefault();
 	const status = document.querySelector('.quiji-options-status');
 	const jira = document.querySelector('.quiji-options-jira-url').value;
@@ -24,7 +24,7 @@ const saveOptions = event => {
 			{
 				jiraURL: jira,
 				defaultOption,
-				trimSpaces
+				trimSpaces,
 			},
 			() => {
 				status.textContent = _browser.i18n.getMessage('savedOptions');
@@ -42,9 +42,9 @@ const restoreOptions = () => {
 		{
 			jiraURL: '',
 			defaultOption: 0,
-			trimSpaces: 0
+			trimSpaces: 0,
 		},
-		options => {
+		(options) => {
 			document.querySelector('.quiji-options-jira-url').value = (options && options.jiraURL) || '';
 			// Map 0 to currentTab and 1 to newTab
 			let defaultOption = _browser.i18n.getMessage('currentTab');
@@ -58,7 +58,7 @@ const restoreOptions = () => {
 	);
 };
 
-const createDefaultShortcuts = shortcutList => {
+const createDefaultShortcuts = (shortcutList) => {
 	let listItem = document.createElement('li');
 	listItem.textContent = 'Popup: Ctrl+Shift+K';
 	shortcutList.appendChild(listItem);
@@ -75,8 +75,8 @@ const loadShortcuts = () => {
 	if (!_browser.commands) {
 		createDefaultShortcuts(shortcutList);
 	} else {
-		_browser.commands.getAll(commands => {
-			commands.map(command => {
+		_browser.commands.getAll((commands) => {
+			commands.map((command) => {
 				const listItem = document.createElement('li');
 				switch (command.name) {
 					case '_execute_browser_action':
@@ -98,7 +98,7 @@ const loadShortcuts = () => {
 document.addEventListener('DOMContentLoaded', () => {
 	restoreOptions();
 	loadShortcuts();
-	document.querySelector('.quiji-options').addEventListener('submit', e => {
+	document.querySelector('.quiji-options').addEventListener('submit', (e) => {
 		saveOptions(e);
 	});
 });
