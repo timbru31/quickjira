@@ -2,7 +2,7 @@
 const _browser = this._browser || this.browser || this.chrome;
 const storage = _browser.storage.sync || _browser.storage.local;
 
-const handleSubmit = event => {
+const handleSubmit = (event) => {
 	if (event) {
 		event.preventDefault();
 	}
@@ -25,9 +25,9 @@ const renderDialog = () => {
 	storage.get(
 		{
 			defaultOption: 0,
-			lastTicket: ''
+			lastTicket: '',
 		},
-		options => {
+		(options) => {
 			const form = document.querySelector('.quiji-popup-form');
 			const newButton = document.querySelector('.quiji-new-tab');
 			newButton.newTab = true;
@@ -62,7 +62,7 @@ function createLastTicketButton(options) {
 		if (!options.lastTicket) {
 			lastTicketButton.disabled = true;
 		} else {
-			lastTicketButton.addEventListener('click', e => handleLastTicket(e, options.defaultOption, options.lastTicket));
+			lastTicketButton.addEventListener('click', (e) => handleLastTicket(e, options.defaultOption, options.lastTicket));
 		}
 	}
 	return lastTicketButton;

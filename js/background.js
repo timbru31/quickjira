@@ -6,9 +6,9 @@ var openTicket = (ticket, newTab) => {
 	storage.get(
 		{
 			jiraURL: '',
-			trimSpaces: 0
+			trimSpaces: 0,
 		},
-		options => {
+		(options) => {
 			const jiraURL = options && options.jiraURL;
 			const trimSpaces = options && options.trimSpaces !== 0;
 			let newURL;
@@ -17,7 +17,7 @@ var openTicket = (ticket, newTab) => {
 				ticket = decodeURIComponent(ticket).replace(/\s/g, '');
 			}
 			storage.set({
-				lastTicket: ticket
+				lastTicket: ticket,
 			});
 
 			if (!jiraURL) {
@@ -41,18 +41,18 @@ var openTicket = (ticket, newTab) => {
 	);
 };
 
-const handleSelectionCurrent = selection => {
+const handleSelectionCurrent = (selection) => {
 	openTicket(selection.selectionText, false);
 };
 
-const handleSelectionNew = selection => {
+const handleSelectionNew = (selection) => {
 	openTicket(selection.selectionText, true);
 };
 
 if (_browser.contextMenus) {
 	const parentId = _browser.contextMenus.create({
 		title: 'Quick JIRA',
-		contexts: ['selection']
+		contexts: ['selection'],
 	});
 
 	const currentTabString = _browser.i18n.getMessage('openInCurrentTab');
@@ -60,7 +60,7 @@ if (_browser.contextMenus) {
 		title: currentTabString,
 		parentId: parentId,
 		contexts: ['selection'],
-		onclick: handleSelectionCurrent
+		onclick: handleSelectionCurrent,
 	});
 
 	const newTabString = _browser.i18n.getMessage('openInNewTab');
@@ -68,18 +68,18 @@ if (_browser.contextMenus) {
 		title: newTabString,
 		parentId: parentId,
 		contexts: ['selection'],
-		onclick: handleSelectionNew
+		onclick: handleSelectionNew,
 	});
 }
 
 if (_browser.omnibox) {
-	_browser.omnibox.onInputEntered.addListener(text => {
+	_browser.omnibox.onInputEntered.addListener((text) => {
 		storage.get(
 			{
 				// fallback
-				defaultOption: 0
+				defaultOption: 0,
 			},
-			options => {
+			(options) => {
 				const newTab = (options && options.defaultOption !== 0) || false;
 				openTicket(text, newTab);
 			}
@@ -95,14 +95,14 @@ const funcToInject = () => {
 const jsCodeStr = `;(${funcToInject})();`;
 
 if (_browser.commands) {
-	_browser.commands.onCommand.addListener(cmd => {
+	_browser.commands.onCommand.addListener((cmd) => {
 		_browser.tabs.executeScript(
 			{
 				code: jsCodeStr,
-				allFrames: true
+				allFrames: true,
 			},
-			selectedTextPerFrame => {
-				if (!_browser.runtime.lastError && (selectedTextPerFrame.length > 0 && typeof selectedTextPerFrame[0] === 'string')) {
+			(selectedTextPerFrame) => {
+				if (!_browser.runtime.lastError && selectedTextPerFrame.length > 0 && typeof selectedTextPerFrame[0] === 'string') {
 					const selectedText = selectedTextPerFrame[0];
 					if (cmd === 'open-ticket-in-current-tab') {
 						openTicket(selectedText, false);
@@ -116,7 +116,7 @@ if (_browser.commands) {
 }
 
 if (_browser.runtime && _browser.runtime.onInstalled) {
-	_browser.runtime.onInstalled.addListener(details => {
+	_browser.runtime.onInstalled.addListener((details) => {
 		if (details.reason === 'install') {
 			try {
 				_browser.runtime.openOptionsPage();
@@ -133,12 +133,12 @@ if (_browser.runtime && _browser.runtime.onInstalled) {
 }
 
 function openURLInTab(newTab, newURL) {
-	_browser.tabs.query({ active: true, currentWindow: true }, tabs => {
+	_browser.tabs.query({ active: true, currentWindow: true }, (tabs) => {
 		if (newTab) {
 			_browser.tabs.create({ url: newURL });
 		} else {
 			_browser.tabs.update(tabs[0].id, {
-				url: newURL
+				url: newURL,
 			});
 		}
 	});
