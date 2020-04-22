@@ -29,7 +29,7 @@
 		"@types/chrome": "^0.0.104",
 		"addons-linter": "^1.23.0",
 		"husky": "^4.2.5",
-		"lint-staged": "^10.1.6",
+		"lint-staged": "^10.1.7",
 		"prettier": "^2.0.4",
 		"standard-version": "^7.1.0",
 		"stylelint": "^13.3.2",
