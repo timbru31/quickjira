@@ -1,6 +1,7 @@
 # Quick JIRA (quiji)
 
-[![Build Status](https://travis-ci.org/timbru31/quickjira.svg?branch=master)](https://travis-ci.org/timbru31/quickjira)
+[![Security](https://github.com/timbru31/quickjira/workflows/Security/badge.svg)](https://github.com/timbru31/quickjira/actions?query=workflow%3ASecurity)
+[![Linting](https://github.com/timbru31/quickjira/workflows/Linting/badge.svg)](https://github.com/timbru31/quickjira/actions?query=workflow%3ALinting)
 
 [![Dependency Status](https://david-dm.org/timbru31/quickjira.svg)](https://david-dm.org/timbru31/quickjira)
 [![devDependency Status](https://david-dm.org/timbru31/quickjira/dev-status.svg)](https://david-dm.org/timbru31/quickjira#info=devDependencies)
