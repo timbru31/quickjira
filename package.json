@@ -28,7 +28,7 @@
 	"devDependencies": {
 		"@types/chrome": "^0.0.126",
 		"addons-linter": "^2.14.0",
-		"husky": "^4.3.5",
+		"husky": "^4.3.6",
 		"lint-staged": "^10.5.3",
 		"prettier": "^2.2.1",
 		"standard-version": "^9.0.0",
