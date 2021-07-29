@@ -28,7 +28,7 @@ You can now open up a JIRA issue within a second - in your current or a new tab.
 Just configure the "base url" and you are ready to go!
 The settings are synced via your Google account across other browsers.
 
-[![Quick JIRA @Chrome Web Store](https://developer.chrome.com/webstore/images/ChromeWebStore_Badge_v2_206x58.png 'QuickJIRA @Chrome Web Store')](https://chrome.google.com/webstore/detail/quick-jira/acdnmaeifljongleeegkkfnfcopblokj)
+[![Quick JIRA @Chrome Web Store](https://storage.googleapis.com/chrome-gcs-uploader.appspot.com/image/WlD8wC6g8khYWPJUsQceQkhXSlv1/tbyBjqi7Zu733AAKA5n4.png 'QuickJIRA @Chrome Web Store')](https://chrome.google.com/webstore/detail/quick-jira/acdnmaeifljongleeegkkfnfcopblokj)
 [<img alt="Quick JIRA @Opera add-ons" src="https://dev.opera.com/extensions/branding-guidelines/addons_206x58_en@2x.png" height="58" width="206">](https://addons.opera.com/extensions/details/quick-jira)
 [<img alt="Quick JIRA @Add-Ons for Firefox" src="./images/firefox-logo-horizontal-lockup.png" height="58">](https://addons.mozilla.org/firefox/addon/quickjira)
 
