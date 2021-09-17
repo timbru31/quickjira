@@ -31,7 +31,7 @@
 		"addons-linter": "^3.15.0",
 		"husky": "^7.0.2",
 		"lint-staged": "^11.1.2",
-		"prettier": "^2.4.0",
+		"prettier": "^2.4.1",
 		"standard-version": "^9.3.1",
 		"stylelint": "^13.13.1",
 		"stylelint-config-recommended": "^5.0.0",
