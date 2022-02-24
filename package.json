@@ -6,7 +6,7 @@
 	"scripts": {
 		"prepare": "husky install",
 		"prebuild": "rm -rf dist",
-		"postbuild": "rsync -av --exclude='js' src/ dist",
+		"package": "rsync -av js manifest.json css html images background.html _locales dist",
 		"stylelint": "stylelint --allow-empty-input 'css/*.css'",
 		"lint": "npm run stylelint",
 		"prerelease": "npm run test && npm run build",
