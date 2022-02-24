@@ -1,4 +1,5 @@
 .DS_Store
 release_*
 node_modules/
+dist/
 *.zip
