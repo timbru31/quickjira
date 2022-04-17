@@ -12,6 +12,15 @@ const handleSubmit = (event) => {
 		window.setTimeout(() => window.close(), 1000);
 		_browser.extension.getBackgroundPage().openTicket(ticket, event.target.newTab, company);
 	}
+
+	storage.set(
+		{
+			jiraLASTCOMP: company,
+		},
+		() => {
+			//? maybe storing last option should be an option
+		}
+	);
 };
 
 const handleLastTicket = (event, defaultOption, lastTicket) => {
@@ -27,6 +36,7 @@ const renderDialog = () => {
 		{
 			defaultOption: 0,
 			jiraCompanyIds: '',
+			jiraLASTCOMP: '',
 			lastTicket: '',
 		},
 		(options) => {
@@ -42,6 +52,11 @@ const renderDialog = () => {
 				allCompanyOptions[i].innerHTML = options.jiraCompanyIds[i] || ''
 			}
 
+			//on first run, options.jiraLASTCOMP may be null
+			if (options.jiraLASTCOMP){
+				const jiraCompany = parseInt(options.jiraLASTCOMP)
+				document.querySelectorAll('.company-options')[jiraCompany].setAttribute('selected', '')
+		    }
 			const lastTicketButton = createLastTicketButton(options);
 
 			form.addEventListener('submit', handleSubmit);
