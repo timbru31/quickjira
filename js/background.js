@@ -9,7 +9,6 @@ var openTicket = (ticket, newTab, company) => {
 			trimSpaces: 0,
 		},
 		(options) => {
-			//const jiraURL = options && options.jiraURL;
 			const jiraUrlArray = parseInt(company)
 			const jiraURL = options && options.jiraURL[jiraUrlArray];
 

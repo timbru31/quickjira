@@ -9,12 +9,10 @@ const saveOptions = (event) => {
 	const jira = document.querySelectorAll('.quiji-options-jira-url');
 	const jiraCompanies = document.querySelectorAll('.company-id');
 
-	let invalidUrl = Boolean
-	for (let i = 0; i < jira.length; i++) {
-		if (!urlPattern.test(jira[i].value)) {
+	let invalidUrl = false
+	for (const urls of jira) {
+		if (!urlPattern.test(urls.value)) {
 			invalidUrl = true
-		} else {
-			invalidUrl = false
 		}
 	}
 	if (invalidUrl) {
@@ -72,7 +70,6 @@ const restoreOptions = () => {
 				allLinkNodes[i].value = allJiraLinks[i] || ''
 				allCompanyNodes[i].value = options.jiraCompanyIds[i] || ''
 			}
-			//document.querySelector('.quiji-options-jira-url').value = (options && options.jiraURL[0]) || '';
 			// Map 0 to currentTab and 1 to newTab
 			let defaultOption = _browser.i18n.getMessage('currentTab');
 			if (options && options.defaultOption === 1) {

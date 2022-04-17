@@ -8,7 +8,6 @@ const handleSubmit = (event) => {
 	}
 	const ticket = encodeURIComponent(document.querySelector('.quiji-ticket-id').value);
 	const company = document.querySelector('.company-selector').value
-console.log(company)
 	if (ticket) {
 		window.setTimeout(() => window.close(), 1000);
 		_browser.extension.getBackgroundPage().openTicket(ticket, event.target.newTab, company);
