@@ -7,9 +7,11 @@ const handleSubmit = (event) => {
 		event.preventDefault();
 	}
 	const ticket = encodeURIComponent(document.querySelector('.quiji-ticket-id').value);
+	const company = document.querySelector('.company-selector').value
+console.log(company)
 	if (ticket) {
 		window.setTimeout(() => window.close(), 1000);
-		_browser.extension.getBackgroundPage().openTicket(ticket, event.target.newTab);
+		_browser.extension.getBackgroundPage().openTicket(ticket, event.target.newTab, company);
 	}
 };
 
@@ -25,6 +27,7 @@ const renderDialog = () => {
 	storage.get(
 		{
 			defaultOption: 0,
+			jiraCompanyIds: '',
 			lastTicket: '',
 		},
 		(options) => {
@@ -33,6 +36,12 @@ const renderDialog = () => {
 			newButton.newTab = true;
 			const currentButton = document.querySelector('.quiji-current-tab');
 			currentButton.newTab = false;
+
+			//render company options
+			let allCompanyOptions = document.querySelectorAll('.company-options')
+			for (let i = 0; i < allCompanyOptions.length; i++) {
+				allCompanyOptions[i].innerHTML = options.jiraCompanyIds[i] || ''
+			}
 
 			const lastTicketButton = createLastTicketButton(options);
 

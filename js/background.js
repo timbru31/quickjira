@@ -2,14 +2,17 @@
 const _browser = this.browser || this.chrome;
 const storage = _browser.storage.sync || _browser.storage.local;
 
-var openTicket = (ticket, newTab) => {
+var openTicket = (ticket, newTab, company) => {
 	storage.get(
 		{
 			jiraURL: '',
 			trimSpaces: 0,
 		},
 		(options) => {
-			const jiraURL = options && options.jiraURL;
+			//const jiraURL = options && options.jiraURL;
+			const jiraUrlArray = parseInt(company)
+			const jiraURL = options && options.jiraURL[jiraUrlArray];
+
 			const trimSpaces = options && options.trimSpaces !== 0;
 			let newURL;
 
