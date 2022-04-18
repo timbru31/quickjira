@@ -8,16 +8,15 @@ const handleSubmit = (event) => {
 	}
 	const ticket = encodeURIComponent(document.querySelector('.quiji-ticket-id').value);
 	const company = document.querySelector('.company-selector').value
-	if (ticket) {
-		window.setTimeout(() => window.close(), 1000);
-		_browser.extension.getBackgroundPage().openTicket(ticket, event.target.newTab, company);
-	}
-
 	storage.set(
 		{
-			jiraLASTCOMP: company,
+			jiraLastUsed: company,
 		},
 		() => {
+			if (ticket) {
+				window.setTimeout(() => window.close(), 1000);
+				_browser.extension.getBackgroundPage().openTicket(ticket, event.target.newTab, company);
+			}
 			//? maybe storing last option should be an option
 		}
 	);
@@ -36,7 +35,7 @@ const renderDialog = () => {
 		{
 			defaultOption: 0,
 			jiraCompanyIds: '',
-			jiraLASTCOMP: '',
+			jiraLastUsed: '',
 			lastTicket: '',
 		},
 		(options) => {
@@ -49,12 +48,12 @@ const renderDialog = () => {
 			//render company options
 			let allCompanyOptions = document.querySelectorAll('.company-options')
 			for (let i = 0; i < allCompanyOptions.length; i++) {
-				allCompanyOptions[i].innerHTML = options.jiraCompanyIds[i] || ''
+				allCompanyOptions[i].innerHTML = options.jiraCompanyIds[i] || `Jira ${i+1}`
 			}
 
-			//on first run, options.jiraLASTCOMP may be null
-			if (options.jiraLASTCOMP){
-				const jiraCompany = parseInt(options.jiraLASTCOMP)
+			//on first run, options.jiraLastUsed may be null
+			if (options.jiraLastUsed){
+				const jiraCompany = parseInt(options.jiraLastUsed)
 				document.querySelectorAll('.company-options')[jiraCompany].setAttribute('selected', '')
 		    }
 			const lastTicketButton = createLastTicketButton(options);

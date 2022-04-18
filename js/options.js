@@ -11,10 +11,11 @@ const saveOptions = (event) => {
 
 	let invalidUrl = false
 	for (const urls of jira) {
-		if (!urlPattern.test(urls.value)) {
-			invalidUrl = true
+		if (urls.value) {
+			invalidUrl = !urlPattern.test(urls.value) ? true : invalidUrl
 		}
 	}
+
 	if (invalidUrl) {
 		status.textContent = _browser.i18n.getMessage('validURL');
 	} else {
