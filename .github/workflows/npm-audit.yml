@@ -1,12 +1,18 @@
 name: Security
 
-on: [push, pull_request]
+on:
+  push:
+    branches:
+      - master
+  pull_request:
 
 jobs:
     build:
         runs-on: ubuntu-latest
 
         steps:
-            - uses: actions/checkout@v3
+            - uses: actions/checkout@v4.0.0
+
             - uses: actions/setup-node@v3.8.1
+
             - run: npm audit
