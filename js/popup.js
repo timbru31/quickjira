@@ -7,10 +7,19 @@ const handleSubmit = (event) => {
 		event.preventDefault();
 	}
 	const ticket = encodeURIComponent(document.querySelector('.quiji-ticket-id').value);
-	if (ticket) {
-		window.setTimeout(() => window.close(), 1000);
-		_browser.extension.getBackgroundPage().openTicket(ticket, event.target.newTab);
-	}
+	const company = document.querySelector('.company-selector').value
+	storage.set(
+		{
+			jiraLastUsed: company,
+		},
+		() => {
+			if (ticket) {
+				window.setTimeout(() => window.close(), 1000);
+				_browser.extension.getBackgroundPage().openTicket(ticket, event.target.newTab, company);
+			}
+			//? maybe storing last option should be an option
+		}
+	);
 };
 
 const handleLastTicket = (event, defaultOption, lastTicket) => {
@@ -25,6 +34,8 @@ const renderDialog = () => {
 	storage.get(
 		{
 			defaultOption: 0,
+			jiraCompanyIds: '',
+			jiraLastUsed: '',
 			lastTicket: '',
 		},
 		(options) => {
@@ -34,6 +45,17 @@ const renderDialog = () => {
 			const currentButton = document.querySelector('.quiji-current-tab');
 			currentButton.newTab = false;
 
+			//render company options
+			let allCompanyOptions = document.querySelectorAll('.company-options')
+			for (let i = 0; i < allCompanyOptions.length; i++) {
+				allCompanyOptions[i].innerHTML = options.jiraCompanyIds[i] || `Jira ${i+1}`
+			}
+
+			//on first run, options.jiraLastUsed may be null
+			if (options.jiraLastUsed){
+				const jiraCompany = parseInt(options.jiraLastUsed)
+				document.querySelectorAll('.company-options')[jiraCompany].setAttribute('selected', '')
+		    }
 			const lastTicketButton = createLastTicketButton(options);
 
 			form.addEventListener('submit', handleSubmit);
