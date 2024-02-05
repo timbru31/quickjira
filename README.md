@@ -3,9 +3,6 @@
 [![Security](https://github.com/timbru31/quickjira/workflows/Security/badge.svg)](https://github.com/timbru31/quickjira/actions?query=workflow%3ASecurity)
 [![Linting](https://github.com/timbru31/quickjira/workflows/Linting/badge.svg)](https://github.com/timbru31/quickjira/actions?query=workflow%3ALinting)
 
-[![Dependency Status](https://david-dm.org/timbru31/quickjira.svg)](https://david-dm.org/timbru31/quickjira)
-[![devDependency Status](https://david-dm.org/timbru31/quickjira/dev-status.svg)](https://david-dm.org/timbru31/quickjira#info=devDependencies)
-
 [![Known Vulnerabilities](https://snyk.io/test/github/timbru31/quickjira/badge.svg)](https://snyk.io/test/github/timbru31/quickjira)
 
 [![Chrome Web Store](https://img.shields.io/chrome-web-store/v/acdnmaeifljongleeegkkfnfcopblokj.svg)](https://chrome.google.com/webstore/detail/quickjira/acdnmaeifljongleeegkkfnfcopblokj)
@@ -13,8 +10,7 @@
 [![Add-Ons for Firefox](https://img.shields.io/amo/v/quickjira.svg)](https://addons.mozilla.org/firefox/addon/quickjira/)
 
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
-[![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=timbru31/quickjira)](https://dependabot.com)
-[![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE.md)
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 ## Info
 
