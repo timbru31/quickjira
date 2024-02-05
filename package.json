@@ -4,7 +4,7 @@
 	"private": true,
 	"description": "WebExtension for Chrome, Firefox, Edge and Opera to quickly open JIRA with the corresponding ticket",
 	"scripts": {
-		"prepare": "husky install",
+		"prepare": "husky",
 		"prebuild": "rm -rf dist",
 		"build": "tsc",
 		"postbuild": "rsync -av --exclude='js' src/ dist",
