@@ -28,7 +28,7 @@
 	"homepage": "https://github.com/timbru31/quickjira#readme",
 	"devDependencies": {
 		"@types/chrome": "^0.0.271",
-		"addons-linter": "^6.33.0",
+		"addons-linter": "^7.1.0",
 		"husky": "^9.1.6",
 		"lint-staged": "^15.2.10",
 		"prettier": "^2.8.8",
