@@ -131,6 +131,7 @@ li {
 
 input[type='text'].quiji-options-jira-url {
 	margin-top: 3px;
+	margin-bottom: 5px;
 	min-height: 2em;
 	padding-left: 6px;
 	width: 100%;

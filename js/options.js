@@ -6,8 +6,17 @@ const storage = _browser.storage.sync || _browser.storage.local;
 const saveOptions = (event) => {
 	event.preventDefault();
 	const status = document.querySelector('.quiji-options-status');
-	const jira = document.querySelector('.quiji-options-jira-url').value;
-	if (!urlPattern.test(jira)) {
+	const jira = document.querySelectorAll('.quiji-options-jira-url');
+	const jiraCompanies = document.querySelectorAll('.company-id');
+
+	let invalidUrl = false
+	for (const urls of jira) {
+		if (urls.value) {
+			invalidUrl = !urlPattern.test(urls.value) ? true : invalidUrl
+		}
+	}
+
+	if (invalidUrl) {
 		status.textContent = _browser.i18n.getMessage('validURL');
 	} else {
 		let defaultOption = document.querySelector('select').value;
@@ -20,9 +29,17 @@ const saveOptions = (event) => {
 
 		const trimSpaces = document.querySelector('#trim-spaces').checked ? 1 : 0;
 
+		let allJira = []
+		let allJiraCompanies = []
+		for (let i = 0; i < jira.length; i++) {
+			allJira.push(jira[i].value)
+			allJiraCompanies.push(jiraCompanies[i].value)
+		}
+
 		storage.set(
 			{
-				jiraURL: jira,
+				jiraURL: allJira,
+				jiraCompanyIds: allJiraCompanies,
 				defaultOption,
 				trimSpaces,
 			},
@@ -41,11 +58,19 @@ const restoreOptions = () => {
 	storage.get(
 		{
 			jiraURL: '',
+			jiraCompanyIds: '',
 			defaultOption: 0,
 			trimSpaces: 0,
 		},
 		(options) => {
-			document.querySelector('.quiji-options-jira-url').value = (options && options.jiraURL) || '';
+			//for each load options here. 
+			let allJiraLinks = options.jiraURL
+			let allLinkNodes = document.querySelectorAll('.quiji-options-jira-url')
+			let allCompanyNodes = document.querySelectorAll('.company-id')
+			for (let i = 0; i < allJiraLinks.length; i++) {
+				allLinkNodes[i].value = allJiraLinks[i] || ''
+				allCompanyNodes[i].value = options.jiraCompanyIds[i] || ''
+			}
 			// Map 0 to currentTab and 1 to newTab
 			let defaultOption = _browser.i18n.getMessage('currentTab');
 			if (options && options.defaultOption === 1) {
