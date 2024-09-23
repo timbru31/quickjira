@@ -64,7 +64,7 @@
     "description": "base URL you need to enter for a valid ticket URL"
   },
   "baseURLDescription": {
-    "message": "Please enter here the JIRA URL for the Quick Search. Please keep in mind that the URL needs to end with an equals sign.",
+    "message": "Please enter here the JIRA URL for the Quick Search. Please keep in mind that the URL should end with an equals sign.",
     "description": "Description text of the base URL"
   },
   "baseURLExample": {

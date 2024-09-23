@@ -64,7 +64,7 @@
     "description": "base URL you need to enter for a valid ticket URL"
   },
   "baseURLDescription": {
-    "message": "Por favor ingresa la URL de Jira QuickSearch. Tenga en cuenta que la URL necesita terminar con símbolo igual",
+    "message": "Por favor ingresa la URL de Jira QuickSearch. Tenga en cuenta que la URL debe terminar con símbolo igual",
     "description": "Description text of the base URL"
   },
   "baseURLExample": {
