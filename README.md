@@ -30,15 +30,15 @@ The settings are synced via your Google account across other browsers.
 
 ## Features
 
--   open issue in current or new tab
--   re-open last viewed ticket
--   shortcuts
-    -   Popup (default is CTRL/CMD + Shift + K)
-    -   Open selected text in the current tab (Alt + K)
-    -   Open selected text in a new tab (Alt + Shift + K)
--   omnibox keyword "jira"
--   configure default action
--   right click (context menu) integration
+- open issue in current or new tab
+- re-open last viewed ticket
+- shortcuts
+  - Popup (default is CTRL/CMD + Shift + K)
+  - Open selected text in the current tab (Alt + K)
+  - Open selected text in a new tab (Alt + Shift + K)
+- omnibox keyword "jira"
+- configure default action
+- right click (context menu) integration
 
 ## Changelog
 

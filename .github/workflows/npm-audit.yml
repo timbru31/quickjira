@@ -7,12 +7,14 @@ on:
   pull_request:
 
 jobs:
-    build:
-        runs-on: ubuntu-latest
+  build:
+    runs-on: ubuntu-latest
 
-        steps:
-            - uses: actions/checkout@v4.1.7
+    steps:
+      - uses: actions/checkout@v4.1.7
 
-            - uses: actions/setup-node@v4.0.4
+      - uses: actions/setup-node@v4.0.4
+        with:
+          node-version-file: '.node-version'
 
-            - run: npm audit
+      - run: npm audit
