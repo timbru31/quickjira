@@ -1,7 +1,7 @@
 import { _browser, storage } from './helper.js';
 
 // URL validation pattern
-const urlPattern = /^https?:\/\/(?:www\.|(?!www))[^\s.]+\.[^\s]{2,}|www\.[^\s]+\.[^\s]{2,}$/;
+const urlPattern = /^https?:\/\/(?:www\.|(?!www))[^\s/]+(?:\/[^\s]*)?|www\.[^\s/]+(?:\/[^\s]*)?$/;
 
 // Type definition for options
 interface Options {
