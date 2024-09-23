@@ -3,7 +3,6 @@ body {
   background: #ededed;
   font-size: 13px;
   font: message-box;
-  margin: 0;
 }
 
 a {
@@ -75,6 +74,7 @@ input[type='submit']:focus {
 }
 
 label {
+  font-size: 16px;
   line-height: 25px;
 }
 
@@ -103,7 +103,7 @@ label {
   padding: 3px 0 3px 5px;
 }
 
-/* Page stlying */
+/* Page styling */
 ul {
   display: inline-block;
   margin-top: 0;
@@ -114,7 +114,6 @@ li {
 }
 
 .quiji-footer {
-  background-color: #fff;
   padding: 10px 20px;
   white-space: nowrap;
 }
@@ -138,6 +137,7 @@ input[type='text'].quiji-options-jira-url {
   min-height: 2em;
   padding-left: 6px;
   width: 100%;
+  max-width: 800px;
 }
 
 .quiji-options-status {
@@ -211,5 +211,6 @@ input[type='text'].quiji-options-jira-url {
   input.quiji-options-jira-url[type='text'] {
     margin-top: 6px;
     width: 80%;
+    max-width: 800px;
   }
 }

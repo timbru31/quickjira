@@ -1,11 +1,11 @@
 <!doctype html>
 <html>
   <head>
-    <script type="text/javascript" src="../js/localizer.js"></script>
+    <script type="module" src="../js/localizer.js"></script>
     <title data-i18n="optionsTitle"></title>
     <link rel="stylesheet" type="text/css" href="../css/style.css" />
     <link rel="icon" type="image/png" href="../images/icon128.png" />
-    <script type="text/javascript" src="../js/options.js"></script>
+    <script type="module" src="../js/options.js"></script>
     <meta charset="utf-8" />
   </head>
   <body class="quiji">
@@ -22,9 +22,7 @@
           <br />
           <span class="quiji-options-url-text" data-i18n="baseURLMoreInfo"></span>
           <span class="quiji-options-url-text">
-            <a target="_blank" href="https://confluence.atlassian.com/display/JIRA/Using+Quick+Search#UsingQuickSearch-Smartquerying"
-              >JIRA Quick Search</a
-            >
+            <a target="_blank" href="https://support.atlassian.com/jira-software-cloud/docs/find-recent-issues/">JIRA Quick Search</a>
           </span>
         </p>
         <input type="text" class="quiji-options-jira-url" required />
@@ -48,6 +46,7 @@
         </div>
       </form>
     </section>
+    <hr />
     <footer class="quiji-footer">
       <span data-i18n="version"></span> &bull; <a href="options.html" data-i18n="options"></a> &bull;
       <a href="changelog.html" data-i18n="changelog"></a> &bull;

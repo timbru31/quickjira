@@ -1,7 +1,9 @@
 {
   "compilerOptions": {
     "declaration": false,
-    "module": "es2015",
+    "target": "ES2023",
+    "module": "ES2022",
+    "moduleResolution": "node",
     "noImplicitAny": true,
     "noImplicitReturns": false,
     "strictNullChecks": true,
@@ -10,9 +12,8 @@
     "noImplicitThis": true,
     "outDir": "dist/js",
     "removeComments": true,
-    "target": "ES2022",
-    "lib": ["dom", "ES2022"],
-    "types": ["chrome"]
+    "esModuleInterop": true,
+    "lib": ["dom", "ES2023"]
   },
   "include": ["src/js/*.ts"]
 }
