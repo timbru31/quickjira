@@ -8,7 +8,7 @@
     "prebuild": "rm -rf dist",
     "build": "tsc",
     "postbuild": "rsync -av --exclude='js' src/ dist",
-    "eslint": "eslint 'js/**/*.js'",
+    "eslint": "eslint 'src/js/**/*.ts'",
     "stylelint": "stylelint --allow-empty-input 'src/**/*.css'",
     "lint": "npm run eslint && npm run stylelint",
     "prerelease": "npm run test && npm run build",
