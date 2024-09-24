@@ -174,3 +174,9 @@ input[type='text'].quiji-options-jira-url {
 .quiji-url {
   white-space: nowrap;
 }
+
+@-moz-document url-prefix() {
+  .quiji-popup-label {
+    font-size: 1em;
+  }
+}
