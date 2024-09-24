@@ -1,8 +1,8 @@
 /* General styling */
 body {
   background: #ededed;
-  font: message-box;
-  font-size: 13px;
+  margin: 0;
+  /* font: message-box; */
 }
 
 a {
@@ -36,13 +36,12 @@ input[type='button'] {
 
 input[type='button'],
 input[type='submit'] {
-  background-color: #20315e;
+  background-color: #0052cc;
   border: 1px solid transparent;
   border-color: #357ebd;
   border-radius: 4px;
   color: #fff;
   cursor: pointer;
-  font-size: 12px;
   line-height: 1.2;
   padding: 5px 11px;
   text-align: center;
@@ -74,8 +73,11 @@ select:focus {
 }
 
 label {
-  font-size: 16px;
   line-height: 25px;
+}
+
+.h3 {
+  font-size: 1.2em;
 }
 
 .red {
@@ -94,6 +96,10 @@ label {
   width: 120px;
 }
 
+.quiji-popup-label {
+  font-size: 1.2em;
+}
+
 .quiji-buttons input {
   margin-bottom: 5px;
 }
@@ -101,6 +107,7 @@ label {
 .quiji-ticket-id {
   width: 100px;
   padding: 3px 0 3px 5px;
+  margin-top: 5px;
 }
 
 /* Page styling */
@@ -116,10 +123,15 @@ li {
 .quiji-footer {
   padding: 10px 20px;
   white-space: nowrap;
+  width: 100%;
+  height: 50px;
+  background-color: #ffffff;
+  position: fixed;
+  bottom: 0;
+  line-height: 50px;
 }
 
 .quiji-page {
-  font-size: 14px;
   margin: 14px 17px; /* Chrome default */
 }
 
@@ -162,55 +174,4 @@ input[type='text'].quiji-options-jira-url {
 
 .quiji-url {
   white-space: nowrap;
-}
-
-/* Changelog styling */
-.quiji-current-release {
-  padding-left: 10px;
-}
-
-/* Donation styling */
-.quiji-donation-chain {
-  white-space: nowrap;
-}
-
-.quiji-donation-options {
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  padding: 20px 0;
-}
-
-.quiji-donation-paypal {
-  margin-right: 20px;
-}
-
-.quiji-donation-bitcoin {
-  margin-left: 20px;
-}
-
-.quiji-donation-bitcoin-logo {
-  display: block;
-  margin: 0 auto;
-}
-
-@-moz-document url-prefix() {
-  body {
-    background-color: unset;
-  }
-
-  .quiji-page {
-    margin: 0;
-  }
-
-  .quiji-footer {
-    background-color: unset;
-    padding: 10px 0;
-  }
-
-  input.quiji-options-jira-url[type='text'] {
-    margin-top: 6px;
-    width: 80%;
-    max-width: 800px;
-  }
 }

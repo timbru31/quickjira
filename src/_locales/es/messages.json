@@ -1,6 +1,6 @@
 {
   "version": {
-    "message": "Quick JIRA v0.11.2",
+    "message": "Quick JIRA v1.0.0",
     "description": "Please do not alter this value"
   },
   "options": {
@@ -17,10 +17,6 @@
   },
   "feedback": {
     "message": "Sugerencias",
-    "description": "Link in footer"
-  },
-  "donate": {
-    "message": "¿Donar?",
     "description": "Link in footer"
   },
   "handmade": {
@@ -118,17 +114,5 @@
   "changelogHeader": {
     "message": "Registro de cambios de Quick JIRA (quiji)",
     "description": "Header of changelog"
-  },
-  "donationTitle": {
-    "message": "Donaciones a Quick JIRA (quiji)",
-    "description": "Text in tab"
-  },
-  "supportDevelopment": {
-    "message": "¿Quieres fomentar el desarrollo de Quick JIRA?",
-    "description": "Donation info header"
-  },
-  "donationChain": {
-    "message": "Donation chain — You donate → I can buy some coffee → faster updates & more features → you profit! :)",
-    "description": "Donation workflow text"
   }
 }

@@ -1,4 +1,4 @@
-import { _browser, storage } from './helper.js';
+import { _browser, Options, storage } from './helper.js';
 
 interface Message {
   action: string;
@@ -13,12 +13,6 @@ _browser.runtime.onMessage.addListener((message: Message, _sender, _sendResponse
     void openTicket(ticket, newTab);
   }
 });
-
-interface Options {
-  jiraURL: string;
-  defaultOption: number;
-  trimSpaces: number;
-}
 
 async function openTicket(ticket: string, newTab: boolean) {
   await storage.get(
@@ -60,109 +54,97 @@ const handleSelectionNew = async (selection: chrome.contextMenus.OnClickData | b
   await openTicket(selection.selectionText!, true);
 };
 
-// eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
-if (_browser.contextMenus) {
-  // Create the parent context menu item with an explicit id
-  const parentId = _browser.contextMenus.create({
-    id: 'quick-jira-parent',
-    title: 'Quick JIRA',
-    contexts: ['selection'],
-  });
+// Create the parent context menu item with an explicit id
+const parentId = _browser.contextMenus.create({
+  id: 'quick-jira-parent',
+  title: 'Quick JIRA',
+  contexts: ['selection'],
+});
 
-  const currentTabString = _browser.i18n.getMessage('openInCurrentTab');
-  _browser.contextMenus.create({
-    id: 'quick-jira-current-tab',
-    title: currentTabString,
-    parentId: parentId,
-    contexts: ['selection'],
-  });
+const currentTabString = _browser.i18n.getMessage('openInCurrentTab');
+_browser.contextMenus.create({
+  id: 'quick-jira-current-tab',
+  title: currentTabString,
+  parentId: parentId,
+  contexts: ['selection'],
+});
 
-  const newTabString = _browser.i18n.getMessage('openInNewTab');
-  _browser.contextMenus.create({
-    id: 'quick-jira-new-tab',
-    title: newTabString,
-    parentId: parentId,
-    contexts: ['selection'],
-  });
+const newTabString = _browser.i18n.getMessage('openInNewTab');
+_browser.contextMenus.create({
+  id: 'quick-jira-new-tab',
+  title: newTabString,
+  parentId: parentId,
+  contexts: ['selection'],
+});
 
-  _browser.contextMenus.onClicked.addListener((info, _tab) => {
-    if (info.menuItemId === 'quick-jira-current-tab') {
-      void handleSelectionCurrent(info);
-    }
-    if (info.menuItemId === 'quick-jira-new-tab') {
-      void handleSelectionNew(info);
-    }
-  });
-}
+_browser.contextMenus.onClicked.addListener((info, _tab) => {
+  if (info.menuItemId === 'quick-jira-current-tab') {
+    void handleSelectionCurrent(info);
+  }
+  if (info.menuItemId === 'quick-jira-new-tab') {
+    void handleSelectionNew(info);
+  }
+});
 
-// eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
-if (_browser.omnibox) {
-  _browser.omnibox.onInputEntered.addListener((text) => {
-    void storage.get(
-      {
-        defaultOption: 0,
-      },
-      (options) => {
-        const newTab = options.defaultOption !== 0 || false;
-        void openTicket(text, newTab);
-      },
-    );
-  });
-}
+_browser.omnibox.onInputEntered.addListener((text) => {
+  void storage.get(
+    {
+      defaultOption: 0,
+    },
+    (options) => {
+      const newTab = options.defaultOption !== 0 || false;
+      void openTicket(text, newTab);
+    },
+  );
+});
 
-// eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
-if (_browser.commands && _browser.scripting) {
-  _browser.commands.onCommand.addListener((cmd) => {
-    // Get the currently active tab
-    void _browser.tabs.query({ active: true, currentWindow: true }, (tabs) => {
-      if (tabs.length > 0) {
-        const tabId = tabs[0].id;
-        if (tabId) {
-          _browser.scripting
-            .executeScript({
-              target: { tabId: tabId, allFrames: true },
-              // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-              // @ts-expect-error
-              func: () => window.getSelection()?.toString(),
-            })
-            .then((selectedTextPerFrame) => {
-              if (selectedTextPerFrame.length > 0 && typeof selectedTextPerFrame[0].result === 'string') {
-                const selectedText = selectedTextPerFrame[0].result;
-                if (cmd === 'open-ticket-in-current-tab') {
-                  void openTicket(selectedText, false);
-                } else if (cmd === 'open-ticket-in-new-tab') {
-                  void openTicket(selectedText, true);
-                }
+_browser.commands.onCommand.addListener((cmd) => {
+  // Get the currently active tab
+  void _browser.tabs.query({ active: true, currentWindow: true }, (tabs) => {
+    if (tabs.length > 0) {
+      const tabId = tabs[0].id;
+      if (tabId) {
+        _browser.scripting
+          .executeScript({
+            target: { tabId: tabId, allFrames: true },
+            // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+            // @ts-expect-error
+            func: () => window.getSelection()?.toString(),
+          })
+          .then((selectedTextPerFrame) => {
+            if (selectedTextPerFrame.length > 0 && typeof selectedTextPerFrame[0].result === 'string') {
+              const selectedText = selectedTextPerFrame[0].result;
+              if (cmd === 'open-ticket-in-current-tab') {
+                void openTicket(selectedText, false);
+              } else if (cmd === 'open-ticket-in-new-tab') {
+                void openTicket(selectedText, true);
               }
-            })
-            .catch((error: unknown) => {
-              console.error('Error executing script:', error);
-            });
-        }
-      }
-    });
-  });
-}
-
-// eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
-if (_browser.runtime?.onInstalled) {
-  _browser.runtime.onInstalled.addListener((details) => {
-    if (details.reason === 'install') {
-      try {
-        void _browser.runtime.openOptionsPage();
-      } catch {
-        // eslint-disable-next-line @typescript-eslint/no-deprecated
-        const optionsPage = (_browser.runtime.getManifest() as chrome.runtime.Manifest).options_page;
-        if (optionsPage) {
-          const optionsPageUrl = _browser.runtime.getURL(optionsPage);
-          void _browser.tabs.query({ active: true, currentWindow: true }, () => {
-            void _browser.tabs.create({ url: optionsPageUrl });
+            }
+          })
+          .catch((error: unknown) => {
+            console.error('Error executing script:', error);
           });
-        }
       }
     }
   });
-}
+});
+
+_browser.runtime.onInstalled.addListener((details) => {
+  if (details.reason === 'install') {
+    try {
+      void _browser.runtime.openOptionsPage();
+    } catch {
+      // eslint-disable-next-line @typescript-eslint/no-deprecated
+      const optionsPage = (_browser.runtime.getManifest() as chrome.runtime.Manifest).options_page;
+      if (optionsPage) {
+        const optionsPageUrl = _browser.runtime.getURL(optionsPage);
+        void _browser.tabs.query({ active: true, currentWindow: true }, () => {
+          void _browser.tabs.create({ url: optionsPageUrl });
+        });
+      }
+    }
+  }
+});
 
 async function openURLInTab(newTab: boolean, newURL: string) {
   await _browser.tabs.query({ active: true, currentWindow: true }, (tabs) => {

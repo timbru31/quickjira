@@ -10,8 +10,10 @@
   </head>
   <body class="quiji">
     <section class="quiji-page">
+      <h1 class="h1">Quick JIRA (quiji) Options</h1>
+      <hr />
       <form class="quiji-options">
-        <h3 data-i18n="baseURL"></h3>
+        <h2 class="h3" data-i18n="baseURL"></h2>
         <p>
           <span class="quiji-options-url-text" data-i18n="baseURLDescription"></span>
           <br />
@@ -26,18 +28,18 @@
           </span>
         </p>
         <input type="text" class="quiji-options-jira-url" required />
-        <h3 data-i18n="defaultAction"></h3>
+        <h2 class="h3" data-i18n="defaultAction"></h2>
         <p data-i18n="defaultActionDescription"></p>
         <select name="default option">
           <option data-i18n="currentTab"></option>
           <option data-i18n="newTab"></option>
         </select>
-        <h3 data-i18n="trimSpaces"></h3>
+        <h2 class="h3" data-i18n="trimSpaces"></h2>
         <div>
           <input type="checkbox" id="trim-spaces" />
           <label data-i18n="trimSpacesDescription" for="trim-spaces"></label>
         </div>
-        <h3 data-i18n="shortcuts"></h3>
+        <h2 class="h3" data-i18n="shortcuts"></h2>
         <p data-i18n="shortcutsDescription"></p>
         <ul class="quiji-shortcuts"></ul>
         <div>
@@ -46,17 +48,16 @@
         </div>
       </form>
     </section>
-    <hr />
     <footer class="quiji-footer">
       <span data-i18n="version"></span> &bull; <a href="options.html" data-i18n="options"></a> &bull;
-      <a href="changelog.html" data-i18n="changelog"></a> &bull;
+      <a href="https://github.com/timbru31/quickjira/blob/master/CHANGELOG.md" data-i18n="changelog"></a> &bull;
       <a href="https://github.com/timbru31/quickjira/issues" data-i18n="support" target="_blank"></a> &bull;
       <a
         href="https://chrome.google.com/webstore/detail/quick-jira/acdnmaeifljongleeegkkfnfcopblokj/reviews"
         data-i18n="feedback"
         target="_blank"
       ></a>
-      &bull; <span data-i18n="handmade"></span> &bull; <a href="donation.html" data-i18n="donate"></a>
+      &bull; <span data-i18n="handmade"></span>
     </footer>
   </body>
 </html>

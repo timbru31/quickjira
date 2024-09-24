@@ -1,14 +1,7 @@
-import { _browser, storage } from './helper.js';
+import { _browser, Options, storage } from './helper.js';
 
 // URL validation pattern
 const urlPattern = /^https?:\/\/(?:www\.|(?!www))[^\s/]+(?:\/[^\s]*)?|www\.[^\s/]+(?:\/[^\s]*)?$/;
-
-// Type definition for options
-interface Options {
-  jiraURL: string;
-  defaultOption: number;
-  trimSpaces: number;
-}
 
 // Save options function
 const saveOptions = async (event: Event) => {
