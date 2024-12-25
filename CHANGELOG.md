@@ -1,5 +1,9 @@
 # Changelog
 
+#### v1.0.0
+
+- Updated extension to manifest v3
+
 #### v0.11.2
 
 - Make space trimming configurable
