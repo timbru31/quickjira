@@ -41,6 +41,6 @@
     "stylelint": "^16.12.0",
     "stylelint-config-recommended": "^14.0.1",
     "typescript": "^5.7.2",
-    "typescript-eslint": "^8.19.0"
+    "typescript-eslint": "^8.19.1"
   }
 }
