@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/no-deprecated */
-
 const isFirefox = typeof browser !== 'undefined';
 type BrowserType = typeof browser | typeof chrome;
 

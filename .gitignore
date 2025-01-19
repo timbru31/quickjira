@@ -3,3 +3,11 @@ release_*
 node_modules/
 *.zip
 dist/
+DerivedData/
+xcuserdata/
+*.xcscmblueprint
+*.xccheckout
+*.xcuserstate
+*.xcworkspace
+.build/
+Package.resolved

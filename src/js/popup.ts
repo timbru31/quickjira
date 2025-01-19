@@ -16,9 +16,6 @@ interface Message {
   newTab: boolean;
 }
 
-// eslint-disable-next-line @typescript-eslint/no-invalid-void-type
-type ResponseType = void; // or define a more specific type if you expect a response
-
 const handleSubmit = (event?: Event) => {
   if (event) {
     event.preventDefault();
@@ -35,8 +32,8 @@ const handleSubmit = (event?: Event) => {
     // Use a type assertion to ensure event.target is an HTMLElement
     const newTab: boolean = (event?.target as CustomHTMLElement).newTab ?? false;
 
-    // eslint-disable-next-line @typescript-eslint/no-deprecated
-    void (_browser.runtime as typeof chrome.runtime).sendMessage<Message, ResponseType>({
+    // eslint-disable-next-line @typescript-eslint/no-invalid-void-type
+    void (_browser.runtime as typeof chrome.runtime).sendMessage<Message, void>({
       action: 'openTicket',
       ticket: ticket,
       newTab: newTab,
@@ -54,7 +51,6 @@ const handleLastTicket = (event?: Event, defaultOption?: number, lastTicket?: st
   }, 1000);
 
   if (lastTicket) {
-    // eslint-disable-next-line @typescript-eslint/no-deprecated
     void (_browser.runtime as typeof chrome.runtime).sendMessage<Message, ResponseType>({
       action: 'openTicket',
       ticket: lastTicket,

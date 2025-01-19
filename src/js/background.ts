@@ -42,16 +42,16 @@ async function openTicket(ticket: string, newTab: boolean) {
   );
 }
 
-// eslint-disable-next-line @typescript-eslint/no-deprecated
 const handleSelectionCurrent = async (selection: chrome.contextMenus.OnClickData | browser.contextMenus.OnClickData) => {
-  // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-  await openTicket(selection.selectionText!, false);
+  if (selection.selectionText) {
+    await openTicket(selection.selectionText, false);
+  }
 };
 
-// eslint-disable-next-line @typescript-eslint/no-deprecated
 const handleSelectionNew = async (selection: chrome.contextMenus.OnClickData | browser.contextMenus.OnClickData) => {
-  // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-  await openTicket(selection.selectionText!, true);
+  if (selection.selectionText) {
+    await openTicket(selection.selectionText, true);
+  }
 };
 
 // Create the parent context menu item with an explicit id
@@ -86,17 +86,20 @@ _browser.contextMenus.onClicked.addListener((info, _tab) => {
   }
 });
 
-_browser.omnibox.onInputEntered.addListener((text) => {
-  void storage.get(
-    {
-      defaultOption: 0,
-    },
-    (options) => {
-      const newTab = options.defaultOption !== 0 || false;
-      void openTicket(text, newTab);
-    },
-  );
-});
+// eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
+if (_browser.omnibox) {
+  _browser.omnibox.onInputEntered.addListener((text) => {
+    void storage.get(
+      {
+        defaultOption: 0,
+      },
+      (options) => {
+        const newTab = options.defaultOption !== 0 || false;
+        void openTicket(text, newTab);
+      },
+    );
+  });
+}
 
 _browser.commands.onCommand.addListener((cmd) => {
   // Get the currently active tab
@@ -107,9 +110,8 @@ _browser.commands.onCommand.addListener((cmd) => {
         _browser.scripting
           .executeScript({
             target: { tabId: tabId, allFrames: true },
-            // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-            // @ts-expect-error
-            func: () => window.getSelection()?.toString(),
+            // eslint-disable-next-line @typescript-eslint/no-unsafe-return, @typescript-eslint/no-explicit-any
+            func: () => window.getSelection()?.toString() as any,
           })
           .then((selectedTextPerFrame) => {
             if (selectedTextPerFrame.length > 0 && typeof selectedTextPerFrame[0].result === 'string') {
@@ -134,7 +136,6 @@ _browser.runtime.onInstalled.addListener((details) => {
     try {
       void _browser.runtime.openOptionsPage();
     } catch {
-      // eslint-disable-next-line @typescript-eslint/no-deprecated
       const optionsPage = (_browser.runtime.getManifest() as chrome.runtime.Manifest).options_page;
       if (optionsPage) {
         const optionsPageUrl = _browser.runtime.getURL(optionsPage);
@@ -151,7 +152,6 @@ async function openURLInTab(newTab: boolean, newURL: string) {
     if (newTab) {
       void _browser.tabs.create({ url: newURL });
     } else if (tabs.length > 0 && tabs[0].id) {
-      // eslint-disable-next-line @typescript-eslint/no-deprecated
       void (_browser.tabs as typeof chrome.tabs).update(tabs[0].id, {
         url: newURL,
       });

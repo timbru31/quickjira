@@ -111,7 +111,6 @@ const loadShortcuts = async () => {
     if (!_browser.commands) {
       createDefaultShortcuts(shortcutList);
     } else {
-      // eslint-disable-next-line @typescript-eslint/no-deprecated
       await _browser.commands.getAll((commands: chrome.commands.Command[]) => {
         commands.forEach((command) => {
           const listItem = document.createElement('li');
