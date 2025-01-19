@@ -7,12 +7,13 @@
     "prepare": "husky",
     "prebuild": "rm -rf dist",
     "build": "tsc",
-    "postbuild": "rsync -av --exclude='js' src/ dist",
-    "eslint": "eslint 'src/js/**/*.ts'",
+    "postbuild": "tsx scripts/postbuild.ts",
+    "eslint": "eslint src/js",
     "stylelint": "stylelint --allow-empty-input 'src/**/*.css'",
     "lint": "npm run eslint && npm run stylelint",
-    "prerelease": "npm run test && npm run build",
-    "release": "commit-and-tag-version -s",
+    "prerelease": "npm run test",
+    "release": "commit-and-tag-version -s -a",
+    "postrelease": "npm run build",
     "pretest": "npm run lint",
     "test": "echo soon!"
   },
@@ -31,16 +32,25 @@
     "@types/chrome": "^0.0.297",
     "@types/eslint__js": "^8.42.3",
     "@types/firefox-webext-browser": "^120.0.4",
+    "@types/fs-extra": "^11.0.4",
     "addons-linter": "^7.7.0",
     "commit-and-tag-version": "^12.5.0",
     "eslint-config-prettier": "^10.0.1",
     "eslint-plugin-prettier": "^5.2.2",
+    "fs-extra": "^11.3.0",
     "husky": "^9.1.7",
     "lint-staged": "^15.4.1",
     "prettier": "^3.4.2",
     "stylelint": "^16.13.2",
     "stylelint-config-recommended": "^14.0.1",
+    "tsx": "^4.19.2",
     "typescript": "^5.7.3",
     "typescript-eslint": "^8.20.0"
+  },
+  "commit-and-tag-version": {
+    "scripts": {
+      "postbump": "tsx scripts/patch-versions.ts && prettier --write src/manifest.json && git add src/manifest.json",
+      "postchangelog": "prettier --write CHANGELOG.md"
+    }
   }
 }
