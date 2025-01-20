@@ -8,13 +8,10 @@
   "action": {
     "default_icon": {
       "16": "images/icon16.png",
-      "20": "images/icon20.png",
-      "25": "images/icon25.png",
-      "30": "images/icon30.png",
       "32": "images/icon32.png",
-      "40": "images/icon40.png",
       "48": "images/icon48.png",
-      "64": "images/icon64.png"
+      "64": "images/icon64.png",
+      "128": "images/icon128.png"
     },
     "default_popup": "html/popup.html",
     "default_title": "__MSG_defaultTitle__"

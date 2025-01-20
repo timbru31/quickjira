@@ -42,7 +42,7 @@ If you can answer yes, then this extension is for you!
 You can now open up a JIRA issue within a second - in your current or a new tab.
 
 Just configure the "base url" and you are ready to go!
-The settings are synced via your Google account across other browsers.
+The settings are synced via your browser's account (if signed in) across other browsers.
 
 ## Features
 
@@ -66,9 +66,7 @@ For support please create an issue here at GitHub
 
 ## Pull Requests
 
-Feel free to submit any PRs here, too. :)
-
-Please indent using two spaces only, have a newline at the EOF and use UNIX line ending, thanks!
+We welcome pull requests from the community! If you have a feature, bug fix, or improvement, please feel free to contribute. Before submitting your pull request, ensure that you have thoroughly tested your code. Additionally, perform linting using ESLint to maintain code quality and consistency. Your contributions are greatly appreciated and help make this project better for everyone.
 
 ---
 
