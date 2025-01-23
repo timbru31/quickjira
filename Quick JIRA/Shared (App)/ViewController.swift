@@ -60,11 +60,34 @@ class ViewController: PlatformViewController, WKNavigationDelegate, WKScriptMess
     }
 
     func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
-#if os(macOS)
-        if (message.body as! String != "open-preferences") {
+        guard let body = message.body as? String, body == "open-preferences" else {
             return
         }
 
+    #if os(iOS)
+        let urlString: String
+        let systemVersion = ProcessInfo.processInfo.operatingSystemVersion
+
+        if systemVersion.majorVersion >= 18 {
+            // iOS 18 and above
+            urlString = "App-Prefs:com.apple.mobilesafari"
+        } else if systemVersion.majorVersion == 17 {
+            // iOS 17
+            urlString = "Prefs:com.apple.mobilesafari&path=WEB_EXTENSIONS"
+        } else {
+            // Fallback for unsupported versions
+            urlString = "App-prefs:Safari"
+        }
+
+        if let url = URL(string: urlString) {
+            UIApplication.shared.open(url, options: [:]) { success in
+                if !success {
+                    // Optionally handle failure
+                    print("Failed to open Safari settings.")
+                }
+            }
+        }
+    #elseif os(macOS)
         SFSafariApplication.showPreferencesForExtension(withIdentifier: extensionBundleIdentifier) { error in
             guard error == nil else {
                 // Insert code to inform the user that something went wrong.
@@ -75,7 +98,8 @@ class ViewController: PlatformViewController, WKNavigationDelegate, WKScriptMess
                 NSApp.terminate(self)
             }
         }
-#endif
+    #endif
+
     }
 
 }
