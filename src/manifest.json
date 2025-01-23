@@ -58,7 +58,7 @@
     }
   },
   "omnibox": {
-    "keyword": "jira"
+    "keyword": "quiji"
   },
   "background": {
     "service_worker": "js/background.js",
