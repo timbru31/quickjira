@@ -108,13 +108,13 @@ const loadShortcuts = async () => {
           switch (command.name) {
             case '_execute_action':
             case '_execute_browser_action':
-              listItem.textContent = `Popup: ${command.shortcut ?? 'Ctrl+Shift+K'}`;
+              listItem.textContent = `Popup: ${command.shortcut === '' ? _browser.i18n.getMessage('unassigned') : (command.shortcut ?? 'Ctrl+Shift+K')}`;
               break;
             case 'open-ticket-in-new-tab':
-              listItem.textContent = `${_browser.i18n.getMessage('openInNewTab')}: ${command.shortcut ?? 'Alt+Shift+K'}`;
+              listItem.textContent = `${_browser.i18n.getMessage('openInNewTab')}: ${command.shortcut === '' ? _browser.i18n.getMessage('unassigned') : (command.shortcut ?? 'Alt+Shift+K')}`;
               break;
             case 'open-ticket-in-current-tab':
-              listItem.textContent = `${_browser.i18n.getMessage('openInCurrentTab')}: ${command.shortcut ?? 'Alt+K'}`;
+              listItem.textContent = `${_browser.i18n.getMessage('openInCurrentTab')}: ${command.shortcut === '' ? _browser.i18n.getMessage('unassigned') : (command.shortcut ?? 'Alt+K')}`;
               break;
           }
           shortcutList.appendChild(listItem);

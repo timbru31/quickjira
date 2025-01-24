@@ -1,6 +1,6 @@
 {
   "version": {
-    "message": "Quick JIRA v1.0.0",
+    "message": "Quick JIRA v2.0.0",
     "description": "Please do not alter this value"
   },
   "options": {
@@ -110,5 +110,9 @@
   "placeholder": {
     "message": "Gib die Ticket ID ein",
     "description": "Placeholder text for the input field"
+  },
+  "unassigned": {
+    "message": "Nicht zugewiesen",
+    "description": "Text for unassigned shortcut"
   }
 }
