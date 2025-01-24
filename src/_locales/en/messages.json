@@ -99,14 +99,6 @@
     "message": "Save options",
     "description": "Text for button"
   },
-  "savedOptions": {
-    "message": "Options were saved",
-    "description": "Text displayed when button is pressed"
-  },
-  "validURL": {
-    "message": "Please specify a valid URL!",
-    "description": "Error message on invalid URL"
-  },
   "changelogTitle": {
     "message": "Quick JIRA (quiji) was updated",
     "description": "Title in tab"
@@ -114,5 +106,9 @@
   "changelogHeader": {
     "message": "Changelog of Quick JIRA (quiji)",
     "description": "Header of changelog"
+  },
+  "placeholder": {
+    "message": "Enter ticket ID",
+    "description": "Placeholder text for the input field"
   }
 }

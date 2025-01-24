@@ -1,192 +1,222 @@
-/* General styling */
-body {
-  background: #ededed;
+/* Global Reset and Styles */
+body,
+h1,
+h2,
+h3,
+p,
+ul,
+li {
   margin: 0;
-  font-family:
-    -apple-system,
-    BlinkMacSystemFont,
-    Segoe UI,
-    Roboto,
-    Oxygen,
-    Ubuntu,
-    Fira Sans,
-    Droid Sans,
-    Helvetica Neue,
-    sans-serif;
+  padding: 0;
+  list-style: none;
+}
+
+body {
+  background-color: var(--background-color);
+  font-family: var(--font-family);
+  color: var(--text-color);
+  line-height: 1.6;
 }
 
 a {
-  color: #0921ea;
+  color: var(--primary-color);
+  text-decoration: none;
 }
 
-a:visited {
-  color: #0921ea;
+footer a {
+  color: var(--primary-color);
+  margin: 0 4px;
+}
+
+a:hover {
+  color: var(--primary-hover-color);
+}
+
+input,
+select,
+button {
+  font-family: var(--font-family);
+}
+
+label {
+  font-size: 1rem;
+}
+
+/* List Styling */
+ul {
+  padding-bottom: var(--spacing);
+}
+
+li {
+  margin-bottom: 8px;
+}
+
+/* Layout and Structure */
+main {
+  padding: var(--spacing);
+  max-width: 800px;
+  margin: auto;
+}
+
+footer {
+  background-color: var(--background-color);
+  border-top: 1px solid var(--border-color);
+  text-align: center;
+  padding: var(--spacing);
+  font-size: 0.9rem;
+  color: var(--secondary-text-color);
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+header {
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2rem;
+  margin-bottom: 8px;
+}
+
+hr {
+  border: none;
+  height: 2px;
+  background-color: var(--border-color);
+  margin: 16px 0;
+}
+
+/* Form Styles */
+form {
+  background-color: var(--form-background);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px var(--shadow-color);
+  padding: 0 var(--spacing);
+  margin-bottom: var(--spacing);
+}
+
+form h2,
+form p {
+  margin: 10px 0;
+}
+
+form p {
+  font-size: 1rem;
+  color: var(--secondary-text-color);
 }
 
 input[type='text'],
 select {
-  background-color: #fff;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  min-height: 2em;
-}
-
-input[type='text']:invalid {
-  border: 1px solid #ff0000;
-  box-shadow:
-    inset 0 1px 1px rgba(0, 0, 0, 0.075),
-    0 0 8px rgba(255, 0, 0, 0.6);
-}
-
-input[type='button'] {
-  min-width: 100px;
-  width: auto;
-}
-
-input[type='button'],
-input[type='submit'] {
-  background-color: #0052cc;
-  border: 1px solid transparent;
-  border-color: #357ebd;
-  border-radius: 4px;
-  color: #fff;
-  cursor: pointer;
-  line-height: 1.2;
-  padding: 5px 11px;
-  text-align: center;
-  vertical-align: middle;
-}
-
-input[type='button']:hover,
-input[type='button']:focus,
-input[type='submit']:hover,
-input[type='submit']:focus {
-  background-color: #0065ff;
-}
-
-input[type='button']:disabled,
-input[type='button']:disabled:hover,
-input[type='button']:disabled:focus {
-  background-color: grey;
-  border-color: grey;
-  cursor: not-allowed;
-}
-
-input[type='text']:focus,
-select:focus {
-  border-color: #66afe9;
-  box-shadow:
-    inset 0 1px 1px rgba(0, 0, 0, 0.075),
-    0 0 8px rgba(102, 175, 233, 0.6);
-}
-
-label {
-  line-height: 25px;
-}
-
-.h3 {
-  font-size: 1.2em;
-}
-
-.red {
-  color: #ff0000;
-}
-
-/* Popup window styling */
-.quiji-popup {
-  display: flex;
-  justify-content: center;
-  margin: 8px;
-  text-align: center;
-}
-
-.quiji-popup-form {
-  width: 160px;
-}
-
-.quiji-popup-label {
-  font-size: 1.2em;
-}
-
-.quiji-buttons input {
-  margin-bottom: 5px;
-}
-
-.quiji-ticket-id {
-  width: 140px;
-  padding: 3px 0 3px 5px;
-  margin-top: 5px;
-}
-
-/* Page styling */
-ul {
-  display: inline-block;
-  margin-top: 0;
-}
-
-li {
-  text-align: left;
-}
-
-.quiji-footer {
-  padding: 10px 20px;
-  white-space: nowrap;
   width: 100%;
-  height: 50px;
-  background-color: #ffffff;
-  position: fixed;
-  bottom: 0;
-  line-height: 50px;
+  padding: 8px;
+  margin-bottom: var(--spacing);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  font-size: 1rem;
+  background-color: var(--input-background);
+  color: var(--text-color);
+  box-shadow: inset 0 1px 2px var(--shadow-color);
 }
 
-.quiji-page {
-  margin: 14px 17px; /* Chrome default */
-}
-
-/* Options styling */
-/* override Chrome styles */
-:enabled:hover:-webkit-any(input[type='checkbox'], input[type='radio'], :-webkit-any(button, input[type='button'], input[type='submit'])) {
-  background-image: none;
-  border-color: #285e8e;
-  box-shadow: none;
-  color: #fff;
-}
-
+/* Limit Width for Specific Inputs */
 input[type='text'].quiji-options-jira-url {
-  margin-top: 3px;
-  min-height: 2em;
-  padding-left: 6px;
-  width: 100%;
-  max-width: 800px;
+  max-width: 600px;
 }
 
-.quiji-options-status {
-  display: inline;
-  font-weight: bold;
-  padding-left: 5px;
-  vertical-align: bottom;
+select {
+  max-width: 250px;
 }
 
-.quiji-options-url-text {
-  margin-bottom: 0;
+/* Trim Spaces - Checkbox */
+div {
+  display: flex;
+  align-items: center;
+  margin-bottom: var(--spacing);
 }
 
-/* Override Chrome styles */
+input[type='checkbox'] {
+  margin-right: 8px;
+  transform: scale(1.2);
+  accent-color: var(--primary-color);
+}
+
+/* Shortcuts Styles */
+.quiji-shortcuts li {
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+
+h3.quiji-shortcuts-title {
+  font-size: 1.2rem;
+  margin-bottom: 16px;
+}
+
+/* Save Button */
 .quiji-options-save {
-  background-image: none;
-  box-shadow: none;
+  background-color: var(--primary-color);
+  color: #ffffff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1.1rem;
   display: inline-block;
-  margin: 20px auto 0;
-  text-shadow: none;
+  margin-top: var(--spacing);
+  transition: all 0.3s ease;
+  opacity: 1;
+  transform: scale(1);
 }
 
-.quiji-url {
-  white-space: nowrap;
+.quiji-url-highlight {
+  color: var(--url-highlight);
+  font-weight: bold;
+  text-decoration: underline;
 }
 
-@-moz-document url-prefix() {
-  .quiji-popup-label {
-    font-size: 1em;
-  }
+/* Button Container and Checkmark */
+.button-container {
+  position: relative;
+  height: 40px;
+  width: 100%;
+}
+
+.quiji-options-save,
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  transition: all 0.3s ease;
+}
+
+.quiji-options-save.hidden {
+  opacity: 0;
+  transform: scale(0.5);
+}
+
+.quiji-options-save:hover {
+  background-color: var(--primary-hover-color);
+}
+
+.checkmark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  color: #ffffff;
+  font-size: 24px;
+  opacity: 0;
+  transform: scale(0.5);
+}
+
+.checkmark.visible {
+  opacity: 1;
+  transform: scale(1);
 }

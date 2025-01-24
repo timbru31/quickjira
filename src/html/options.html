@@ -1,63 +1,78 @@
 <!doctype html>
-<html>
+<html lang="en">
   <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script type="module" src="../js/localizer.js"></script>
     <title data-i18n="optionsTitle"></title>
+    <link rel="stylesheet" type="text/css" href="../css/root.css" />
     <link rel="stylesheet" type="text/css" href="../css/style.css" />
     <link rel="icon" type="image/png" href="../images/icon128.png" />
     <script type="module" src="../js/options.js"></script>
-    <meta charset="utf-8" />
   </head>
-  <body class="quiji">
-    <section class="quiji-page">
-      <h1 class="h1">Quick JIRA (quiji) Options</h1>
-      <hr />
-      <form class="quiji-options">
-        <h2 class="h3" data-i18n="baseURL"></h2>
-        <p>
-          <span class="quiji-options-url-text" data-i18n="baseURLDescription"></span>
-          <br />
-          <span class="quiji-options-url-text" data-i18n="baseURLExample"></span>
-          <span>
-            <em class="quiji-url">https://jira.atlassian.com/secure/QuickSearch.jspa?searchString=</em>
-          </span>
-          <br />
-          <span class="quiji-options-url-text" data-i18n="baseURLMoreInfo"></span>
-          <span class="quiji-options-url-text">
-            <a target="_blank" href="https://support.atlassian.com/jira-software-cloud/docs/find-recent-issues/">JIRA Quick Search</a>
-          </span>
-        </p>
-        <input type="text" class="quiji-options-jira-url" required />
-        <h2 class="h3" data-i18n="defaultAction"></h2>
-        <p data-i18n="defaultActionDescription"></p>
-        <select name="default option">
-          <option data-i18n="currentTab"></option>
-          <option data-i18n="newTab"></option>
-        </select>
-        <h2 class="h3" data-i18n="trimSpaces"></h2>
-        <div>
-          <input type="checkbox" id="trim-spaces" />
-          <label data-i18n="trimSpacesDescription" for="trim-spaces"></label>
-        </div>
-        <h2 class="h3" data-i18n="shortcuts"></h2>
-        <p data-i18n="shortcutsDescription"></p>
-        <ul class="quiji-shortcuts"></ul>
-        <div>
-          <input type="submit" class="quiji-options-save" value="Save options" />
-          <p class="quiji-options-status red"></p>
-        </div>
-      </form>
-    </section>
-    <footer class="quiji-footer">
-      <span data-i18n="version"></span> &bull; <a href="options.html" data-i18n="options"></a> &bull;
-      <a href="https://github.com/timbru31/quickjira/blob/master/CHANGELOG.md" data-i18n="changelog"></a> &bull;
-      <a href="https://github.com/timbru31/quickjira/issues" data-i18n="support" target="_blank"></a> &bull;
-      <a
-        href="https://chrome.google.com/webstore/detail/quick-jira/acdnmaeifljongleeegkkfnfcopblokj/reviews"
-        data-i18n="feedback"
-        target="_blank"
-      ></a>
-      &bull; <span data-i18n="handmade"></span>
-    </footer>
+  <body>
+    <main>
+      <header>
+        <h1 data-i18n="optionsTitle"></h1>
+        <hr />
+      </header>
+
+      <section class="quiji-page">
+        <form class="quiji-options">
+          <!-- JIRA Base URL Section -->
+          <h2 class="h3" data-i18n="baseURL"></h2>
+          <p data-i18n="baseURLDescription"></p>
+          <p>
+            <span class="quiji-options-url-text" data-i18n="baseURLExample"></span>
+            <span class="quiji-url-highlight">https://jira.atlassian.com/secure/QuickSearch.jspa?searchString=</span>
+          </p>
+          <input
+            type="text"
+            class="quiji-options-jira-url"
+            required
+            placeholder="https://jira.atlassian.com/secure/QuickSearch.jspa?searchString="
+            pattern="[Hh][Tt][Tt][Pp][Ss]?:\/\/(?:(?:[a-zA-Z\u00a1-\uffff0-9]+-?)*[a-zA-Z\u00a1-\uffff0-9]+)(?:\.(?:[a-zA-Z\u00a1-\uffff0-9]+-?)*[a-zA-Z\u00a1-\uffff0-9]+)*(?:\.(?:[a-zA-Z\u00a1-\uffff]{2,}))(?::\d{2,5})?(?:\/[^\s]*)?"
+          />
+
+          <!-- Default Action Section -->
+          <h2 class="h3" data-i18n="defaultAction"></h2>
+          <p data-i18n="defaultActionDescription"></p>
+          <select name="default option">
+            <option data-i18n="currentTab"></option>
+            <option data-i18n="newTab"></option>
+          </select>
+
+          <!-- Trim Spaces Section -->
+          <h2 class="h3" data-i18n="trimSpaces"></h2>
+          <div>
+            <input type="checkbox" id="trim-spaces" />
+            <label for="trim-spaces" data-i18n="trimSpacesDescription"></label>
+          </div>
+
+          <!-- Shortcuts Section -->
+          <h2 class="h3" data-i18n="shortcuts"></h2>
+          <p data-i18n="shortcutsDescription"></p>
+          <ul class="quiji-shortcuts"></ul>
+
+          <!-- Save Button -->
+          <div class="button-container">
+            <button type="submit" class="quiji-options-save" data-i18n="saveOptions"></button>
+            <div class="checkmark">✓</div>
+          </div>
+        </form>
+      </section>
+
+      <footer class="quiji-footer">
+        <span data-i18n="version"></span> &bull; <a href="options.html" data-i18n="options"></a> &bull;
+        <a href="https://github.com/timbru31/quickjira/blob/master/CHANGELOG.md" data-i18n="changelog"></a> &bull;
+        <a href="https://github.com/timbru31/quickjira/issues" data-i18n="support" target="_blank"></a> &bull;
+        <a
+          href="https://chrome.google.com/webstore/detail/quick-jira/acdnmaeifljongleeegkkfnfcopblokj/reviews"
+          data-i18n="feedback"
+          target="_blank"
+        ></a>
+        &bull; <span data-i18n="handmade"></span>
+      </footer>
+    </main>
   </body>
 </html>

@@ -1,51 +1,42 @@
 import { _browser, Options, storage } from './helper.js';
 
-// URL validation pattern
-const urlPattern = /^https?:\/\/(?:www\.|(?!www))[^\s/]+(?:\/[^\s]*)?|www\.[^\s/]+(?:\/[^\s]*)?$/;
-
 // Save options function
 const saveOptions = async (event: Event) => {
   event.preventDefault();
 
-  const status = document.querySelector('.quiji-options-status');
   const jiraInput = document.querySelector<HTMLInputElement>('.quiji-options-jira-url');
 
-  if (status && jiraInput) {
+  if (jiraInput) {
     // Check for null before accessing properties
     const jira = jiraInput.value;
 
-    if (!urlPattern.test(jira)) {
-      status.textContent = _browser.i18n.getMessage('validURL');
-    } else {
-      const selectElement = document.querySelector<HTMLSelectElement>('select');
+    const selectElement = document.querySelector<HTMLSelectElement>('select');
 
-      if (selectElement) {
-        let defaultOption = selectElement.value;
+    if (selectElement) {
+      let defaultOption = selectElement.value;
 
-        // Map currentTab to 0 and newTab to 1
-        if (_browser.i18n.getMessage('currentTab') === defaultOption) {
-          defaultOption = '0';
-        } else {
-          defaultOption = '1';
-        }
-
-        const trimSpacesCheckbox = document.querySelector<HTMLInputElement>('#trim-spaces');
-        const trimSpaces = trimSpacesCheckbox?.checked ? 1 : 0; // Check for null
-
-        await storage.set(
-          {
-            jiraURL: jira,
-            defaultOption: parseInt(defaultOption), // Ensure defaultOption is a number
-            trimSpaces,
-          },
-          () => {
-            status.textContent = _browser.i18n.getMessage('savedOptions');
-            window.setTimeout(() => {
-              window.close();
-            }, 1000);
-          },
-        );
+      // Map currentTab to 0 and newTab to 1
+      if (_browser.i18n.getMessage('currentTab') === defaultOption) {
+        defaultOption = '0';
+      } else {
+        defaultOption = '1';
       }
+
+      const trimSpacesCheckbox = document.querySelector<HTMLInputElement>('#trim-spaces');
+      const trimSpaces = trimSpacesCheckbox?.checked ? 1 : 0; // Check for null
+
+      await storage.set(
+        {
+          jiraURL: jira,
+          defaultOption: parseInt(defaultOption), // Ensure defaultOption is a number
+          trimSpaces,
+        },
+        () => {
+          window.setTimeout(() => {
+            window.close();
+          }, 1000);
+        },
+      );
     }
   }
 };

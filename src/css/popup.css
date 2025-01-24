@@ -1,0 +1,132 @@
+/* Popup specific styles */
+body.quiji-popup {
+  width: 300px;
+  padding: 16px;
+  font-family: var(--font-family);
+  background-color: var(--background-color);
+  color: var(--text-color);
+  margin: 0;
+}
+
+.quiji-popup-form h1 {
+  font-size: 1.5rem;
+  margin-bottom: 16px;
+  color: var(--primary-color);
+}
+
+.quiji-input-container {
+  margin-bottom: 16px;
+}
+
+.quiji-popup-label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.quiji-ticket-id {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  font-size: 1rem;
+  box-sizing: border-box;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.quiji-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.quiji-button {
+  width: 100%;
+  padding: 10px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+  color: var(--background-color);
+  font-weight: bold;
+}
+
+.quiji-current-tab {
+  background-color: var(--primary-color);
+}
+
+.quiji-new-tab {
+  background-color: #008da6; /* Teal T300 */
+}
+
+.quiji-spacer {
+  width: 100%;
+}
+
+.quiji-last-ticket {
+  background-color: #6554c0; /* Purple P300 */
+  border-top: 1px solid var(--border-color);
+  padding-top: 16px;
+}
+
+.quiji-last-ticket:disabled {
+  background-color: #c1c7d0; /* Atlassian neutral N40 */
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.quiji-button:hover:not(:disabled) {
+  filter: brightness(110%);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.quiji-button:focus:not(:disabled) {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+.quiji-button:active:not(:disabled) {
+  transform: translateY(1px);
+  box-shadow: none;
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  .quiji-ticket-id {
+    background-color: #2e3338;
+    color: #ffffff;
+    border-color: #505f79;
+  }
+
+  .quiji-current-tab {
+    background-color: var(--primary-color);
+  }
+
+  .quiji-new-tab {
+    background-color: var(--teal-color);
+  }
+
+  .quiji-last-ticket {
+    background-color: var(--purple-color);
+    border-top-color: #505f79;
+  }
+
+  .quiji-last-ticket:disabled {
+    background-color: var(--disabled-color);
+  }
+
+  ::selection {
+    background-color: var(--primary-hover-color);
+    color: var(--background-color);
+  }
+}
+
+/* Light mode selection */
+::selection {
+  background-color: var(--primary-color);
+  color: var(--background-color);
+}
