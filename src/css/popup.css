@@ -33,6 +33,13 @@ body.quiji-popup {
   box-sizing: border-box;
   background-color: var(--background-color);
   color: var(--text-color);
+  transition: all 0.2s ease;
+}
+
+.quiji-ticket-id:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px var(--primary-color);
 }
 
 .quiji-buttons {
@@ -64,11 +71,13 @@ body.quiji-popup {
 
 .quiji-spacer {
   width: 100%;
+  border: none;
+  border-top: 1px solid var(--border-color);
+  margin: 8px 0;
 }
 
 .quiji-last-ticket {
   background-color: #6554c0; /* Purple P300 */
-  border-top: 1px solid var(--border-color);
   padding-top: 16px;
 }
 
@@ -78,15 +87,30 @@ body.quiji-popup {
   opacity: 0.7;
 }
 
-.quiji-button:hover:not(:disabled) {
+.quiji-button:hover:not(:disabled),
+.quiji-button:focus-visible:not(:disabled) {
   filter: brightness(110%);
   transform: translateY(-1px);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .quiji-button:focus:not(:disabled) {
-  outline: 2px solid var(--primary-color);
-  outline-offset: 2px;
+  outline: none;
+  box-shadow:
+    0 0 0 2px var(--background-color),
+    0 0 0 4px var(--primary-color);
+}
+
+.quiji-new-tab:focus:not(:disabled) {
+  box-shadow:
+    0 0 0 2px var(--background-color),
+    0 0 0 4px #008da6;
+}
+
+.quiji-last-ticket:focus:not(:disabled) {
+  box-shadow:
+    0 0 0 2px var(--background-color),
+    0 0 0 4px #6554c0;
 }
 
 .quiji-button:active:not(:disabled) {
@@ -112,6 +136,9 @@ body.quiji-popup {
 
   .quiji-last-ticket {
     background-color: var(--purple-color);
+  }
+
+  .quiji-spacer {
     border-top-color: #505f79;
   }
 
