@@ -43,7 +43,7 @@
     "lint-staged": "^15.4.3",
     "prettier": "^3.5.3",
     "stylelint": "^16.15.0",
-    "stylelint-config-recommended": "^14.0.1",
+    "stylelint-config-recommended": "^15.0.0",
     "tsx": "^4.19.3",
     "typescript": "^5.8.2",
     "typescript-eslint": "^8.26.0"
