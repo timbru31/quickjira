@@ -30,7 +30,7 @@
   "homepage": "https://github.com/timbru31/quickjira#readme",
   "devDependencies": {
     "@eslint/js": "^9.22.0",
-    "@types/chrome": "^0.0.308",
+    "@types/chrome": "^0.0.309",
     "@types/eslint__js": "^9.14.0",
     "@types/firefox-webext-browser": "^120.0.4",
     "@types/fs-extra": "^11.0.4",
