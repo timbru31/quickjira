@@ -37,7 +37,7 @@
     "addons-linter": "^7.15.0",
     "commit-and-tag-version": "^12.5.1",
     "eslint-config-prettier": "^10.1.5",
-    "eslint-plugin-prettier": "^5.4.1",
+    "eslint-plugin-prettier": "^5.5.0",
     "fs-extra": "^11.3.0",
     "husky": "^9.1.7",
     "lint-staged": "^16.1.2",
