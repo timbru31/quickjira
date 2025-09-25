@@ -124,6 +124,13 @@ select {
 input[type='text'].quiji-options-jira-url {
   max-width: 600px;
 }
+input[type='text'].quiji-options-bitbucket-url {
+  max-width: 600px;
+}
+
+input[type='text'].quiji-options-bitbucket-prefix {
+  max-width: 200px;
+}
 
 select {
   max-width: 250px;
