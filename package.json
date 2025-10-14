@@ -32,7 +32,7 @@
     "@eslint/js": "^9.37.0",
     "@types/chrome": "^0.1.24",
     "@types/eslint__js": "^9.14.0",
-    "@types/firefox-webext-browser": "^120.0.4",
+    "@types/firefox-webext-browser": "^120.0.5",
     "@types/fs-extra": "^11.0.4",
     "addons-linter": "^7.20.0",
     "commit-and-tag-version": "^12.6.0",
