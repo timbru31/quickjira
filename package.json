@@ -46,7 +46,7 @@
     "stylelint-config-recommended": "^14.0.1",
     "tsx": "^4.20.6",
     "typescript": "^5.9.3",
-    "typescript-eslint": "^8.46.2"
+    "typescript-eslint": "^8.46.3"
   },
   "commit-and-tag-version": {
     "scripts": {
