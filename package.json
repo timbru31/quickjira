@@ -35,7 +35,7 @@
     "@types/firefox-webext-browser": "^120.0.4",
     "@types/fs-extra": "^11.0.4",
     "addons-linter": "^7.20.0",
-    "commit-and-tag-version": "^12.6.0",
+    "commit-and-tag-version": "^12.6.1",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-prettier": "^5.5.4",
     "fs-extra": "^11.3.2",
