@@ -44,7 +44,7 @@
     "prettier": "^3.7.3",
     "stylelint": "^16.26.1",
     "stylelint-config-recommended": "^14.0.1",
-    "tsx": "^4.20.6",
+    "tsx": "^4.21.0",
     "typescript": "^5.9.3",
     "typescript-eslint": "^8.48.0"
   },
