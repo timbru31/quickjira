@@ -7,6 +7,8 @@ export const _browser: BrowserType = isFirefox ? browser : chrome;
 export const storage = _browser.storage.sync || _browser.storage.local;
 
 export interface Options {
+  bitbucketURL: string;
+  bitbucketPrefix: string;
   jiraURL: string;
   defaultOption: number;
   trimSpaces: number;

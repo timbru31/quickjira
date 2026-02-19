@@ -6,6 +6,19 @@ const saveOptions = async (event: Event) => {
 
   const jiraInput = document.querySelector<HTMLInputElement>('.quiji-options-jira-url');
 
+  const bitBucketInput = document.querySelector<HTMLInputElement>('.quiji-options-bitbucket-url');
+  const bitBucketPrefixInput = document.querySelector<HTMLInputElement>('.quiji-options-bitbucket-prefix');
+
+  if (bitBucketInput && bitBucketPrefixInput) {
+    const bitbucket = bitBucketInput.value;
+    const prefix = bitBucketPrefixInput.value;
+
+    await storage.set({
+      bitbucketURL: bitbucket,
+      bitbucketPrefix: prefix,
+    });
+  }
+
   if (jiraInput) {
     // Check for null before accessing properties
     const jira = jiraInput.value;
@@ -53,12 +66,26 @@ const restoreOptions = async () => {
       jiraURL: '',
       defaultOption: 0,
       trimSpaces: 0,
+      bitbucketURL: '',
+      bitbucketPrefix: '',
     } as Options,
     (options) => {
       // Type the options parameter
       const jiraInput = document.querySelector<HTMLInputElement>('.quiji-options-jira-url');
       if (jiraInput) {
         jiraInput.value = (options as Options).jiraURL || '';
+      }
+
+      // Type the options parameter
+      const bitbucketInput = document.querySelector<HTMLInputElement>('.quiji-options-bitbucket-url');
+      if (bitbucketInput) {
+        bitbucketInput.value = (options as Options).bitbucketURL || '';
+      }
+
+      // Type the options parameter
+      const prefixInput = document.querySelector<HTMLInputElement>('.quiji-options-bitbucket-prefix');
+      if (prefixInput) {
+        prefixInput.value = (options as Options).bitbucketPrefix || '';
       }
 
       // Map 0 to currentTab and 1 to newTab
