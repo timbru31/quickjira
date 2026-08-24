@@ -19,15 +19,34 @@ async function openTicket(ticket: string, newTab: boolean) {
     {
       jiraURL: '',
       trimSpaces: 0,
+      bitbucketURL: '',
+      bitbucketPrefix: '',
     },
     (options) => {
       const jiraURL = (options as Options).jiraURL;
+      const bitbucketURL = (options as Options).bitbucketURL;
+
+      let bitbucketPrefix = (options as Options).bitbucketPrefix;
+      bitbucketPrefix = encodeURIComponent(bitbucketPrefix);
+
       const trimSpaces = options.trimSpaces !== 0;
       let newURL: string;
 
       if (trimSpaces) {
         ticket = decodeURIComponent(ticket).replace(/\s/g, '');
       }
+
+      if (ticket.startsWith(bitbucketPrefix)) {
+        console.log('Bitbucket ticket detected');
+        if (!bitbucketURL) {
+          void _browser.runtime.openOptionsPage();
+        } else {
+          newURL = ticket.replace(bitbucketPrefix, bitbucketURL);
+          void openURLInTab(newTab, newURL);
+          return;
+        }
+      }
+
       void storage.set({
         lastTicket: ticket,
       });

@@ -67,6 +67,18 @@
     "message": "For example:",
     "description": "Info text with an example JIRA URL. URL is followed after the sentence"
   },
+  "bb_baseURL": {
+    "message": "Bitbucket base URL",
+    "description": "base URL you need to enter for a valid repo URL"
+  },
+  "bb_baseURLDescription": {
+    "message": "Please enter here the Bitbucket URL for the Quick Search. Please keep in mind that the URL should end with a forward slash.",
+    "description": "Description text of the bitbucket base URL"
+  },
+  "bb_baseURLExample": {
+    "message": "For example:",
+    "description": "Info text with an example Bitbucket URL. URL is followed after the sentence"
+  },
   "baseURLMoreInfo": {
     "message": " More information regarding the JIRA Quick Search can be found here:",
     "description": "Info text for the JIRA QuickSearch function. URL is followed after the sentence"
