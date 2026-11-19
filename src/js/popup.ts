@@ -87,9 +87,12 @@ const renderDialog = async () => {
         currentButton.value = _browser.i18n.getMessage('currentTab');
         lastTicketButton.value = _browser.i18n.getMessage('lastTicket');
 
-        setTimeout(() => {
+        const focusTicketInput = () => {
           document.querySelector<HTMLInputElement>('#quiji-ticket-id')?.focus();
-        }, 0);
+        };
+        setTimeout(focusTicketInput, 0);
+        // Firefox can activate the popup frame after the call above, which drops the input's focus (Mozilla bug 1324255)
+        window.addEventListener('focus', focusTicketInput, { once: true });
       }
     },
   );
